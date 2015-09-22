@@ -1,0 +1,50 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+
+#include "ELC_Types_AS.h"
+//#include <stdbool.h>
+//
+//#define Elc_FALSE   (false)
+//#define Elc_TRUE    (true)
+//
+//
+//typedef unsigned char               Elc_U8;
+//typedef unsigned short              Elc_U16;
+//typedef unsigned int                    Elc_U32;
+//typedef unsigned long long          Elc_U64;
+//
+//typedef char                    Elc_S8;
+//typedef short                   Elc_S16;
+//typedef int                     Elc_S32;
+//typedef long long               Elc_S64;
+//
+//typedef bool                    Elc_BOOL;
+//
+//typedef void *                      Elc_LPVOID;
+//typedef const void *            Elc_LPCVOID;
+//
+//typedef long                            Elc_LONG;
+//typedef unsigned long           Elc_ULONG;
+//
+//typedef unsigned short      UTF16;
+//
+//typedef int         WPARAM;
+//typedef long        LPARAM;
+//
+//#define INFINITE	(Elc_U32)(-1)
+//
+//#ifndef MAKETAG
+//#define MAKETAG(a, b, c, d)                     \
+//(((long)(unsigned char)(d) << 0) |      \
+//((long)(unsigned char)(c) << 8) |      \
+//((long)(unsigned char)(b) << 16) |     \
+//((long)(unsigned char)(a) << 24))
+//#endif
+
+#endif

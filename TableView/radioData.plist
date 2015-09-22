@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mainTitle</key>
+	<array>
+		<string>怀旧金曲</string>
+		<string>轻松调频</string>
+		<string>新闻广播</string>
+		<string>劲歌 FM 88.7</string>
+	</array>
+	<key>subTitle</key>
+	<array>
+		<string>Oldies Online</string>
+		<string>Easy FM</string>
+		<string>News Radio</string>
+		<string>HIT FM 88.7</string>
+	</array>
+	<key>logoImage</key>
+	<array>
+		<string>JUGG1.jpg</string>
+		<string>JUGG2.jpg</string>
+		<string>JUGG3.jpg</string>
+		<string>JUGG4.jpg</string>
+	</array>
+</dict>
+</plist>
