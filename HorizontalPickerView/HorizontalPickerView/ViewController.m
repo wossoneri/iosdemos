@@ -29,12 +29,36 @@
     self.itemTitles = [rootDictionary objectForKey:@"heros"];
     NSLog(@"%@", self.itemTitles);
     
+    
+    
 }
+
+//- (NSArray *)getImages
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
 }
+
+#pragma mark - HPickerViewDataSource
+- (NSUInteger)numberOfItemsInPickerView:(HPickerView *)pickerView {
+    return [self.itemTitles count];
+}
+
+- (NSString *)pickerView:(HPickerView *)pickerView titleForItem:(NSInteger)item {
+    return self.itemTitles[item];
+}
+
+#pragma mark - HPickerViewDelegate
+
+- (void)pickerView:(HPickerView *)pickerView didSelectItem:(NSInteger)item
+{
+    NSLog(@"%@", self.itemTitles[item]);
+}
+
+
+
 
 @end

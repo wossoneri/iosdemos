@@ -12,7 +12,8 @@
 @interface ViewController : UIViewController <HPickerViewDataSource, HPickerViewDelegate>
 
 @property (nonatomic, strong) HPickerView *pickerView;
-@property (nonatomic, strong) NSArray* itemTitles;
+@property (nonatomic, strong) NSArray *itemTitles;
+@property (nonatomic, strong) NSArray *itemImages;
 
 @end
 

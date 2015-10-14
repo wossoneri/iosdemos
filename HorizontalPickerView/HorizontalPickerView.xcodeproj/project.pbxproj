@@ -108,6 +108,7 @@
 		C57751D61BCB9AC200AE4586 /* HorizontalPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				C5A751DB1BCC999A002075AB /* HPickerView */,
 				C57751DA1BCB9AC200AE4586 /* AppDelegate.h */,
 				C57751DB1BCB9AC200AE4586 /* AppDelegate.m */,
 				C57751DD1BCB9AC200AE4586 /* ViewController.h */,
@@ -118,8 +119,6 @@
 				C57751E81BCB9AC300AE4586 /* Info.plist */,
 				C57752101BCBB54300AE4586 /* titles.plist */,
 				C57751D71BCB9AC200AE4586 /* Supporting Files */,
-				C577520D1BCB9B3000AE4586 /* HPickerView.h */,
-				C577520E1BCB9B3000AE4586 /* HPickerView.m */,
 				C57752141BCBBA9000AE4586 /* iconHeros.xcassets */,
 			);
 			path = HorizontalPickerView;
@@ -149,6 +148,15 @@
 				C57751FE1BCB9AC300AE4586 /* Info.plist */,
 			);
 			path = HorizontalPickerViewUITests;
+			sourceTree = "<group>";
+		};
+		C5A751DB1BCC999A002075AB /* HPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				C577520D1BCB9B3000AE4586 /* HPickerView.h */,
+				C577520E1BCB9B3000AE4586 /* HPickerView.m */,
+			);
+			name = HPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,6 +522,7 @@
 				C57752031BCB9AC300AE4586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C57752041BCB9AC300AE4586 /* Build configuration list for PBXNativeTarget "HorizontalPickerViewTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +531,7 @@
 				C57752061BCB9AC300AE4586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C57752071BCB9AC300AE4586 /* Build configuration list for PBXNativeTarget "HorizontalPickerViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +540,7 @@
 				C57752091BCB9AC300AE4586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
