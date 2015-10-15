@@ -62,6 +62,11 @@
 //                                                       multiplier:1.0
 //                                                         constant:0]];
 
+    
+//    NSLog(@"cell x: %f", self.bounds.origin.x);
+//    NSLog(@"cell y: %f", self.bounds.origin.y);
+//    NSLog(@"cell width: %f", self.bounds.size.width);
+//    NSLog(@"cell height: %f", self.bounds.size.height);
 }
 
 

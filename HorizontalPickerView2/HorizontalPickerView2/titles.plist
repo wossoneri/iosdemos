@@ -4,16 +4,30 @@
 <dict>
 	<key>heros</key>
 	<array>
+		<string>AA</string>
+		<string>BM</string>
+		<string>CM</string>
+		<string>DOOM</string>
 		<string>DP</string>
+		<string>DW</string>
 		<string>ES</string>
+		<string>FV</string>
 		<string>JUGG</string>
 		<string>Lich</string>
 		<string>Lina</string>
+		<string>LOA</string>
+		<string>Oracle</string>
 		<string>PA</string>
 		<string>POM</string>
 		<string>Puck</string>
 		<string>Pudge</string>
+		<string>QOP</string>
+		<string>SB</string>
+		<string>Silencer</string>
 		<string>SS</string>
+		<string>TA</string>
+		<string>VIP</string>
+		<string>WD</string>
 	</array>
 </dict>
 </plist>

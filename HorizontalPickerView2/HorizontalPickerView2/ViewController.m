@@ -24,62 +24,95 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"titles" ofType:@"plist"];
     NSDictionary *rootDictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
     self.itemTitles = [rootDictionary objectForKey:@"heros"];
-    NSLog(@"%@", self.itemTitles);
+//    NSLog(@"%@", self.itemTitles);
     
 //    CollectionViewLayout *layout = [[CollectionViewLayout alloc] init];
 //    self.collectionView.collectionViewLayout = layout;
     
-    self.itemName = [[UILabel alloc] init];
-    self.itemName.text = @"DOTA";
+
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:[[CollectionViewLayout alloc] init]];
+    CGRect rct = self.view.bounds;
+    rct.size.height = 100;
+    rct.origin.y = [[UIScreen mainScreen] bounds].size.height / 2.0 - rct.size.height;
+//    NSLog(@"y : %f", rct.origin.y);
+    self.collectionView = [[UICollectionView alloc] initWithFrame:rct collectionViewLayout:[[CollectionViewLayout alloc] init]];
+//    self.collectionView = [[UICollectionView alloc] init];
+//    self.collectionView.collectionViewLayout = [[CollectionViewLayout alloc] init];
+    
     self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.collectionView.showsHorizontalScrollIndicator = NO;
+    self.collectionView.decelerationRate = UIScrollViewDecelerationRateNormal;
+    
     [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([CollectionViewCell class])];
     [self.collectionView setBackgroundColor:[UIColor blueColor]];
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
     
     
-    NSLog(@"width : %f", self.view.bounds.size.width);
+    
+    self.itemName = [[UILabel alloc] initWithFrame:CGRectMake(rct.origin.x, rct.origin.y + rct.size.height, rct.size.width, 50)];
+    self.itemName.text = @"DOTA";
+    self.itemName.textAlignment = NSTextAlignmentCenter;
+    self.itemName.backgroundColor = [UIColor yellowColor];
+    self.itemName.font = [UIFont fontWithName:@"Helvetica Neue" size:20];
+//    NSLog(@"width : %f", self.view.bounds.size.width);
     
     [self.view addSubview:self.collectionView];
-//    [self.view addSubview:self.itemName];
-//    
-//    [self.collectionView setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    [self.itemName setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    
-//    UIView *tmpView = self.view;
-////    UICollectionView *view1 = self.collectionView;
-////    UILabel *view2 = self.itemName;
-//    
-//    [tmpView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[tmpView]-(<=1)-[_collectionView]"]
-//                                                                    options:NSLayoutFormatAlignAllCenterX
-//                                                                    metrics:nil
-//                                                                      views:NSDictionaryOfVariableBindings(tmpView, _collectionView)]];
-//    [tmpView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[tmpView]-(<=1)-[_itemName]"]
-//                                                                    options:NSLayoutFormatAlignAllCenterX
-//                                                                    metrics:nil
-//                                                                      views:NSDictionaryOfVariableBindings(tmpView, _itemName)]];
-//    
-//    [tmpView addConstraint:[NSLayoutConstraint constraintWithItem:_collectionView
-//                                                        attribute:NSLayoutAttributeCenterY
-//                                                        relatedBy:NSLayoutRelationEqual
-//                                                           toItem:tmpView
-//                                                        attribute:NSLayoutAttributeCenterY
-//                                                       multiplier:1.0
-//                                                         constant:0]];
-//    [tmpView addConstraint:[NSLayoutConstraint constraintWithItem:_itemName
-//                                                        attribute:NSLayoutAttributeCenterY
-//                                                        relatedBy:NSLayoutRelationEqual
-//                                                           toItem:tmpView
-//                                                        attribute:NSLayoutAttributeCenterY
-//                                                       multiplier:1.0
-//                                                         constant:100]];
+    [self.view addSubview:self.itemName];
+    
+
 
     
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.collectionView reloadData];
+    NSIndexPath *selection = [NSIndexPath indexPathForItem:(NSInteger)([self.itemTitles count] / 2.0) inSection:0];
+    [self.collectionView selectItemAtIndexPath:selection animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+    [self.collectionView scrollToItemAtIndexPath:selection atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    [self changeNameAtIndex:selection.row];
+
+}
+
+
+//- (void)didEndScrolling
+//{
+//    CGPoint center = [self.view convertPoint:self.collectionView.center toView:self.collectionView];
+//    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:center];
+//    [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+//}
+
+- (void)changeNameAtIndex:(NSInteger)row {
+
+    if (row >= 0)
+        self.itemName.text = self.itemTitles[row];
+    
+}
+
+- (NSInteger)getCenterCellIndex {
+
+//    NSLog(@"self.collectionView.contentOffset.x: %f", self.collectionView.contentOffset.x);
+//    NSLog(@"half of bounds: %f", (CGRectGetWidth(self.collectionView.bounds) / 2.0));
+    
+    
+    CGFloat x =(CGRectGetWidth(self.collectionView.bounds) / 2.0)+ self.collectionView.contentOffset.x;
+    CGFloat y = 0 + 50;//self.collectionView.center.y;
+    CGPoint point = CGPointMake(x, y);
+    
+//    NSLog(@"PointX:%f", point.x);
+//    NSLog(@"PointY:%f", point.y);
+    
+    NSIndexPath *index = [self.collectionView indexPathForItemAtPoint:point];
+    if (index != nil) {
+//        NSLog(@"row: %ld", (long)index.row);
+        return index.row;
+    }else
+        return -1;
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -87,10 +120,10 @@
 }
 
 
-#pragma mark - UICollectionViewDataSource
+#pragma mark - CollectionViewDataSource
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    NSLog(@"count: %lu", (unsigned long)[self.itemTitles count]);
+//    NSLog(@"count: %lu", (unsigned long)[self.itemTitles count]);
     
     return [self.itemTitles count];
 }
@@ -99,8 +132,20 @@
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CollectionViewCell class]) forIndexPath:indexPath];
     
     cell.image.image = [UIImage imageNamed:[self.itemTitles objectAtIndex:indexPath.row]];
-    cell.backgroundColor = [UIColor whiteColor];
+//    cell.backgroundColor = [UIColor whiteColor];
     return cell;
+}
+
+#pragma mark - CollectionViewDelegate
+//选中item  不完善
+- (void)collectionView:(nonnull UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+    
+    //滚动到中间
+    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+
+    [self changeNameAtIndex:indexPath.row];
 }
 
 
@@ -128,9 +173,28 @@
                             0, (collectionView.bounds.size.width - lastSize.width) / 2);
     
     
-    
-    
 }
 
+#pragma mark scrollView Delegate
+- (void)scrollViewDidEndDecelerating:(nonnull UIScrollView *)scrollView {
+
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+//    [CATransaction begin];
+//    [CATransaction setValue:(id)kCFBooleanTrue
+//                     forKey:kCATransactionDisableActions];
+//    self.collectionView.layer.mask.frame = self.collectionView.bounds;
+//    [CATransaction commit];
+
+    [self changeNameAtIndex:[self getCenterCellIndex]];
+    
+}
 
 @end
