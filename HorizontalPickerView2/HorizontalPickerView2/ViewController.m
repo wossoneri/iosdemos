@@ -8,9 +8,12 @@
 
 #import "ViewController.h"
 #import "CollectionViewCell.h"
-#import "CollectionViewLayout.h"
+
 
 @interface ViewController ()
+{
+    NSInteger centerIndex;
+}
 
 @end
 
@@ -29,13 +32,13 @@
 //    CollectionViewLayout *layout = [[CollectionViewLayout alloc] init];
 //    self.collectionView.collectionViewLayout = layout;
     
-
+    self.layout = [[CollectionViewLayout alloc] init];
     
     CGRect rct = self.view.bounds;
-    rct.size.height = 100;
+    rct.size.height = 150;
     rct.origin.y = [[UIScreen mainScreen] bounds].size.height / 2.0 - rct.size.height;
 //    NSLog(@"y : %f", rct.origin.y);
-    self.collectionView = [[UICollectionView alloc] initWithFrame:rct collectionViewLayout:[[CollectionViewLayout alloc] init]];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:rct collectionViewLayout:self.layout];
 //    self.collectionView = [[UICollectionView alloc] init];
 //    self.collectionView.collectionViewLayout = [[CollectionViewLayout alloc] init];
     
@@ -51,7 +54,6 @@
     
     
     self.itemName = [[UILabel alloc] initWithFrame:CGRectMake(rct.origin.x, rct.origin.y + rct.size.height, rct.size.width, 50)];
-    self.itemName.text = @"DOTA";
     self.itemName.textAlignment = NSTextAlignmentCenter;
     self.itemName.backgroundColor = [UIColor yellowColor];
     self.itemName.font = [UIFont fontWithName:@"Helvetica Neue" size:20];
@@ -59,8 +61,6 @@
     
     [self.view addSubview:self.collectionView];
     [self.view addSubview:self.itemName];
-    
-
 
     
 }
@@ -75,6 +75,7 @@
     [self.collectionView scrollToItemAtIndexPath:selection atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     [self changeNameAtIndex:selection.row];
 
+    centerIndex = selection.row;
 }
 
 
@@ -130,8 +131,20 @@
 
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CollectionViewCell class]) forIndexPath:indexPath];
-    
+
     cell.image.image = [UIImage imageNamed:[self.itemTitles objectAtIndex:indexPath.row]];
+    cell.name.text = [self.itemTitles objectAtIndex:indexPath.row];
+    if (self.layout.selectEnable) {
+        if (indexPath.row == centerIndex) {
+            cell.name.hidden = NO;
+        }else
+            cell.name.hidden = YES;
+        
+    } else {
+        cell.name.hidden = NO;
+    }
+    
+    
 //    cell.backgroundColor = [UIColor whiteColor];
     return cell;
 }
@@ -140,12 +153,23 @@
 //选中item  不完善
 - (void)collectionView:(nonnull UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
+    if (!self.layout.selectEnable) {
+        self.layout.selectEnable = YES;
+        [self.collectionView reloadData];
+    }
+//    else if (centerIndex == indexPath.row) {
+//        self.layout.selectEnable = NO;
+//        [self.collectionView reloadData];
+//    }
+    
     [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionNone];
     
     //滚动到中间
     [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 
     [self changeNameAtIndex:indexPath.row];
+    
+
 }
 
 
@@ -193,8 +217,11 @@
 //    self.collectionView.layer.mask.frame = self.collectionView.bounds;
 //    [CATransaction commit];
 
-    [self changeNameAtIndex:[self getCenterCellIndex]];
-    
+    centerIndex = [self getCenterCellIndex];
+    [self changeNameAtIndex:centerIndex];
+    if (self.layout.selectEnable) {
+        [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:centerIndex inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+    }
 }
 
 @end

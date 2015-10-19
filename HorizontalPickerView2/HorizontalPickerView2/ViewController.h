@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollectionViewLayout.h"
 
 @interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray *itemTitles;
 @property (nonatomic, strong) UILabel *itemName;
+@property (nonatomic, strong) CollectionViewLayout *layout;
 
 @end
 

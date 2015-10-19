@@ -436,7 +436,7 @@
 				INFOPLIST_FILE = HorizontalPickerView2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.magewell.HorizontalPickerView2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.du.HorizontalPickerView2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -448,7 +448,7 @@
 				INFOPLIST_FILE = HorizontalPickerView2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.magewell.HorizontalPickerView2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.du.HorizontalPickerView2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -520,6 +520,7 @@
 				C58563441BCE2944002D5DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C58563451BCE2944002D5DB4 /* Build configuration list for PBXNativeTarget "HorizontalPickerView2Tests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				C58563471BCE2944002D5DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C58563481BCE2944002D5DB4 /* Build configuration list for PBXNativeTarget "HorizontalPickerView2UITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				C585634A1BCE2944002D5DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

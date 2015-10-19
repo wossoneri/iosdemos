@@ -10,4 +10,6 @@
 
 @interface CollectionViewLayout : UICollectionViewFlowLayout
 
+@property (nonatomic) BOOL selectEnable;
+
 @end

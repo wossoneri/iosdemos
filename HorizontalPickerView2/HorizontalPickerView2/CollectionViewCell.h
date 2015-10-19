@@ -11,5 +11,6 @@
 @interface CollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImageView *image;
+@property (nonatomic, strong) UILabel   *name;
 
 @end

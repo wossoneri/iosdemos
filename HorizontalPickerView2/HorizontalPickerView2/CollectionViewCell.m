@@ -36,31 +36,43 @@
     self.image.contentMode = UIViewContentModeCenter;
     self.image.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
+    self.name = [[UILabel alloc] init];
+    self.name.font = [UIFont fontWithName:@"Helvetica Neue" size:20];
+    self.name.textAlignment = NSTextAlignmentCenter;
+    
     [self.contentView addSubview:self.image];
+    [self.contentView addSubview:self.name];
     
     [self.image setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.name setTranslatesAutoresizingMaskIntoConstraints:NO];
 
     
     UIView *tmpView = self.contentView;
-    UIImageView *imageView = self.image;
+//    UIImageView *imageView = self.image;
 
-    [tmpView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[tmpView]-(<=1)-[imageView]"]
+    [tmpView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[tmpView]-(<=1)-[_image]"]
                                                                     options:NSLayoutFormatAlignAllCenterX
                                                                     metrics:nil
-                                                                      views:NSDictionaryOfVariableBindings(tmpView, imageView)]];
-    
-    [tmpView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[tmpView]-(<=1)-[imageView]"]
-                                                                    options:NSLayoutFormatAlignAllCenterY
+                                                                      views:NSDictionaryOfVariableBindings(tmpView, _image)]];
+    [tmpView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[tmpView]-(<=1)-[_name]"]
+                                                                    options:NSLayoutFormatAlignAllCenterX
                                                                     metrics:nil
-                                                                      views:NSDictionaryOfVariableBindings(tmpView, imageView)]];
+                                                                      views:NSDictionaryOfVariableBindings(tmpView, _name)]];
     
-//    [tmpView addConstraint:[NSLayoutConstraint constraintWithItem:imageView
-//                                                        attribute:NSLayoutAttributeCenterY
-//                                                        relatedBy:NSLayoutRelationEqual
-//                                                           toItem:tmpView
-//                                                        attribute:NSLayoutAttributeCenterY
-//                                                       multiplier:1.0
-//                                                         constant:0]];
+    [tmpView addConstraint:[NSLayoutConstraint constraintWithItem:_image
+                                                        attribute:NSLayoutAttributeCenterY
+                                                        relatedBy:NSLayoutRelationEqual
+                                                           toItem:tmpView
+                                                        attribute:NSLayoutAttributeCenterY
+                                                       multiplier:1.0
+                                                         constant:-15]];
+    [tmpView addConstraint:[NSLayoutConstraint constraintWithItem:_name
+                                                        attribute:NSLayoutAttributeCenterY
+                                                        relatedBy:NSLayoutRelationEqual
+                                                           toItem:tmpView
+                                                        attribute:NSLayoutAttributeCenterY
+                                                       multiplier:1.0
+                                                         constant:30]];
 
     
 //    NSLog(@"cell x: %f", self.bounds.origin.x);
@@ -69,10 +81,11 @@
 //    NSLog(@"cell height: %f", self.bounds.size.height);
 }
 
-
+//
 - (void)setSelected:(BOOL)selected {
     [super setSelected:selected];
     
+    self.name.hidden = !selected;
 }
 
 
