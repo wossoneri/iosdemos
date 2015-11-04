@@ -1,0 +1,6 @@
+platform :ios, '9.0'
+
+xcodeproj 'UIViewAttributeTest'
+target 'UIViewAttributeTest', :exclusive => true do
+  pod 'Masonry'
+end

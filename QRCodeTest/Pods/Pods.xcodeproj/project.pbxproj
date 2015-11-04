@@ -1,0 +1,1121 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0417BD782B375C300BA167F5BE3C43CA /* DecodedBitStreamParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA51B6CEC923FCD83BF9E07B72D36C3 /* DecodedBitStreamParser.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		052E5ABAF32477249F81FB3078329E39 /* CharacterSetECI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 017BA19CDB35D4144CE2BD66BC2D1768 /* CharacterSetECI.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		07E4830F82E963DBDDDB2C7F5E46F3AB /* ResultAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE683A945E0010DC4139D437B9D264 /* ResultAction.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		09C5E25D87D44A22F05E9691728B056C /* UPCEReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D41308906EFFB1D4F7A13C1C33E9871 /* UPCEReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		0C5300A8F27AA36EDF498519700B4406 /* MultiFormatOneDReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1E444C93206A22BAD079C0C7445F8873 /* MultiFormatOneDReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		0E567F6833FC09CD248C6D9A85561F6E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB7AD0D467F4DE8675C2C9FEFC8E9B2 /* CoreVideo.framework */; };
+		0E634BC4E29D9DE494D9FF45B7D7C005 /* BigIntegerUtils.cc in Sources */ = {isa = PBXBuildFile; fileRef = FD65341DDC13FF8E32BBD0060EF4B7E7 /* BigIntegerUtils.cc */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		0EBC652A42B9313431057A6EB3BFCD36 /* ZXBinaryBitmap.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFBC0465DC357967FD2975A337FD2D27 /* ZXBinaryBitmap.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		0EF2E869A93B4E5BBBD6D43E3A7C368D /* QRCodeMultiReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91D7AB47C7D4B2ACDB0457B32024A25E /* QRCodeMultiReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		14129626632E7FB207B1B4E364FE168C /* ZXHybridBinarizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9512D194E049A6C3A04FD9B4160685A1 /* ZXHybridBinarizer.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		145A0CFE6C7D9EE08B57BA2185BD1290 /* BusinessCardParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D80DE53A1DB102F7A8CFAAFC49B5F2E6 /* BusinessCardParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		15AE34B2665353BEF332E6D084D0C20A /* LinesSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF990E9EE1A9D879D7BC847C64C2F88C /* LinesSampler.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		16AF860586AF6392AF295B85BB5CE3C8 /* Detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9D284B39B51B641251F76B0A13DFB /* Detector.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		1C8FC85030DE8D8D116F863E1E3AA6AF /* OneDResultPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB8459E5EBF5E4BC2A198D907BDA80D /* OneDResultPoint.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		1E55965771F6CD015D0523BEDA60189A /* TelResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C85A3007057E1F4FD9A5875EFC203C79 /* TelResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		1E74A4E355ABCAA8A15C1FDE0A74E05F /* BinaryBitmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D05719FB5B5F4E8CE63A3CA0F47AF8C /* BinaryBitmap.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		1F598ED7C83E1FB7622614495F997536 /* ZXCapture.mm in Sources */ = {isa = PBXBuildFile; fileRef = D09BFCC519C447D4AB7FEAB42FE0AAF1 /* ZXCapture.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		216675B78166806E4F69A39B43851EAD /* ZXImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E559219F66BF5BC7E69B2B909529D24 /* ZXImage.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		220DAA2DEAD62E3EBE65D4BD063A2FCE /* DecoderResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C29E2A35AE6BD983C4AC79A0EEF2B6D /* DecoderResult.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		268226F3C6E1A143077D499C6D5241E8 /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B5431E33586B76225602466830AFA35 /* Version.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		27C00BA79765828948EA9485C1D70E73 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4C0FF638A8F214F8A104ACADAAC482 /* QuartzCore.framework */; };
+		28A320FAB89FF2EE9BBA60CEC98956A0 /* GreyscaleRotatedLuminanceSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 775FD07AC6F209A1925659598A1938B3 /* GreyscaleRotatedLuminanceSource.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		29875CA5311A647DA7AC537650E67532 /* EmailAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DE59FB7D295C798B5E49D9A54F4AE1 /* EmailAction.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		2AD20908EA7D451C386C35E556AD8B7B /* MultipleBarcodeReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31B06C7954643029705AC1A087128711 /* MultipleBarcodeReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		2BDFE1EE8443A035FB3657BD525B2B52 /* ProductResultParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 95C31880770FCD8A1CE0625C725D5684 /* ProductResultParser.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		2D9850A6548D8B117365C4245B823D69 /* ShowMapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA13114B2A9800060464567A4CD089 /* ShowMapAction.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		2EDB80B0FDF8FE8AA5D719055825D1D7 /* TextResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DA120EE10A0F47B332AE38C215E07 /* TextResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		2F5DA9BED65710951B5A55989AB8B4DC /* CornerPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DC3677920B4B3FFC4DF571154FD1 /* CornerPoint.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		2FE914053659218B24000080980C3968 /* MultiFormatUPCEANReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3766F9D0090097618D4C167060A7CD7 /* MultiFormatUPCEANReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		3034434BB477727EC5BC4346AC2EADD9 /* ErrorCorrection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA317F1DFEB0B99DCDF30633C79829BA /* ErrorCorrection.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		306BBC7B569EBA930416A1CE508A4A92 /* TwoDDecoderResult.m in Sources */ = {isa = PBXBuildFile; fileRef = F768F3797E9BD29CA8B7ED8C1713EE01 /* TwoDDecoderResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		30D2E267D55514D4C7271791AEA215AC /* DecodedBitStreamParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746F1292826A9C74C9737B80402C4909 /* DecodedBitStreamParser.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		30EE986F59D0E8692898CC78DB8B7EC9 /* ZXCGImageLuminanceSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = B14EBCFCC3DCEC01103430F7811394D7 /* ZXCGImageLuminanceSource.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		312D51DC274D5B01CAD542BA88BAB963 /* AztecDetectorResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EEECA51E16E370B7B1D1383186CAF7F /* AztecDetectorResult.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		31935DBF1A2F8D9504576577C2A27184 /* BigIntegerAlgorithms.cc in Sources */ = {isa = PBXBuildFile; fileRef = 01442902F8B92401F54C86BE60066F37 /* BigIntegerAlgorithms.cc */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		323B09BDA5A6D851149FD3BDD9B3AA15 /* DataMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 882A902CD17E85CEA3B3BE9A7F01C663 /* DataMask.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		348A0689DE23CD45E457FC689A08C5B0 /* IllegalArgumentException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E27B926F2ABD609DFD62D8ADF4BA4E2C /* IllegalArgumentException.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		382196C1F55A6F5D40521A3E1AD710E4 /* CallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 904A88CDB47267C820AC5588F54091FE /* CallAction.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		38FCD8C7950281F958B6920B4D31D610 /* Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E03B95690AA6A0EC915DDF78E5E2763 /* Decoder.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		3F8B6183D538C6910186A2CADB9C19B4 /* SMSTOResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C85B4550C92F85DBE6E87F292BD85DB /* SMSTOResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		42D03E8708F89FAB902DFFDF65C46090 /* DetectorResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D08B7E50D0AC294058FEA5A1FC5A040 /* DetectorResult.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		46BB8F8580C0DC78CC58CE55368578C5 /* BizcardResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3192F4AD47E6DEDBF07D72456B66764E /* BizcardResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		46D956622BBB6A43D8D7B798C8A0BB0F /* LuminanceSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2432A4A94C6B4316FC0D8AF5166219E1 /* LuminanceSource.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		4763F8C969D42999F7A3467C96EB0401 /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5579B8FCE4CFD8F41C6FEAE7E061FC6B /* Exception.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		4826D392022E9D48A01CC27BF8688022 /* Result.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2287A5B35F6F567C0C678B7FC7651E5 /* Result.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		4A6452CF3745C3C75F322DCC896289BE /* FinderPatternFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DB29C31C6528A65A439E581A807CC48 /* FinderPatternFinder.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		4A8BBEF50BE3576DE74984ACC6F42D10 /* ZXingWidgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC6A5DE59010839FF377029C0A3786F /* ZXingWidgetController.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		4BE7B361CE81225C8C175DDD63956EC5 /* DataBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB80052309601ABFCF94CBF75C094937 /* DataBlock.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		4CB1124E8AEAE529EE7EA270A14ADD0C /* BigUnsignedInABase.cc in Sources */ = {isa = PBXBuildFile; fileRef = 542A4C68DF6FCD3B19B6E8F5C0C66F14 /* BigUnsignedInABase.cc */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		4E9430B30EBCDBA747C5EE9A1C00FB64 /* EAN13Reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14128F028A0E2CA6F7A12A81721D6BB4 /* EAN13Reader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		4F9B4C4DA2CA6ECBFBFBD8864B4793C7 /* ZXResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83D4D77295E65BDA522BD7C376EE837C /* ZXResult.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		52260E500122D4204D75A10673D05334 /* GenericMultipleBarcodeReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 436296CF28753887504A796AC6824BD8 /* GenericMultipleBarcodeReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		578261A336FF456159696D92741B9B59 /* Binarizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6796AB7A6E10E36DFB9106271766BD67 /* Binarizer.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		588212411653B1286B66A102A577E052 /* PerspectiveTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DA341FE9F71DF1B775557DFB24A267 /* PerspectiveTransform.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		59506D9D39E33910869A99636924414E /* TelParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4B363BCB1833CA4A433DC930AD554 /* TelParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		596FE7A5631C8388C51FA3E0D541724B /* GridSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A08B7E9CCC61C0E574EF628647A5AD0 /* GridSampler.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		59ACA0597BE29264DC3EA0152034A459 /* BitMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D591B2B1AA056576FE2D09A2C818E55 /* BitMatrix.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		5B422A25DCCD9D9D12DBBBFF76E0BEA6 /* URIParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF4468FDCBA2A556206659B1F3BE1D /* URIParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		5DEB847C4C80A784CF3B721C7F6ECA9A /* Reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38C2C075A3E5F8348BE2BC50E5742785 /* Reader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		5F185FC20E3BF2E2E93520D2EA59FA20 /* BigInteger.cc in Sources */ = {isa = PBXBuildFile; fileRef = B5BA4934C1C2E79D0D551B7F77554C9B /* BigInteger.cc */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		607E52C2B40F5EE8F0E9BFE6EB80ED62 /* TextParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D90B831A6B68B2BC4326EE2A96D7029 /* TextParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		612C68DED3A5B61008CC624124978DA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A492579FFEE83EB243A1DD5D67B292 /* CoreGraphics.framework */; };
+		6317120BC81A965A2861AB4FC45A845D /* ZXCaptureView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 807883AE362E9E72596494162E1C75E6 /* ZXCaptureView.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		6451CD510886FD30F870CB20D880347E /* Mode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E2138F1067E39742A8268B8341D923C /* Mode.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		64E05AD581AD6DAA6D31BC5F6C9620D1 /* BarcodeFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBF616B0940A3248607B7AFC33002585 /* BarcodeFormat.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		6694C97336D7F8A28E131AC93CE2D1F4 /* PDF417Reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65461C4BF86A3A40B0CC29252CE992BE /* PDF417Reader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		68601F600BE29A381A8FEBD53BD60810 /* Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1773A68A531DDECC81F3A509338CC515 /* Decoder.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		68EB9F4746E8EBB5CE97E2FB15263F07 /* ZXIllegalArgumentException.mm in Sources */ = {isa = PBXBuildFile; fileRef = 001FD306A51F67AC6D86CA543CC8FAFF /* ZXIllegalArgumentException.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		6B7CC0C6C80A52361B30B27292BE93DE /* ISBNResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F1B6792629764452D65EA78FD02CD7 /* ISBNResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		6D86ECB1AEE8882AEB22DB8C597E45B6 /* FormatReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5FC13F5EF9AF2AA853CCC8B22AADC93 /* FormatReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		6E9DF88DEF204D82E3BAFF7D74C23E37 /* GeoParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6A8583F49447A0358D1CBFD2569CAE /* GeoParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		70693E3A9A517025BB52878B97920C11 /* GenericGF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F075ABAE70F941F09650EE55538D94F0 /* GenericGF.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		73F6243469C9A14C12B36E1411162E1E /* CGImageLuminanceSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA4383592913B63A9E78327AE208F5DB /* CGImageLuminanceSource.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		7454C91FE1FC06AC5959668435233C0F /* HybridBinarizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD39A5A84320BD640DE977D19F4BF9DF /* HybridBinarizer.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		75B2A61733B4276D6463CE97AC4C2B49 /* ModulusPoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEDEA0C077704ADECC76A545FAC4C7 /* ModulusPoly.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		76F44E826F78DFC677136C2B3C25E77B /* SMSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7933FCDF326CF50654678D7559BF0 /* SMSAction.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		779D6468E7BB9B07B53662E67B2C68A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBB4088898494435290564A848F8EB4 /* AudioToolbox.framework */; };
+		7892F630EE5F81CEDBD16973B151A961 /* MultiFormatOneDReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5713F959CBF077E3A3788A6499F1A9AA /* MultiFormatOneDReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		7DE79EA377C3BA7E27F94580234C3F84 /* EmailParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D553E9A2235A7A1E0799281636FEF825 /* EmailParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		7FAB152A70B4F6EBC65769ADC88952DF /* ProductParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFF0DA38BAF0B285949407D28B7E652 /* ProductParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		80E008147683CD561668A71728445963 /* BitArrayIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCA488379B550FB681CD33F082D1C10 /* BitArrayIO.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		838E7CE6EE23FCF6AAD035F6CE46DCA0 /* ZXDecodeHints.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5E6931C393BE85D6CBB6EB1BC39E513E /* ZXDecodeHints.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		85DEF89D83B02C235416821CA05B7747 /* MultiFormatUPCEANReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDD9C7B7ED03E26EC6D2218E34AF351C /* MultiFormatUPCEANReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		86F45CDD45F2F10912340A9B0C1BC1CF /* MultiFormatReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA1B420383E962CADD230B8479AD8718 /* MultiFormatReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		884F9DB6C6BCB331AFED67933206A165 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5757369889F1C5D10C56945B065CDC5 /* ImageIO.framework */; };
+		8A5BE8F269C8CB23FCBBC1F1655CA7C1 /* AddContactAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5486F3BB98634729D00983345AC9BD12 /* AddContactAction.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		8CFAD5528676AEAD9EC2B077257201D6 /* SMTPResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C83267F4C2B6713342ADE8E6D64681 /* SMTPResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		8DBE5E1A8076FAA39C6E2CB7B530EB65 /* AddressBookAUResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9153BAE855F58F6EB31B073513A90CB6 /* AddressBookAUResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		8E214D1154F2C7298D0961FE3F449FDE /* FormatException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 090A1920CD72DCD61310C9B83927CE3E /* FormatException.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		8E7A5615B7B9832E447502AD155FB1F9 /* UniversalResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A9642537C14E996E5FEBF52B0C493826 /* UniversalResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		8EA48915719CC1C7D6B448A7823405A2 /* QRCodeReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89F94F4934F6819A5BB68B953054AECE /* QRCodeReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		8F2AE02B5B431440F3084A71B28CC6E7 /* ZXQRCodeReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6088355F36996C05E31A232C0FE7ED6F /* ZXQRCodeReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		8FA5A67E8E843CF465D60C9D48A77225 /* AztecReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF9A25D7FA31CEA60EF21C84583A5E06 /* AztecReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		90E720A0C996C123E9DCA6A1897F1C9F /* GeoResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D21429C09D93434767A098D06AA296 /* GeoResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		9125B15A0AE1AC9A0608C4DDAA541B67 /* BookmarkDoCoMoResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C53323BB044532E1470C1421AEC5EB65 /* BookmarkDoCoMoResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		935483B956A47419E78A002CCF6E265D /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EC8F20595A168AB1905358B4C58B6 /* Version.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		93D4B1F22657292611A6100616B73663 /* GenericGFPoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA45BC8014782571C3F980B00769A7CE /* GenericGFPoly.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		9415660549C3003F4916EA8453DB0B6E /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 590B3C61A12890F3DF0E390C18F4B2ED /* OverlayView.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		948CB20D39B406BE9C30838AB89C0392 /* ReedSolomonException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E219DE42EEBD8FC586EE85C7D571D /* ReedSolomonException.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		965241DC99EF00F12AF27515697F82E1 /* AlignmentPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85C16224EF65A70B0E90334379FF1113 /* AlignmentPattern.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		9AED1F7BD17DDAABAD03C487385FDE2D /* Code128Reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F461C8A687B046D63D1FABAA8DF7BD19 /* Code128Reader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		9AFBFA2814EA14B96F006FBEB52143B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E36DE6CD45D206277C2FCB09B12BA /* Foundation.framework */; };
+		9D84C649BE17263316CF9AE2EA2D1F5F /* ZXBinarizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = C4443F0EBCB98954A1529D4DA0981943 /* ZXBinarizer.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		9E4BD516613DB32414432546347F1E03 /* ZXLuminanceSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7CAD96609A4B64015F8F36C43D63B289 /* ZXLuminanceSource.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		9E4D1F357E53B3BBD76DC6DE9362D3FF /* CodaBarReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3329877AFD5F6977CA583456FCC1369 /* CodaBarReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		9E5400DF971DC01539E4BCBE8AB8DEBF /* ReedSolomonDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE139C938F16B61283606097848D795A /* ReedSolomonDecoder.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		9E5BEC6BDCF98A0C7D4C775BF16EAB08 /* Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B188668E4EAECF716D72EF64259B7D31 /* Decoder.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A0BE8977C870342D820A59A62180799A /* ModulusGF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBE0B9C422CA8C2E46F9C8A9E6655FCA /* ModulusGF.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A12923DBBEACF338BCA459A8B67F7477 /* ResultPointCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B11D1013D17FBF27D7E7C06B640154 /* ResultPointCallback.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A1D1D8725F7E6A00422C722BBFFBA435 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A2626CED4BE8C48D47C485FDFCDC01 /* CoreMedia.framework */; };
+		A4493F3374788A14831CCD35DDBDAB0F /* BitMatrixParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 300A74C3EC9F521507F0F13D6DC068C7 /* BitMatrixParser.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A4535447008F633A04BDB323CBECF03C /* ResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA3A956A766B30376A0D2FC6854E49D /* ResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A4F16C3ECEF962FECFD523BD2441104C /* ZXMultiFormatReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 664B9A53188374BB2CEAE12CECCBF8F8 /* ZXMultiFormatReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A4F7A988EA15A48482C1538D4E98E956 /* Str.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A3F2323F03CA5A39E3CEAF842EF771B /* Str.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A4FA254BD4ED88D61C50AFBDFD6BF1A6 /* MultiDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBAC1782A00C2D95C53E2ED05A18B6A4 /* MultiDetector.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A5FD326B4CA9B95118441EE273FD18FE /* MultiFormatReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 702932A108DCA0DD1F23088C9CD979B9 /* MultiFormatReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A6FE6EACAA2C885C1D384A1F42D1F91D /* Detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C814B6774B33E88E7F4A56E7A9C2A976 /* Detector.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		A9C5E23DABD500B25FE5FA7AAF336062 /* SMSResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C9C1B81ABD8676CC50C6FC3700C484 /* SMSResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		AAEF174950EBB42F561668D9BD413F74 /* ChecksumException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F685495FF4E8FEC13DC68F2DDCEF721 /* ChecksumException.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		ABA3AD4B24C57261DD2407E69158E0B7 /* URLTOResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F59FFB98DD7FBCA4F76CAA25A80E603 /* URLTOResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		ACF4FD00965567877F354B3AAD0E40E9 /* AztecReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6504DBCE5D43975B22A787FC0C79ACB0 /* AztecReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B0E9438BAB954994FC4B9723D225C53C /* DecodedBitStreamParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5231D13A90D3A32395804C2A9D32C0DD /* DecodedBitStreamParser.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B1A30270D1EA2FB93A9DE0A960C651CF /* DecodeHints.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1596211F02AB08721CF4CD971653D256 /* DecodeHints.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B39B7212290AB31AADA20CBF44DF5056 /* Decoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 41BEE211CF06FEE99D130375702FF62A /* Decoder.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B45E0CEA6838ED5A9B0BDE4DC1DD234F /* Pods-QRCodeTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B94EE17A637B98F42224F08D769F662 /* Pods-QRCodeTest-dummy.m */; };
+		B51673D20773ED4E08B81FF0A3177C07 /* ZXReaderException.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3CA69622099203C7AF80D4115251AC6D /* ZXReaderException.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B5A73D419BFEFC7FFC2AF25266285950 /* EmailDoCoMoResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF54B3EE4D7118624AC8E3E238D004D /* EmailDoCoMoResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B5E7EB6C90F87710235C72C8817083E7 /* CBarcodeFormat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6FD88FF2730A9D7E032F7A7BEA074 /* CBarcodeFormat.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B612B698C584732530D0CD56CF7DBFE6 /* FinderPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0C8F3016B4B8BA0DB28874B1EC7A808 /* FinderPattern.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B7A63940BCA9D6DEDF7BD33CFD22974A /* AlignmentPatternFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F26C5A9DD6E7E08BCA28790051D90B2 /* AlignmentPatternFinder.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B93DE1159DC3C15C6528A5E722373778 /* BitMatrixParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F642AFDFC007B5EFC8A26D653D32DFF1 /* BitMatrixParser.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		B99434CCA5803CD16E0F2AD9B4C32E87 /* Code39Reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5F8FFE0CFCFC51ACD4B4DB0091F07 /* Code39Reader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		BA0058F760E79C8557F7FEF1A1D9C943 /* BitMatrixParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6924DA2250C1E1B8297A059560E5F09 /* BitMatrixParser.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		BBF01641CDB895A059CB946AFCB65DD2 /* URLResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A881FA2F0E87C5680FED7B9B1C0728BC /* URLResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		BCC7DD9118F40ADCBA490B0CAB2DD3F4 /* ZXing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D763374A682E160E3EC2C3E8FAD9A /* ZXing-dummy.m */; };
+		BE473B1BD7A0D92E551EF08C9C7821AF /* BitSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C99C88F9536B9DF2E2CF590CD970E35 /* BitSource.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		BFB0700AC1EA5D2ADC062E70320CCEBE /* StringUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E2BD4732FD01DEA282F751232A92 /* StringUtils.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		C1DEB18A230235509A1392C82298336E /* WhiteRectangleDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C87EB90C7698D53BF4CCEE70B9DEB167 /* WhiteRectangleDetector.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		C268E20AF3B6B79AA95B03EFD5303FE7 /* ResultPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20D6688876A0BB68B42E9BC4D830593C /* ResultPoint.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		C2DC6557DAA4F8E8051A0CEB1E75A2DC /* Detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 724B8D756B73C7699B8ECAA90E4DEB86 /* Detector.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		C325E94FCB1FE2EA1073E5322E0CF79D /* UPCEANReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5C90A9A217B556E51F82FEE99AFCA2 /* UPCEANReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		C4003C1468EC72CA20F392B296270730 /* VCardResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C99E459CEFC52509D182FCBC494C32CD /* VCardResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		C4F489983850912EB1C150E194AB0D42 /* EmailAddressResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 028E65F449C02700295E16F3EF3A8DD3 /* EmailAddressResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		C5C44DB18E6B65E2409DD4B144A6188D /* BitArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBB66FDF333E2718C93247F538ECBD22 /* BitArray.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		C85FE199809967F07575A9852717EFD8 /* DataMatrixReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 547B76A554183956C75C4E40715D35A5 /* DataMatrixReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		CAF9199DCA4E30FEF965CEE37DDA9AC4 /* FinderPatternInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5E11E7C14679FDFE73CFA680A9A6D /* FinderPatternInfo.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		CBC480B8D2A4AD49416E5D5709CCE2C8 /* OpenUrlAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A7F54DAE5E91B4139B443DA957EAA9 /* OpenUrlAction.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		CC15DFB6B841A75A0064E54C712EB52F /* Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FC39B25D52A9334EDD48FA9C481B2 /* Decoder.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		CD6246601028E0BF056670C2EA13B8CB /* DetectorException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF2A21DC72D0530CFA93C1BC311984B2 /* DetectorException.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		CFE882E55C16AC05E697C68983BF04BA /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA61BABFEA583F953AAB800443676BF7 /* AddressBookUI.framework */; };
+		D026F760FA0B7D3EA47B26E12F074430 /* GlobalHistogramBinarizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883C4963B6186C8EB9FBCCDCCAABC73D /* GlobalHistogramBinarizer.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		D07AB7105DA9ABEC484E4BA49D8C11F1 /* ParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D04506ED94241E14A3476133D70A84BB /* ParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		D1DC0E78E4C63C06ACFDE15655032B50 /* ArrayAndStringCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 62936C0AE03B95C62469FBE7977602DC /* ArrayAndStringCategories.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		D286D6A8E06CCF935115A5450194F4F4 /* GreyscaleLuminanceSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BB921236B9738A582516F7AB6F53A5 /* GreyscaleLuminanceSource.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		D29BD06430A6D8AD388D76C8BD8F8F6E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC70D88A988F4A6B685E2DC6447E18B7 /* AVFoundation.framework */; };
+		D355D8F8C57ED3ECB1AD8B4BA78DEBD5 /* EAN8Reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 575FC9162EF147678BC6478B8C0EAAD7 /* EAN8Reader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		D558915FAAEFF3C8414488791CF98409 /* OneDReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 293B7056D670D6B36B676F09B3262891 /* OneDReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		D5AFC7C977BF00FAFB52DDFECB80195F /* PlainEmailResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F687808D575DDC8AF281883F6A0B46 /* PlainEmailResultParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		D923B499B1E88133BB11F7D2B5C63CB9 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE641653825FC65948CAA7FB455D38 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		DC539580B989FA3FA04BC8BB99C1A739 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECBB5F8D0F7AB3FB73D24FC3355175C /* AddressBook.framework */; };
+		DD40B73D45F316C748FE5AD41E5FF94E /* ErrorCorrectionLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9B854BB014119F2549C7E28F8D81DCE /* ErrorCorrectionLevel.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		DFD529AAF3B534662B843B37C21A6929 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E36DE6CD45D206277C2FCB09B12BA /* Foundation.framework */; };
+		E0F571EA4EFF65B6B73CB6838E40C137 /* ByQuadrantReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11475A000106D159A71589A9D378DFE5 /* ByQuadrantReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		E143307CE17F361767F90A8520C10B28 /* UPCAReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B289ED37F6B054C53712F3FD36FC1829 /* UPCAReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		E404EFC34CFA61399EDA7F55EA6F40CD /* MultiFinderPatternFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3FE1D41BBAC96DA9C7E592FE31086A6 /* MultiFinderPatternFinder.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		E6E3ECEE840ED955FD41D0CF202414EF /* InvertedLuminanceSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B587DE7F76DD8299D7D00F3A4ECE62E /* InvertedLuminanceSource.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		E7CB4FD03C74466BAFD5B65351AD24E0 /* DataMatrixReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD092FC7ED9EF1B303A4978515B6CE24 /* DataMatrixReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		E865DFB063CB965173A83F9B50B196EE /* ResultIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA63DCFF7279C20F93F8706BA073C88 /* ResultIO.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		E8D339E0CED17025405F701AE60A67EE /* Code93Reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B914014260A225E5B6BD6C0C02323D09 /* Code93Reader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		E91E65DAFF6870AD8228CFCCC7F4F903 /* FormatInformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA5C6AA5885882EAC73EC5B59BE3E5 /* FormatInformation.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		EEB9E505AE745EF2FCDA5788BF506194 /* SMSParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FB4B55E1DCAE2CC8CF67045061D8FD /* SMSParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		EF08842D9113AFBB55C0915439117025 /* BigUnsigned.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8B00FED6E801930B561D1368B6E2DBF9 /* BigUnsigned.cc */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		F3D13956944C23E97F9A7D62E0E8C8B2 /* QRCodeReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = D19446F48E53CEE3CC5B01F7CFE39953 /* QRCodeReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		F5E1D04C62A6F58019CA86EEE179828E /* MonochromeRectangleDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E82552C317C34A8083886F7821C5FAD3 /* MonochromeRectangleDetector.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		F667EC3B660F6BD8B3C4B9097E3E1BD4 /* MeCardParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE914779F1CBFDF5323A88221710E6F /* MeCardParser.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		F6ABF791ADFD01F33285A0B02CB7CA66 /* ITFReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EA01323116806B55E83575F0F0C6AC8 /* ITFReader.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		F7E2A32B4A952D09F794A45171DD95BC /* ISBNParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 166F73C7804D6E6D5ED8EC4FA128BA2C /* ISBNParsedResult.m */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		F8D7012B7EF0BCF75D4210431C909064 /* DataBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 157E1793802582BFC1D2AAFDF60214B5 /* DataBlock.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		F9E9F73AB2D192F5CF2A87725C1E1C09 /* Detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9026B322BC6F8BEF3CA7D6B7D15E3010 /* Detector.cpp */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+		FF6DC064A5B41E74A864709F11FE9EF4 /* ZXReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55B7580013810368B4162486816865E4 /* ZXReader.mm */; settings = {COMPILER_FLAGS = "-IZXing/cpp/core/src/ -IZXing/objc/src/ -IZXing/cpp/core/src/zxing/ -IZXing/iphone/ZXingWidget/Classes/ -fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		508164909CBFA00AFEC5EF16C8CADD98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D77D4512A9467CB21BE1522C6C637153;
+			remoteInfo = ZXing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		001FD306A51F67AC6D86CA543CC8FAFF /* ZXIllegalArgumentException.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXIllegalArgumentException.mm; path = objc/src/ZXing/ZXIllegalArgumentException.mm; sourceTree = "<group>"; };
+		00C83267F4C2B6713342ADE8E6D64681 /* SMTPResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SMTPResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/SMTPResultParser.m; sourceTree = "<group>"; };
+		01442902F8B92401F54C86BE60066F37 /* BigIntegerAlgorithms.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BigIntegerAlgorithms.cc; path = cpp/core/src/bigint/BigIntegerAlgorithms.cc; sourceTree = "<group>"; };
+		017BA19CDB35D4144CE2BD66BC2D1768 /* CharacterSetECI.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = CharacterSetECI.cpp; path = cpp/core/src/zxing/common/CharacterSetECI.cpp; sourceTree = "<group>"; };
+		028E65F449C02700295E16F3EF3A8DD3 /* EmailAddressResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EmailAddressResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/EmailAddressResultParser.m; sourceTree = "<group>"; };
+		046E3EED724B408399D1C98EBABF140B /* libPods-QRCodeTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRCodeTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07D21429C09D93434767A098D06AA296 /* GeoResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GeoResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/GeoResultParser.m; sourceTree = "<group>"; };
+		090A1920CD72DCD61310C9B83927CE3E /* FormatException.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = FormatException.cpp; path = cpp/core/src/zxing/FormatException.cpp; sourceTree = "<group>"; };
+		0C29E2A35AE6BD983C4AC79A0EEF2B6D /* DecoderResult.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DecoderResult.cpp; path = cpp/core/src/zxing/common/DecoderResult.cpp; sourceTree = "<group>"; };
+		0C85B4550C92F85DBE6E87F292BD85DB /* SMSTOResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SMSTOResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/SMSTOResultParser.m; sourceTree = "<group>"; };
+		0D90B831A6B68B2BC4326EE2A96D7029 /* TextParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TextParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/TextParsedResult.m; sourceTree = "<group>"; };
+		0EA01323116806B55E83575F0F0C6AC8 /* ITFReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ITFReader.cpp; path = cpp/core/src/zxing/oned/ITFReader.cpp; sourceTree = "<group>"; };
+		0EF6FD88FF2730A9D7E032F7A7BEA074 /* CBarcodeFormat.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CBarcodeFormat.mm; path = iphone/ZXingWidget/Classes/CBarcodeFormat.mm; sourceTree = "<group>"; };
+		11475A000106D159A71589A9D378DFE5 /* ByQuadrantReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ByQuadrantReader.cpp; path = cpp/core/src/zxing/multi/ByQuadrantReader.cpp; sourceTree = "<group>"; };
+		138588B0449CBBA8FB6A640FED6D166F /* Pods-QRCodeTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QRCodeTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		14128F028A0E2CA6F7A12A81721D6BB4 /* EAN13Reader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EAN13Reader.cpp; path = cpp/core/src/zxing/oned/EAN13Reader.cpp; sourceTree = "<group>"; };
+		157E1793802582BFC1D2AAFDF60214B5 /* DataBlock.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DataBlock.cpp; path = cpp/core/src/zxing/datamatrix/decoder/DataBlock.cpp; sourceTree = "<group>"; };
+		1596211F02AB08721CF4CD971653D256 /* DecodeHints.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DecodeHints.cpp; path = cpp/core/src/zxing/DecodeHints.cpp; sourceTree = "<group>"; };
+		166F73C7804D6E6D5ED8EC4FA128BA2C /* ISBNParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ISBNParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/ISBNParsedResult.m; sourceTree = "<group>"; };
+		1773A68A531DDECC81F3A509338CC515 /* Decoder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Decoder.cpp; path = cpp/core/src/zxing/datamatrix/decoder/Decoder.cpp; sourceTree = "<group>"; };
+		18BE641653825FC65948CAA7FB455D38 /* NSString+HTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTML.m"; path = "iphone/ZXingWidget/Classes/NSString+HTML.m"; sourceTree = "<group>"; };
+		1E444C93206A22BAD079C0C7445F8873 /* MultiFormatOneDReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MultiFormatOneDReader.mm; path = iphone/ZXingWidget/Classes/MultiFormatOneDReader.mm; sourceTree = "<group>"; };
+		1EBE683A945E0010DC4139D437B9D264 /* ResultAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ResultAction.m; path = iphone/ZXingWidget/Classes/actions/ResultAction.m; sourceTree = "<group>"; };
+		1F26C5A9DD6E7E08BCA28790051D90B2 /* AlignmentPatternFinder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AlignmentPatternFinder.cpp; path = cpp/core/src/zxing/qrcode/detector/AlignmentPatternFinder.cpp; sourceTree = "<group>"; };
+		1FD5F8FFE0CFCFC51ACD4B4DB0091F07 /* Code39Reader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Code39Reader.cpp; path = cpp/core/src/zxing/oned/Code39Reader.cpp; sourceTree = "<group>"; };
+		20D6688876A0BB68B42E9BC4D830593C /* ResultPoint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ResultPoint.cpp; path = cpp/core/src/zxing/ResultPoint.cpp; sourceTree = "<group>"; };
+		2432A4A94C6B4316FC0D8AF5166219E1 /* LuminanceSource.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = LuminanceSource.cpp; path = cpp/core/src/zxing/LuminanceSource.cpp; sourceTree = "<group>"; };
+		25B7933FCDF326CF50654678D7559BF0 /* SMSAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SMSAction.m; path = iphone/ZXingWidget/Classes/actions/SMSAction.m; sourceTree = "<group>"; };
+		26DE59FB7D295C798B5E49D9A54F4AE1 /* EmailAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EmailAction.m; path = iphone/ZXingWidget/Classes/actions/EmailAction.m; sourceTree = "<group>"; };
+		293B7056D670D6B36B676F09B3262891 /* OneDReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = OneDReader.cpp; path = cpp/core/src/zxing/oned/OneDReader.cpp; sourceTree = "<group>"; };
+		29C713C373B9E2827250662DDE3B4D0A /* Pods-QRCodeTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QRCodeTest-frameworks.sh"; sourceTree = "<group>"; };
+		2A3F2323F03CA5A39E3CEAF842EF771B /* Str.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Str.cpp; path = cpp/core/src/zxing/common/Str.cpp; sourceTree = "<group>"; };
+		2D41308906EFFB1D4F7A13C1C33E9871 /* UPCEReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = UPCEReader.cpp; path = cpp/core/src/zxing/oned/UPCEReader.cpp; sourceTree = "<group>"; };
+		2DB29C31C6528A65A439E581A807CC48 /* FinderPatternFinder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = FinderPatternFinder.cpp; path = cpp/core/src/zxing/qrcode/detector/FinderPatternFinder.cpp; sourceTree = "<group>"; };
+		2E559219F66BF5BC7E69B2B909529D24 /* ZXImage.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXImage.mm; path = objc/src/ZXing/ZXImage.mm; sourceTree = "<group>"; };
+		2ECBB5F8D0F7AB3FB73D24FC3355175C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
+		300A74C3EC9F521507F0F13D6DC068C7 /* BitMatrixParser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BitMatrixParser.cpp; path = cpp/core/src/zxing/pdf417/decoder/BitMatrixParser.cpp; sourceTree = "<group>"; };
+		3192F4AD47E6DEDBF07D72456B66764E /* BizcardResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BizcardResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/BizcardResultParser.m; sourceTree = "<group>"; };
+		31B06C7954643029705AC1A087128711 /* MultipleBarcodeReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MultipleBarcodeReader.cpp; path = cpp/core/src/zxing/multi/MultipleBarcodeReader.cpp; sourceTree = "<group>"; };
+		38C2C075A3E5F8348BE2BC50E5742785 /* Reader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Reader.cpp; path = cpp/core/src/zxing/Reader.cpp; sourceTree = "<group>"; };
+		3A435C4DA95D379D6BB2B357F924EF1A /* libZXing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZXing.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5431E33586B76225602466830AFA35 /* Version.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Version.cpp; path = cpp/core/src/zxing/qrcode/Version.cpp; sourceTree = "<group>"; };
+		3C7EC8F20595A168AB1905358B4C58B6 /* Version.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Version.cpp; path = cpp/core/src/zxing/datamatrix/Version.cpp; sourceTree = "<group>"; };
+		3CA69622099203C7AF80D4115251AC6D /* ZXReaderException.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXReaderException.mm; path = objc/src/ZXing/ZXReaderException.mm; sourceTree = "<group>"; };
+		3CD4B363BCB1833CA4A433DC930AD554 /* TelParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TelParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/TelParsedResult.m; sourceTree = "<group>"; };
+		3EAEDEA0C077704ADECC76A545FAC4C7 /* ModulusPoly.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ModulusPoly.cpp; path = cpp/core/src/zxing/pdf417/decoder/ec/ModulusPoly.cpp; sourceTree = "<group>"; };
+		3F59FFB98DD7FBCA4F76CAA25A80E603 /* URLTOResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URLTOResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/URLTOResultParser.m; sourceTree = "<group>"; };
+		40FB4B55E1DCAE2CC8CF67045061D8FD /* SMSParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SMSParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/SMSParsedResult.m; sourceTree = "<group>"; };
+		41BEE211CF06FEE99D130375702FF62A /* Decoder.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = Decoder.mm; path = iphone/ZXingWidget/Classes/Decoder.mm; sourceTree = "<group>"; };
+		436296CF28753887504A796AC6824BD8 /* GenericMultipleBarcodeReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GenericMultipleBarcodeReader.cpp; path = cpp/core/src/zxing/multi/GenericMultipleBarcodeReader.cpp; sourceTree = "<group>"; };
+		4A08B7E9CCC61C0E574EF628647A5AD0 /* GridSampler.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GridSampler.cpp; path = cpp/core/src/zxing/common/GridSampler.cpp; sourceTree = "<group>"; };
+		4C8E219DE42EEBD8FC586EE85C7D571D /* ReedSolomonException.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ReedSolomonException.cpp; path = cpp/core/src/zxing/common/reedsolomon/ReedSolomonException.cpp; sourceTree = "<group>"; };
+		4CE5E11E7C14679FDFE73CFA680A9A6D /* FinderPatternInfo.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = FinderPatternInfo.cpp; path = cpp/core/src/zxing/qrcode/detector/FinderPatternInfo.cpp; sourceTree = "<group>"; };
+		4D83E93DE369138904FB5C7796471681 /* Pods-QRCodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QRCodeTest.release.xcconfig"; sourceTree = "<group>"; };
+		4E03B95690AA6A0EC915DDF78E5E2763 /* Decoder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Decoder.cpp; path = cpp/core/src/zxing/pdf417/decoder/Decoder.cpp; sourceTree = "<group>"; };
+		4FF54B3EE4D7118624AC8E3E238D004D /* EmailDoCoMoResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EmailDoCoMoResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/EmailDoCoMoResultParser.m; sourceTree = "<group>"; };
+		5231D13A90D3A32395804C2A9D32C0DD /* DecodedBitStreamParser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DecodedBitStreamParser.cpp; path = cpp/core/src/zxing/qrcode/decoder/DecodedBitStreamParser.cpp; sourceTree = "<group>"; };
+		542A4C68DF6FCD3B19B6E8F5C0C66F14 /* BigUnsignedInABase.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BigUnsignedInABase.cc; path = cpp/core/src/bigint/BigUnsignedInABase.cc; sourceTree = "<group>"; };
+		547B76A554183956C75C4E40715D35A5 /* DataMatrixReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = DataMatrixReader.mm; path = iphone/ZXingWidget/Classes/DataMatrixReader.mm; sourceTree = "<group>"; };
+		5486F3BB98634729D00983345AC9BD12 /* AddContactAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AddContactAction.m; path = iphone/ZXingWidget/Classes/actions/AddContactAction.m; sourceTree = "<group>"; };
+		5579B8FCE4CFD8F41C6FEAE7E061FC6B /* Exception.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Exception.cpp; path = cpp/core/src/zxing/Exception.cpp; sourceTree = "<group>"; };
+		55B7580013810368B4162486816865E4 /* ZXReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXReader.mm; path = objc/src/ZXing/ZXReader.mm; sourceTree = "<group>"; };
+		56AF4468FDCBA2A556206659B1F3BE1D /* URIParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URIParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/URIParsedResult.m; sourceTree = "<group>"; };
+		5713F959CBF077E3A3788A6499F1A9AA /* MultiFormatOneDReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MultiFormatOneDReader.cpp; path = cpp/core/src/zxing/oned/MultiFormatOneDReader.cpp; sourceTree = "<group>"; };
+		575FC9162EF147678BC6478B8C0EAAD7 /* EAN8Reader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EAN8Reader.cpp; path = cpp/core/src/zxing/oned/EAN8Reader.cpp; sourceTree = "<group>"; };
+		590B3C61A12890F3DF0E390C18F4B2ED /* OverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OverlayView.m; path = iphone/ZXingWidget/Classes/OverlayView.m; sourceTree = "<group>"; };
+		5BAA5C6AA5885882EAC73EC5B59BE3E5 /* FormatInformation.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = FormatInformation.cpp; path = cpp/core/src/zxing/qrcode/FormatInformation.cpp; sourceTree = "<group>"; };
+		5BBA13114B2A9800060464567A4CD089 /* ShowMapAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ShowMapAction.m; path = iphone/ZXingWidget/Classes/actions/ShowMapAction.m; sourceTree = "<group>"; };
+		5C99C88F9536B9DF2E2CF590CD970E35 /* BitSource.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BitSource.cpp; path = cpp/core/src/zxing/common/BitSource.cpp; sourceTree = "<group>"; };
+		5E6931C393BE85D6CBB6EB1BC39E513E /* ZXDecodeHints.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXDecodeHints.mm; path = objc/src/ZXing/ZXDecodeHints.mm; sourceTree = "<group>"; };
+		5EA51B6CEC923FCD83BF9E07B72D36C3 /* DecodedBitStreamParser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DecodedBitStreamParser.cpp; path = cpp/core/src/zxing/datamatrix/decoder/DecodedBitStreamParser.cpp; sourceTree = "<group>"; };
+		6088355F36996C05E31A232C0FE7ED6F /* ZXQRCodeReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXQRCodeReader.mm; path = objc/src/ZXing/ZXQRCodeReader.mm; sourceTree = "<group>"; };
+		62936C0AE03B95C62469FBE7977602DC /* ArrayAndStringCategories.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ArrayAndStringCategories.m; path = iphone/ZXingWidget/Classes/ArrayAndStringCategories.m; sourceTree = "<group>"; };
+		6504DBCE5D43975B22A787FC0C79ACB0 /* AztecReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = AztecReader.mm; path = iphone/ZXingWidget/Classes/AztecReader.mm; sourceTree = "<group>"; };
+		652D763374A682E160E3EC2C3E8FAD9A /* ZXing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZXing-dummy.m"; sourceTree = "<group>"; };
+		65461C4BF86A3A40B0CC29252CE992BE /* PDF417Reader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = PDF417Reader.cpp; path = cpp/core/src/zxing/pdf417/PDF417Reader.cpp; sourceTree = "<group>"; };
+		65BB921236B9738A582516F7AB6F53A5 /* GreyscaleLuminanceSource.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GreyscaleLuminanceSource.cpp; path = cpp/core/src/zxing/common/GreyscaleLuminanceSource.cpp; sourceTree = "<group>"; };
+		664B9A53188374BB2CEAE12CECCBF8F8 /* ZXMultiFormatReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXMultiFormatReader.mm; path = objc/src/ZXing/ZXMultiFormatReader.mm; sourceTree = "<group>"; };
+		6796AB7A6E10E36DFB9106271766BD67 /* Binarizer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Binarizer.cpp; path = cpp/core/src/zxing/Binarizer.cpp; sourceTree = "<group>"; };
+		6B94EE17A637B98F42224F08D769F662 /* Pods-QRCodeTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QRCodeTest-dummy.m"; sourceTree = "<group>"; };
+		6D05719FB5B5F4E8CE63A3CA0F47AF8C /* BinaryBitmap.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryBitmap.cpp; path = cpp/core/src/zxing/BinaryBitmap.cpp; sourceTree = "<group>"; };
+		6E2138F1067E39742A8268B8341D923C /* Mode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Mode.cpp; path = cpp/core/src/zxing/qrcode/decoder/Mode.cpp; sourceTree = "<group>"; };
+		702932A108DCA0DD1F23088C9CD979B9 /* MultiFormatReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MultiFormatReader.mm; path = iphone/ZXingWidget/Classes/MultiFormatReader.mm; sourceTree = "<group>"; };
+		71A2626CED4BE8C48D47C485FDFCDC01 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		724B8D756B73C7699B8ECAA90E4DEB86 /* Detector.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Detector.cpp; path = cpp/core/src/zxing/qrcode/detector/Detector.cpp; sourceTree = "<group>"; };
+		746F1292826A9C74C9737B80402C4909 /* DecodedBitStreamParser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DecodedBitStreamParser.cpp; path = cpp/core/src/zxing/pdf417/decoder/DecodedBitStreamParser.cpp; sourceTree = "<group>"; };
+		775FD07AC6F209A1925659598A1938B3 /* GreyscaleRotatedLuminanceSource.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GreyscaleRotatedLuminanceSource.cpp; path = cpp/core/src/zxing/common/GreyscaleRotatedLuminanceSource.cpp; sourceTree = "<group>"; };
+		78C9C1B81ABD8676CC50C6FC3700C484 /* SMSResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SMSResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/SMSResultParser.m; sourceTree = "<group>"; };
+		7CAD96609A4B64015F8F36C43D63B289 /* ZXLuminanceSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXLuminanceSource.mm; path = objc/src/ZXing/ZXLuminanceSource.mm; sourceTree = "<group>"; };
+		7D08B7E50D0AC294058FEA5A1FC5A040 /* DetectorResult.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DetectorResult.cpp; path = cpp/core/src/zxing/common/DetectorResult.cpp; sourceTree = "<group>"; };
+		7D591B2B1AA056576FE2D09A2C818E55 /* BitMatrix.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BitMatrix.cpp; path = cpp/core/src/zxing/common/BitMatrix.cpp; sourceTree = "<group>"; };
+		7EA3A956A766B30376A0D2FC6854E49D /* ResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/ResultParser.m; sourceTree = "<group>"; };
+		807883AE362E9E72596494162E1C75E6 /* ZXCaptureView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXCaptureView.mm; path = objc/src/ZXing/ZXCaptureView.mm; sourceTree = "<group>"; };
+		80F3E2BD4732FD01DEA282F751232A92 /* StringUtils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = StringUtils.cpp; path = cpp/core/src/zxing/common/StringUtils.cpp; sourceTree = "<group>"; };
+		82A8DC3677920B4B3FFC4DF571154FD1 /* CornerPoint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = CornerPoint.cpp; path = cpp/core/src/zxing/datamatrix/detector/CornerPoint.cpp; sourceTree = "<group>"; };
+		83D4D77295E65BDA522BD7C376EE837C /* ZXResult.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXResult.mm; path = objc/src/ZXing/ZXResult.mm; sourceTree = "<group>"; };
+		85C16224EF65A70B0E90334379FF1113 /* AlignmentPattern.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AlignmentPattern.cpp; path = cpp/core/src/zxing/qrcode/detector/AlignmentPattern.cpp; sourceTree = "<group>"; };
+		86A492579FFEE83EB243A1DD5D67B292 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		882A902CD17E85CEA3B3BE9A7F01C663 /* DataMask.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DataMask.cpp; path = cpp/core/src/zxing/qrcode/decoder/DataMask.cpp; sourceTree = "<group>"; };
+		883C4963B6186C8EB9FBCCDCCAABC73D /* GlobalHistogramBinarizer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GlobalHistogramBinarizer.cpp; path = cpp/core/src/zxing/common/GlobalHistogramBinarizer.cpp; sourceTree = "<group>"; };
+		89F94F4934F6819A5BB68B953054AECE /* QRCodeReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = QRCodeReader.cpp; path = cpp/core/src/zxing/qrcode/QRCodeReader.cpp; sourceTree = "<group>"; };
+		8A4DA120EE10A0F47B332AE38C215E07 /* TextResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TextResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/TextResultParser.m; sourceTree = "<group>"; };
+		8B00FED6E801930B561D1368B6E2DBF9 /* BigUnsigned.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BigUnsigned.cc; path = cpp/core/src/bigint/BigUnsigned.cc; sourceTree = "<group>"; };
+		8CBB4088898494435290564A848F8EB4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		8F5FC39B25D52A9334EDD48FA9C481B2 /* Decoder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Decoder.cpp; path = cpp/core/src/zxing/aztec/decoder/Decoder.cpp; sourceTree = "<group>"; };
+		8F685495FF4E8FEC13DC68F2DDCEF721 /* ChecksumException.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ChecksumException.cpp; path = cpp/core/src/zxing/ChecksumException.cpp; sourceTree = "<group>"; };
+		8FF9D284B39B51B641251F76B0A13DFB /* Detector.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Detector.cpp; path = cpp/core/src/zxing/datamatrix/detector/Detector.cpp; sourceTree = "<group>"; };
+		9026B322BC6F8BEF3CA7D6B7D15E3010 /* Detector.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Detector.cpp; path = cpp/core/src/zxing/pdf417/detector/Detector.cpp; sourceTree = "<group>"; };
+		904A88CDB47267C820AC5588F54091FE /* CallAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CallAction.m; path = iphone/ZXingWidget/Classes/actions/CallAction.m; sourceTree = "<group>"; };
+		90F2C0F111487D28B8A05B99E5BC8D55 /* ZXing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZXing.xcconfig; sourceTree = "<group>"; };
+		9153BAE855F58F6EB31B073513A90CB6 /* AddressBookAUResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AddressBookAUResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/AddressBookAUResultParser.m; sourceTree = "<group>"; };
+		91D7AB47C7D4B2ACDB0457B32024A25E /* QRCodeMultiReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = QRCodeMultiReader.cpp; path = cpp/core/src/zxing/multi/qrcode/QRCodeMultiReader.cpp; sourceTree = "<group>"; };
+		9512D194E049A6C3A04FD9B4160685A1 /* ZXHybridBinarizer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXHybridBinarizer.mm; path = objc/src/ZXing/ZXHybridBinarizer.mm; sourceTree = "<group>"; };
+		95C31880770FCD8A1CE0625C725D5684 /* ProductResultParser.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ProductResultParser.mm; path = iphone/ZXingWidget/Classes/resultParsers/ProductResultParser.mm; sourceTree = "<group>"; };
+		9AA63DCFF7279C20F93F8706BA073C88 /* ResultIO.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ResultIO.cpp; path = cpp/core/src/zxing/ResultIO.cpp; sourceTree = "<group>"; };
+		9B587DE7F76DD8299D7D00F3A4ECE62E /* InvertedLuminanceSource.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = InvertedLuminanceSource.cpp; path = cpp/core/src/zxing/InvertedLuminanceSource.cpp; sourceTree = "<group>"; };
+		9EEECA51E16E370B7B1D1383186CAF7F /* AztecDetectorResult.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AztecDetectorResult.cpp; path = cpp/core/src/zxing/aztec/AztecDetectorResult.cpp; sourceTree = "<group>"; };
+		A1D8E9B5C4DA6AAFD3E0724939399641 /* Pods-QRCodeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QRCodeTest.debug.xcconfig"; sourceTree = "<group>"; };
+		A7F1B6792629764452D65EA78FD02CD7 /* ISBNResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ISBNResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/ISBNResultParser.m; sourceTree = "<group>"; };
+		A881FA2F0E87C5680FED7B9B1C0728BC /* URLResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URLResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/URLResultParser.m; sourceTree = "<group>"; };
+		A9642537C14E996E5FEBF52B0C493826 /* UniversalResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UniversalResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/UniversalResultParser.m; sourceTree = "<group>"; };
+		AA45BC8014782571C3F980B00769A7CE /* GenericGFPoly.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GenericGFPoly.cpp; path = cpp/core/src/zxing/common/reedsolomon/GenericGFPoly.cpp; sourceTree = "<group>"; };
+		AB5C90A9A217B556E51F82FEE99AFCA2 /* UPCEANReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = UPCEANReader.cpp; path = cpp/core/src/zxing/oned/UPCEANReader.cpp; sourceTree = "<group>"; };
+		AD092FC7ED9EF1B303A4978515B6CE24 /* DataMatrixReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DataMatrixReader.cpp; path = cpp/core/src/zxing/datamatrix/DataMatrixReader.cpp; sourceTree = "<group>"; };
+		AD1596EEDCFFEFD2BB6739053686263E /* Pods-QRCodeTest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QRCodeTest-resources.sh"; sourceTree = "<group>"; };
+		AF990E9EE1A9D879D7BC847C64C2F88C /* LinesSampler.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = LinesSampler.cpp; path = cpp/core/src/zxing/pdf417/detector/LinesSampler.cpp; sourceTree = "<group>"; };
+		B14EBCFCC3DCEC01103430F7811394D7 /* ZXCGImageLuminanceSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXCGImageLuminanceSource.mm; path = objc/src/ZXing/ZXCGImageLuminanceSource.mm; sourceTree = "<group>"; };
+		B188668E4EAECF716D72EF64259B7D31 /* Decoder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Decoder.cpp; path = cpp/core/src/zxing/qrcode/decoder/Decoder.cpp; sourceTree = "<group>"; };
+		B289ED37F6B054C53712F3FD36FC1829 /* UPCAReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = UPCAReader.cpp; path = cpp/core/src/zxing/oned/UPCAReader.cpp; sourceTree = "<group>"; };
+		B5BA4934C1C2E79D0D551B7F77554C9B /* BigInteger.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BigInteger.cc; path = cpp/core/src/bigint/BigInteger.cc; sourceTree = "<group>"; };
+		B914014260A225E5B6BD6C0C02323D09 /* Code93Reader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Code93Reader.cpp; path = cpp/core/src/zxing/oned/Code93Reader.cpp; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAFF0DA38BAF0B285949407D28B7E652 /* ProductParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ProductParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/ProductParsedResult.m; sourceTree = "<group>"; };
+		BD39A5A84320BD640DE977D19F4BF9DF /* HybridBinarizer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = HybridBinarizer.cpp; path = cpp/core/src/zxing/common/HybridBinarizer.cpp; sourceTree = "<group>"; };
+		BFBC0465DC357967FD2975A337FD2D27 /* ZXBinaryBitmap.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXBinaryBitmap.mm; path = objc/src/ZXing/ZXBinaryBitmap.mm; sourceTree = "<group>"; };
+		C3FE1D41BBAC96DA9C7E592FE31086A6 /* MultiFinderPatternFinder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MultiFinderPatternFinder.cpp; path = cpp/core/src/zxing/multi/qrcode/detector/MultiFinderPatternFinder.cpp; sourceTree = "<group>"; };
+		C4443F0EBCB98954A1529D4DA0981943 /* ZXBinarizer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXBinarizer.mm; path = objc/src/ZXing/ZXBinarizer.mm; sourceTree = "<group>"; };
+		C53323BB044532E1470C1421AEC5EB65 /* BookmarkDoCoMoResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BookmarkDoCoMoResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/BookmarkDoCoMoResultParser.m; sourceTree = "<group>"; };
+		C5757369889F1C5D10C56945B065CDC5 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		C58E36DE6CD45D206277C2FCB09B12BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C5A7B796B26F5630B714795806C8E981 /* ZXing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZXing-prefix.pch"; sourceTree = "<group>"; };
+		C814B6774B33E88E7F4A56E7A9C2A976 /* Detector.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Detector.cpp; path = cpp/core/src/zxing/aztec/detector/Detector.cpp; sourceTree = "<group>"; };
+		C85A3007057E1F4FD9A5875EFC203C79 /* TelResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TelResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/TelResultParser.m; sourceTree = "<group>"; };
+		C87EB90C7698D53BF4CCEE70B9DEB167 /* WhiteRectangleDetector.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WhiteRectangleDetector.cpp; path = cpp/core/src/zxing/common/detector/WhiteRectangleDetector.cpp; sourceTree = "<group>"; };
+		C99E459CEFC52509D182FCBC494C32CD /* VCardResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VCardResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/VCardResultParser.m; sourceTree = "<group>"; };
+		CA1B420383E962CADD230B8479AD8718 /* MultiFormatReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MultiFormatReader.cpp; path = cpp/core/src/zxing/MultiFormatReader.cpp; sourceTree = "<group>"; };
+		CA61BABFEA583F953AAB800443676BF7 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AddressBookUI.framework; sourceTree = DEVELOPER_DIR; };
+		CBAC1782A00C2D95C53E2ED05A18B6A4 /* MultiDetector.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MultiDetector.cpp; path = cpp/core/src/zxing/multi/qrcode/detector/MultiDetector.cpp; sourceTree = "<group>"; };
+		CBE0B9C422CA8C2E46F9C8A9E6655FCA /* ModulusGF.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ModulusGF.cpp; path = cpp/core/src/zxing/pdf417/decoder/ec/ModulusGF.cpp; sourceTree = "<group>"; };
+		CBF616B0940A3248607B7AFC33002585 /* BarcodeFormat.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BarcodeFormat.cpp; path = cpp/core/src/zxing/BarcodeFormat.cpp; sourceTree = "<group>"; };
+		CCCA488379B550FB681CD33F082D1C10 /* BitArrayIO.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BitArrayIO.cpp; path = cpp/core/src/zxing/common/BitArrayIO.cpp; sourceTree = "<group>"; };
+		D04506ED94241E14A3476133D70A84BB /* ParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/ParsedResult.m; sourceTree = "<group>"; };
+		D09BFCC519C447D4AB7FEAB42FE0AAF1 /* ZXCapture.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ZXCapture.mm; path = objc/src/ZXing/ZXCapture.mm; sourceTree = "<group>"; };
+		D0DA341FE9F71DF1B775557DFB24A267 /* PerspectiveTransform.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = PerspectiveTransform.cpp; path = cpp/core/src/zxing/common/PerspectiveTransform.cpp; sourceTree = "<group>"; };
+		D19446F48E53CEE3CC5B01F7CFE39953 /* QRCodeReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = QRCodeReader.mm; path = iphone/ZXingWidget/Classes/QRCodeReader.mm; sourceTree = "<group>"; };
+		D3766F9D0090097618D4C167060A7CD7 /* MultiFormatUPCEANReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MultiFormatUPCEANReader.cpp; path = cpp/core/src/zxing/oned/MultiFormatUPCEANReader.cpp; sourceTree = "<group>"; };
+		D4A7F54DAE5E91B4139B443DA957EAA9 /* OpenUrlAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OpenUrlAction.m; path = iphone/ZXingWidget/Classes/actions/OpenUrlAction.m; sourceTree = "<group>"; };
+		D553E9A2235A7A1E0799281636FEF825 /* EmailParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EmailParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/EmailParsedResult.m; sourceTree = "<group>"; };
+		D6924DA2250C1E1B8297A059560E5F09 /* BitMatrixParser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BitMatrixParser.cpp; path = cpp/core/src/zxing/qrcode/decoder/BitMatrixParser.cpp; sourceTree = "<group>"; };
+		D7F687808D575DDC8AF281883F6A0B46 /* PlainEmailResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PlainEmailResultParser.m; path = iphone/ZXingWidget/Classes/resultParsers/PlainEmailResultParser.m; sourceTree = "<group>"; };
+		D80DE53A1DB102F7A8CFAAFC49B5F2E6 /* BusinessCardParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BusinessCardParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/BusinessCardParsedResult.m; sourceTree = "<group>"; };
+		D8932802FA82EF801BC6B4141740E0E9 /* Pods-QRCodeTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QRCodeTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		DDD9C7B7ED03E26EC6D2218E34AF351C /* MultiFormatUPCEANReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MultiFormatUPCEANReader.mm; path = iphone/ZXingWidget/Classes/MultiFormatUPCEANReader.mm; sourceTree = "<group>"; };
+		DDE914779F1CBFDF5323A88221710E6F /* MeCardParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MeCardParser.m; path = iphone/ZXingWidget/Classes/resultParsers/MeCardParser.m; sourceTree = "<group>"; };
+		DF2A21DC72D0530CFA93C1BC311984B2 /* DetectorException.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DetectorException.cpp; path = cpp/core/src/zxing/datamatrix/detector/DetectorException.cpp; sourceTree = "<group>"; };
+		E0C8F3016B4B8BA0DB28874B1EC7A808 /* FinderPattern.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = FinderPattern.cpp; path = cpp/core/src/zxing/qrcode/detector/FinderPattern.cpp; sourceTree = "<group>"; };
+		E27B926F2ABD609DFD62D8ADF4BA4E2C /* IllegalArgumentException.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = IllegalArgumentException.cpp; path = cpp/core/src/zxing/common/IllegalArgumentException.cpp; sourceTree = "<group>"; };
+		E6B11D1013D17FBF27D7E7C06B640154 /* ResultPointCallback.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ResultPointCallback.cpp; path = cpp/core/src/zxing/ResultPointCallback.cpp; sourceTree = "<group>"; };
+		E82552C317C34A8083886F7821C5FAD3 /* MonochromeRectangleDetector.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MonochromeRectangleDetector.cpp; path = cpp/core/src/zxing/common/detector/MonochromeRectangleDetector.cpp; sourceTree = "<group>"; };
+		E9B854BB014119F2549C7E28F8D81DCE /* ErrorCorrectionLevel.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ErrorCorrectionLevel.cpp; path = cpp/core/src/zxing/qrcode/ErrorCorrectionLevel.cpp; sourceTree = "<group>"; };
+		EA317F1DFEB0B99DCDF30633C79829BA /* ErrorCorrection.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ErrorCorrection.cpp; path = cpp/core/src/zxing/pdf417/decoder/ec/ErrorCorrection.cpp; sourceTree = "<group>"; };
+		EBB66FDF333E2718C93247F538ECBD22 /* BitArray.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BitArray.cpp; path = cpp/core/src/zxing/common/BitArray.cpp; sourceTree = "<group>"; };
+		EC70D88A988F4A6B685E2DC6447E18B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		ED4C0FF638A8F214F8A104ACADAAC482 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		ED6A8583F49447A0358D1CBFD2569CAE /* GeoParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GeoParsedResult.m; path = iphone/ZXingWidget/Classes/parsedResults/GeoParsedResult.m; sourceTree = "<group>"; };
+		EDB7AD0D467F4DE8675C2C9FEFC8E9B2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		EE139C938F16B61283606097848D795A /* ReedSolomonDecoder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ReedSolomonDecoder.cpp; path = cpp/core/src/zxing/common/reedsolomon/ReedSolomonDecoder.cpp; sourceTree = "<group>"; };
+		F075ABAE70F941F09650EE55538D94F0 /* GenericGF.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GenericGF.cpp; path = cpp/core/src/zxing/common/reedsolomon/GenericGF.cpp; sourceTree = "<group>"; };
+		F2287A5B35F6F567C0C678B7FC7651E5 /* Result.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Result.cpp; path = cpp/core/src/zxing/Result.cpp; sourceTree = "<group>"; };
+		F3329877AFD5F6977CA583456FCC1369 /* CodaBarReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = CodaBarReader.cpp; path = cpp/core/src/zxing/oned/CodaBarReader.cpp; sourceTree = "<group>"; };
+		F461C8A687B046D63D1FABAA8DF7BD19 /* Code128Reader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Code128Reader.cpp; path = cpp/core/src/zxing/oned/Code128Reader.cpp; sourceTree = "<group>"; };
+		F5FC13F5EF9AF2AA853CCC8B22AADC93 /* FormatReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = FormatReader.mm; path = iphone/ZXingWidget/Classes/FormatReader.mm; sourceTree = "<group>"; };
+		F642AFDFC007B5EFC8A26D653D32DFF1 /* BitMatrixParser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BitMatrixParser.cpp; path = cpp/core/src/zxing/datamatrix/decoder/BitMatrixParser.cpp; sourceTree = "<group>"; };
+		F768F3797E9BD29CA8B7ED8C1713EE01 /* TwoDDecoderResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TwoDDecoderResult.m; path = iphone/ZXingWidget/Classes/TwoDDecoderResult.m; sourceTree = "<group>"; };
+		FA4383592913B63A9E78327AE208F5DB /* CGImageLuminanceSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CGImageLuminanceSource.mm; path = objc/src/ZXing/CGImageLuminanceSource.mm; sourceTree = "<group>"; };
+		FB80052309601ABFCF94CBF75C094937 /* DataBlock.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DataBlock.cpp; path = cpp/core/src/zxing/qrcode/decoder/DataBlock.cpp; sourceTree = "<group>"; };
+		FCB8459E5EBF5E4BC2A198D907BDA80D /* OneDResultPoint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = OneDResultPoint.cpp; path = cpp/core/src/zxing/oned/OneDResultPoint.cpp; sourceTree = "<group>"; };
+		FD65341DDC13FF8E32BBD0060EF4B7E7 /* BigIntegerUtils.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BigIntegerUtils.cc; path = cpp/core/src/bigint/BigIntegerUtils.cc; sourceTree = "<group>"; };
+		FEC6A5DE59010839FF377029C0A3786F /* ZXingWidgetController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXingWidgetController.m; path = iphone/ZXingWidget/Classes/ZXingWidgetController.m; sourceTree = "<group>"; };
+		FF9A25D7FA31CEA60EF21C84583A5E06 /* AztecReader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AztecReader.cpp; path = cpp/core/src/zxing/aztec/AztecReader.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B7B3701453D1A0A47BB6A00F5586079 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC539580B989FA3FA04BC8BB99C1A739 /* AddressBook.framework in Frameworks */,
+				CFE882E55C16AC05E697C68983BF04BA /* AddressBookUI.framework in Frameworks */,
+				779D6468E7BB9B07B53662E67B2C68A2 /* AudioToolbox.framework in Frameworks */,
+				D29BD06430A6D8AD388D76C8BD8F8F6E /* AVFoundation.framework in Frameworks */,
+				612C68DED3A5B61008CC624124978DA9 /* CoreGraphics.framework in Frameworks */,
+				A1D1D8725F7E6A00422C722BBFFBA435 /* CoreMedia.framework in Frameworks */,
+				0E567F6833FC09CD248C6D9A85561F6E /* CoreVideo.framework in Frameworks */,
+				9AFBFA2814EA14B96F006FBEB52143B8 /* Foundation.framework in Frameworks */,
+				884F9DB6C6BCB331AFED67933206A165 /* ImageIO.framework in Frameworks */,
+				27C00BA79765828948EA9485C1D70E73 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		709FEA1C70BB0EBA132FE3043356A082 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD529AAF3B534662B843B37C21A6929 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0680AECA3F914AB100D26E67F5A1C14A /* Pods-QRCodeTest */ = {
+			isa = PBXGroup;
+			children = (
+				138588B0449CBBA8FB6A640FED6D166F /* Pods-QRCodeTest-acknowledgements.markdown */,
+				D8932802FA82EF801BC6B4141740E0E9 /* Pods-QRCodeTest-acknowledgements.plist */,
+				6B94EE17A637B98F42224F08D769F662 /* Pods-QRCodeTest-dummy.m */,
+				29C713C373B9E2827250662DDE3B4D0A /* Pods-QRCodeTest-frameworks.sh */,
+				AD1596EEDCFFEFD2BB6739053686263E /* Pods-QRCodeTest-resources.sh */,
+				A1D8E9B5C4DA6AAFD3E0724939399641 /* Pods-QRCodeTest.debug.xcconfig */,
+				4D83E93DE369138904FB5C7796471681 /* Pods-QRCodeTest.release.xcconfig */,
+			);
+			name = "Pods-QRCodeTest";
+			path = "Target Support Files/Pods-QRCodeTest";
+			sourceTree = "<group>";
+		};
+		0CD4499978F3ED0D30D66B13BB050ABB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				90F2C0F111487D28B8A05B99E5BC8D55 /* ZXing.xcconfig */,
+				652D763374A682E160E3EC2C3E8FAD9A /* ZXing-dummy.m */,
+				C5A7B796B26F5630B714795806C8E981 /* ZXing-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZXing";
+			sourceTree = "<group>";
+		};
+		227497749CA60B88E0046EBD4042FAFB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0680AECA3F914AB100D26E67F5A1C14A /* Pods-QRCodeTest */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2C88EC5BB3A4FCCB33A3649E6BC1AE15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046E3EED724B408399D1C98EBABF140B /* libPods-QRCodeTest.a */,
+				3A435C4DA95D379D6BB2B357F924EF1A /* libZXing.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44BE5BB2B5E0C39776FD8348103B78F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8E3F251BF36E0A1473F86812CA323EA /* ZXing */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7120141C8DD798023A3D8CD825594B9B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2ECBB5F8D0F7AB3FB73D24FC3355175C /* AddressBook.framework */,
+				CA61BABFEA583F953AAB800443676BF7 /* AddressBookUI.framework */,
+				8CBB4088898494435290564A848F8EB4 /* AudioToolbox.framework */,
+				EC70D88A988F4A6B685E2DC6447E18B7 /* AVFoundation.framework */,
+				86A492579FFEE83EB243A1DD5D67B292 /* CoreGraphics.framework */,
+				71A2626CED4BE8C48D47C485FDFCDC01 /* CoreMedia.framework */,
+				EDB7AD0D467F4DE8675C2C9FEFC8E9B2 /* CoreVideo.framework */,
+				C58E36DE6CD45D206277C2FCB09B12BA /* Foundation.framework */,
+				C5757369889F1C5D10C56945B065CDC5 /* ImageIO.framework */,
+				ED4C0FF638A8F214F8A104ACADAAC482 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */,
+				44BE5BB2B5E0C39776FD8348103B78F9 /* Pods */,
+				2C88EC5BB3A4FCCB33A3649E6BC1AE15 /* Products */,
+				227497749CA60B88E0046EBD4042FAFB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7120141C8DD798023A3D8CD825594B9B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8E3F251BF36E0A1473F86812CA323EA /* ZXing */ = {
+			isa = PBXGroup;
+			children = (
+				5486F3BB98634729D00983345AC9BD12 /* AddContactAction.m */,
+				9153BAE855F58F6EB31B073513A90CB6 /* AddressBookAUResultParser.m */,
+				85C16224EF65A70B0E90334379FF1113 /* AlignmentPattern.cpp */,
+				1F26C5A9DD6E7E08BCA28790051D90B2 /* AlignmentPatternFinder.cpp */,
+				62936C0AE03B95C62469FBE7977602DC /* ArrayAndStringCategories.m */,
+				9EEECA51E16E370B7B1D1383186CAF7F /* AztecDetectorResult.cpp */,
+				FF9A25D7FA31CEA60EF21C84583A5E06 /* AztecReader.cpp */,
+				6504DBCE5D43975B22A787FC0C79ACB0 /* AztecReader.mm */,
+				CBF616B0940A3248607B7AFC33002585 /* BarcodeFormat.cpp */,
+				B5BA4934C1C2E79D0D551B7F77554C9B /* BigInteger.cc */,
+				01442902F8B92401F54C86BE60066F37 /* BigIntegerAlgorithms.cc */,
+				FD65341DDC13FF8E32BBD0060EF4B7E7 /* BigIntegerUtils.cc */,
+				8B00FED6E801930B561D1368B6E2DBF9 /* BigUnsigned.cc */,
+				542A4C68DF6FCD3B19B6E8F5C0C66F14 /* BigUnsignedInABase.cc */,
+				6796AB7A6E10E36DFB9106271766BD67 /* Binarizer.cpp */,
+				6D05719FB5B5F4E8CE63A3CA0F47AF8C /* BinaryBitmap.cpp */,
+				EBB66FDF333E2718C93247F538ECBD22 /* BitArray.cpp */,
+				CCCA488379B550FB681CD33F082D1C10 /* BitArrayIO.cpp */,
+				7D591B2B1AA056576FE2D09A2C818E55 /* BitMatrix.cpp */,
+				300A74C3EC9F521507F0F13D6DC068C7 /* BitMatrixParser.cpp */,
+				D6924DA2250C1E1B8297A059560E5F09 /* BitMatrixParser.cpp */,
+				F642AFDFC007B5EFC8A26D653D32DFF1 /* BitMatrixParser.cpp */,
+				5C99C88F9536B9DF2E2CF590CD970E35 /* BitSource.cpp */,
+				3192F4AD47E6DEDBF07D72456B66764E /* BizcardResultParser.m */,
+				C53323BB044532E1470C1421AEC5EB65 /* BookmarkDoCoMoResultParser.m */,
+				D80DE53A1DB102F7A8CFAAFC49B5F2E6 /* BusinessCardParsedResult.m */,
+				11475A000106D159A71589A9D378DFE5 /* ByQuadrantReader.cpp */,
+				904A88CDB47267C820AC5588F54091FE /* CallAction.m */,
+				0EF6FD88FF2730A9D7E032F7A7BEA074 /* CBarcodeFormat.mm */,
+				FA4383592913B63A9E78327AE208F5DB /* CGImageLuminanceSource.mm */,
+				017BA19CDB35D4144CE2BD66BC2D1768 /* CharacterSetECI.cpp */,
+				8F685495FF4E8FEC13DC68F2DDCEF721 /* ChecksumException.cpp */,
+				F3329877AFD5F6977CA583456FCC1369 /* CodaBarReader.cpp */,
+				F461C8A687B046D63D1FABAA8DF7BD19 /* Code128Reader.cpp */,
+				1FD5F8FFE0CFCFC51ACD4B4DB0091F07 /* Code39Reader.cpp */,
+				B914014260A225E5B6BD6C0C02323D09 /* Code93Reader.cpp */,
+				82A8DC3677920B4B3FFC4DF571154FD1 /* CornerPoint.cpp */,
+				157E1793802582BFC1D2AAFDF60214B5 /* DataBlock.cpp */,
+				FB80052309601ABFCF94CBF75C094937 /* DataBlock.cpp */,
+				882A902CD17E85CEA3B3BE9A7F01C663 /* DataMask.cpp */,
+				AD092FC7ED9EF1B303A4978515B6CE24 /* DataMatrixReader.cpp */,
+				547B76A554183956C75C4E40715D35A5 /* DataMatrixReader.mm */,
+				5EA51B6CEC923FCD83BF9E07B72D36C3 /* DecodedBitStreamParser.cpp */,
+				746F1292826A9C74C9737B80402C4909 /* DecodedBitStreamParser.cpp */,
+				5231D13A90D3A32395804C2A9D32C0DD /* DecodedBitStreamParser.cpp */,
+				1596211F02AB08721CF4CD971653D256 /* DecodeHints.cpp */,
+				8F5FC39B25D52A9334EDD48FA9C481B2 /* Decoder.cpp */,
+				1773A68A531DDECC81F3A509338CC515 /* Decoder.cpp */,
+				B188668E4EAECF716D72EF64259B7D31 /* Decoder.cpp */,
+				4E03B95690AA6A0EC915DDF78E5E2763 /* Decoder.cpp */,
+				41BEE211CF06FEE99D130375702FF62A /* Decoder.mm */,
+				0C29E2A35AE6BD983C4AC79A0EEF2B6D /* DecoderResult.cpp */,
+				8FF9D284B39B51B641251F76B0A13DFB /* Detector.cpp */,
+				C814B6774B33E88E7F4A56E7A9C2A976 /* Detector.cpp */,
+				724B8D756B73C7699B8ECAA90E4DEB86 /* Detector.cpp */,
+				9026B322BC6F8BEF3CA7D6B7D15E3010 /* Detector.cpp */,
+				DF2A21DC72D0530CFA93C1BC311984B2 /* DetectorException.cpp */,
+				7D08B7E50D0AC294058FEA5A1FC5A040 /* DetectorResult.cpp */,
+				14128F028A0E2CA6F7A12A81721D6BB4 /* EAN13Reader.cpp */,
+				575FC9162EF147678BC6478B8C0EAAD7 /* EAN8Reader.cpp */,
+				26DE59FB7D295C798B5E49D9A54F4AE1 /* EmailAction.m */,
+				028E65F449C02700295E16F3EF3A8DD3 /* EmailAddressResultParser.m */,
+				4FF54B3EE4D7118624AC8E3E238D004D /* EmailDoCoMoResultParser.m */,
+				D553E9A2235A7A1E0799281636FEF825 /* EmailParsedResult.m */,
+				EA317F1DFEB0B99DCDF30633C79829BA /* ErrorCorrection.cpp */,
+				E9B854BB014119F2549C7E28F8D81DCE /* ErrorCorrectionLevel.cpp */,
+				5579B8FCE4CFD8F41C6FEAE7E061FC6B /* Exception.cpp */,
+				E0C8F3016B4B8BA0DB28874B1EC7A808 /* FinderPattern.cpp */,
+				2DB29C31C6528A65A439E581A807CC48 /* FinderPatternFinder.cpp */,
+				4CE5E11E7C14679FDFE73CFA680A9A6D /* FinderPatternInfo.cpp */,
+				090A1920CD72DCD61310C9B83927CE3E /* FormatException.cpp */,
+				5BAA5C6AA5885882EAC73EC5B59BE3E5 /* FormatInformation.cpp */,
+				F5FC13F5EF9AF2AA853CCC8B22AADC93 /* FormatReader.mm */,
+				F075ABAE70F941F09650EE55538D94F0 /* GenericGF.cpp */,
+				AA45BC8014782571C3F980B00769A7CE /* GenericGFPoly.cpp */,
+				436296CF28753887504A796AC6824BD8 /* GenericMultipleBarcodeReader.cpp */,
+				ED6A8583F49447A0358D1CBFD2569CAE /* GeoParsedResult.m */,
+				07D21429C09D93434767A098D06AA296 /* GeoResultParser.m */,
+				883C4963B6186C8EB9FBCCDCCAABC73D /* GlobalHistogramBinarizer.cpp */,
+				65BB921236B9738A582516F7AB6F53A5 /* GreyscaleLuminanceSource.cpp */,
+				775FD07AC6F209A1925659598A1938B3 /* GreyscaleRotatedLuminanceSource.cpp */,
+				4A08B7E9CCC61C0E574EF628647A5AD0 /* GridSampler.cpp */,
+				BD39A5A84320BD640DE977D19F4BF9DF /* HybridBinarizer.cpp */,
+				E27B926F2ABD609DFD62D8ADF4BA4E2C /* IllegalArgumentException.cpp */,
+				9B587DE7F76DD8299D7D00F3A4ECE62E /* InvertedLuminanceSource.cpp */,
+				166F73C7804D6E6D5ED8EC4FA128BA2C /* ISBNParsedResult.m */,
+				A7F1B6792629764452D65EA78FD02CD7 /* ISBNResultParser.m */,
+				0EA01323116806B55E83575F0F0C6AC8 /* ITFReader.cpp */,
+				AF990E9EE1A9D879D7BC847C64C2F88C /* LinesSampler.cpp */,
+				2432A4A94C6B4316FC0D8AF5166219E1 /* LuminanceSource.cpp */,
+				DDE914779F1CBFDF5323A88221710E6F /* MeCardParser.m */,
+				6E2138F1067E39742A8268B8341D923C /* Mode.cpp */,
+				CBE0B9C422CA8C2E46F9C8A9E6655FCA /* ModulusGF.cpp */,
+				3EAEDEA0C077704ADECC76A545FAC4C7 /* ModulusPoly.cpp */,
+				E82552C317C34A8083886F7821C5FAD3 /* MonochromeRectangleDetector.cpp */,
+				CBAC1782A00C2D95C53E2ED05A18B6A4 /* MultiDetector.cpp */,
+				C3FE1D41BBAC96DA9C7E592FE31086A6 /* MultiFinderPatternFinder.cpp */,
+				5713F959CBF077E3A3788A6499F1A9AA /* MultiFormatOneDReader.cpp */,
+				1E444C93206A22BAD079C0C7445F8873 /* MultiFormatOneDReader.mm */,
+				CA1B420383E962CADD230B8479AD8718 /* MultiFormatReader.cpp */,
+				702932A108DCA0DD1F23088C9CD979B9 /* MultiFormatReader.mm */,
+				D3766F9D0090097618D4C167060A7CD7 /* MultiFormatUPCEANReader.cpp */,
+				DDD9C7B7ED03E26EC6D2218E34AF351C /* MultiFormatUPCEANReader.mm */,
+				31B06C7954643029705AC1A087128711 /* MultipleBarcodeReader.cpp */,
+				18BE641653825FC65948CAA7FB455D38 /* NSString+HTML.m */,
+				293B7056D670D6B36B676F09B3262891 /* OneDReader.cpp */,
+				FCB8459E5EBF5E4BC2A198D907BDA80D /* OneDResultPoint.cpp */,
+				D4A7F54DAE5E91B4139B443DA957EAA9 /* OpenUrlAction.m */,
+				590B3C61A12890F3DF0E390C18F4B2ED /* OverlayView.m */,
+				D04506ED94241E14A3476133D70A84BB /* ParsedResult.m */,
+				65461C4BF86A3A40B0CC29252CE992BE /* PDF417Reader.cpp */,
+				D0DA341FE9F71DF1B775557DFB24A267 /* PerspectiveTransform.cpp */,
+				D7F687808D575DDC8AF281883F6A0B46 /* PlainEmailResultParser.m */,
+				BAFF0DA38BAF0B285949407D28B7E652 /* ProductParsedResult.m */,
+				95C31880770FCD8A1CE0625C725D5684 /* ProductResultParser.mm */,
+				91D7AB47C7D4B2ACDB0457B32024A25E /* QRCodeMultiReader.cpp */,
+				89F94F4934F6819A5BB68B953054AECE /* QRCodeReader.cpp */,
+				D19446F48E53CEE3CC5B01F7CFE39953 /* QRCodeReader.mm */,
+				38C2C075A3E5F8348BE2BC50E5742785 /* Reader.cpp */,
+				EE139C938F16B61283606097848D795A /* ReedSolomonDecoder.cpp */,
+				4C8E219DE42EEBD8FC586EE85C7D571D /* ReedSolomonException.cpp */,
+				F2287A5B35F6F567C0C678B7FC7651E5 /* Result.cpp */,
+				1EBE683A945E0010DC4139D437B9D264 /* ResultAction.m */,
+				9AA63DCFF7279C20F93F8706BA073C88 /* ResultIO.cpp */,
+				7EA3A956A766B30376A0D2FC6854E49D /* ResultParser.m */,
+				20D6688876A0BB68B42E9BC4D830593C /* ResultPoint.cpp */,
+				E6B11D1013D17FBF27D7E7C06B640154 /* ResultPointCallback.cpp */,
+				5BBA13114B2A9800060464567A4CD089 /* ShowMapAction.m */,
+				25B7933FCDF326CF50654678D7559BF0 /* SMSAction.m */,
+				40FB4B55E1DCAE2CC8CF67045061D8FD /* SMSParsedResult.m */,
+				78C9C1B81ABD8676CC50C6FC3700C484 /* SMSResultParser.m */,
+				0C85B4550C92F85DBE6E87F292BD85DB /* SMSTOResultParser.m */,
+				00C83267F4C2B6713342ADE8E6D64681 /* SMTPResultParser.m */,
+				2A3F2323F03CA5A39E3CEAF842EF771B /* Str.cpp */,
+				80F3E2BD4732FD01DEA282F751232A92 /* StringUtils.cpp */,
+				3CD4B363BCB1833CA4A433DC930AD554 /* TelParsedResult.m */,
+				C85A3007057E1F4FD9A5875EFC203C79 /* TelResultParser.m */,
+				0D90B831A6B68B2BC4326EE2A96D7029 /* TextParsedResult.m */,
+				8A4DA120EE10A0F47B332AE38C215E07 /* TextResultParser.m */,
+				F768F3797E9BD29CA8B7ED8C1713EE01 /* TwoDDecoderResult.m */,
+				A9642537C14E996E5FEBF52B0C493826 /* UniversalResultParser.m */,
+				B289ED37F6B054C53712F3FD36FC1829 /* UPCAReader.cpp */,
+				AB5C90A9A217B556E51F82FEE99AFCA2 /* UPCEANReader.cpp */,
+				2D41308906EFFB1D4F7A13C1C33E9871 /* UPCEReader.cpp */,
+				56AF4468FDCBA2A556206659B1F3BE1D /* URIParsedResult.m */,
+				A881FA2F0E87C5680FED7B9B1C0728BC /* URLResultParser.m */,
+				3F59FFB98DD7FBCA4F76CAA25A80E603 /* URLTOResultParser.m */,
+				C99E459CEFC52509D182FCBC494C32CD /* VCardResultParser.m */,
+				3B5431E33586B76225602466830AFA35 /* Version.cpp */,
+				3C7EC8F20595A168AB1905358B4C58B6 /* Version.cpp */,
+				C87EB90C7698D53BF4CCEE70B9DEB167 /* WhiteRectangleDetector.cpp */,
+				C4443F0EBCB98954A1529D4DA0981943 /* ZXBinarizer.mm */,
+				BFBC0465DC357967FD2975A337FD2D27 /* ZXBinaryBitmap.mm */,
+				D09BFCC519C447D4AB7FEAB42FE0AAF1 /* ZXCapture.mm */,
+				807883AE362E9E72596494162E1C75E6 /* ZXCaptureView.mm */,
+				B14EBCFCC3DCEC01103430F7811394D7 /* ZXCGImageLuminanceSource.mm */,
+				5E6931C393BE85D6CBB6EB1BC39E513E /* ZXDecodeHints.mm */,
+				9512D194E049A6C3A04FD9B4160685A1 /* ZXHybridBinarizer.mm */,
+				001FD306A51F67AC6D86CA543CC8FAFF /* ZXIllegalArgumentException.mm */,
+				2E559219F66BF5BC7E69B2B909529D24 /* ZXImage.mm */,
+				FEC6A5DE59010839FF377029C0A3786F /* ZXingWidgetController.m */,
+				7CAD96609A4B64015F8F36C43D63B289 /* ZXLuminanceSource.mm */,
+				664B9A53188374BB2CEAE12CECCBF8F8 /* ZXMultiFormatReader.mm */,
+				6088355F36996C05E31A232C0FE7ED6F /* ZXQRCodeReader.mm */,
+				55B7580013810368B4162486816865E4 /* ZXReader.mm */,
+				3CA69622099203C7AF80D4115251AC6D /* ZXReaderException.mm */,
+				83D4D77295E65BDA522BD7C376EE837C /* ZXResult.mm */,
+				0CD4499978F3ED0D30D66B13BB050ABB /* Support Files */,
+			);
+			path = ZXing;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2916C5FD01965B3F55B3F3DBD961462D /* Pods-QRCodeTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6D4341B9A8135E4C2E6F2246C2B80EA /* Build configuration list for PBXNativeTarget "Pods-QRCodeTest" */;
+			buildPhases = (
+				34245CD517C19378E178B5689F9FE9D9 /* Sources */,
+				709FEA1C70BB0EBA132FE3043356A082 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C904C9E1AC3CA0BB354B642BD337E7F /* PBXTargetDependency */,
+			);
+			name = "Pods-QRCodeTest";
+			productName = "Pods-QRCodeTest";
+			productReference = 046E3EED724B408399D1C98EBABF140B /* libPods-QRCodeTest.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D77D4512A9467CB21BE1522C6C637153 /* ZXing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2F0D2D9EA03C88DE11E76D150DD61CB /* Build configuration list for PBXNativeTarget "ZXing" */;
+			buildPhases = (
+				0CF3DBE583D153DD91E1743D807CF8D6 /* Sources */,
+				0B7B3701453D1A0A47BB6A00F5586079 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZXing;
+			productName = ZXing;
+			productReference = 3A435C4DA95D379D6BB2B357F924EF1A /* libZXing.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2C88EC5BB3A4FCCB33A3649E6BC1AE15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2916C5FD01965B3F55B3F3DBD961462D /* Pods-QRCodeTest */,
+				D77D4512A9467CB21BE1522C6C637153 /* ZXing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CF3DBE583D153DD91E1743D807CF8D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5BE8F269C8CB23FCBBC1F1655CA7C1 /* AddContactAction.m in Sources */,
+				8DBE5E1A8076FAA39C6E2CB7B530EB65 /* AddressBookAUResultParser.m in Sources */,
+				965241DC99EF00F12AF27515697F82E1 /* AlignmentPattern.cpp in Sources */,
+				B7A63940BCA9D6DEDF7BD33CFD22974A /* AlignmentPatternFinder.cpp in Sources */,
+				D1DC0E78E4C63C06ACFDE15655032B50 /* ArrayAndStringCategories.m in Sources */,
+				312D51DC274D5B01CAD542BA88BAB963 /* AztecDetectorResult.cpp in Sources */,
+				8FA5A67E8E843CF465D60C9D48A77225 /* AztecReader.cpp in Sources */,
+				ACF4FD00965567877F354B3AAD0E40E9 /* AztecReader.mm in Sources */,
+				64E05AD581AD6DAA6D31BC5F6C9620D1 /* BarcodeFormat.cpp in Sources */,
+				5F185FC20E3BF2E2E93520D2EA59FA20 /* BigInteger.cc in Sources */,
+				31935DBF1A2F8D9504576577C2A27184 /* BigIntegerAlgorithms.cc in Sources */,
+				0E634BC4E29D9DE494D9FF45B7D7C005 /* BigIntegerUtils.cc in Sources */,
+				EF08842D9113AFBB55C0915439117025 /* BigUnsigned.cc in Sources */,
+				4CB1124E8AEAE529EE7EA270A14ADD0C /* BigUnsignedInABase.cc in Sources */,
+				578261A336FF456159696D92741B9B59 /* Binarizer.cpp in Sources */,
+				1E74A4E355ABCAA8A15C1FDE0A74E05F /* BinaryBitmap.cpp in Sources */,
+				C5C44DB18E6B65E2409DD4B144A6188D /* BitArray.cpp in Sources */,
+				80E008147683CD561668A71728445963 /* BitArrayIO.cpp in Sources */,
+				59ACA0597BE29264DC3EA0152034A459 /* BitMatrix.cpp in Sources */,
+				A4493F3374788A14831CCD35DDBDAB0F /* BitMatrixParser.cpp in Sources */,
+				BA0058F760E79C8557F7FEF1A1D9C943 /* BitMatrixParser.cpp in Sources */,
+				B93DE1159DC3C15C6528A5E722373778 /* BitMatrixParser.cpp in Sources */,
+				BE473B1BD7A0D92E551EF08C9C7821AF /* BitSource.cpp in Sources */,
+				46BB8F8580C0DC78CC58CE55368578C5 /* BizcardResultParser.m in Sources */,
+				9125B15A0AE1AC9A0608C4DDAA541B67 /* BookmarkDoCoMoResultParser.m in Sources */,
+				145A0CFE6C7D9EE08B57BA2185BD1290 /* BusinessCardParsedResult.m in Sources */,
+				E0F571EA4EFF65B6B73CB6838E40C137 /* ByQuadrantReader.cpp in Sources */,
+				382196C1F55A6F5D40521A3E1AD710E4 /* CallAction.m in Sources */,
+				B5E7EB6C90F87710235C72C8817083E7 /* CBarcodeFormat.mm in Sources */,
+				73F6243469C9A14C12B36E1411162E1E /* CGImageLuminanceSource.mm in Sources */,
+				052E5ABAF32477249F81FB3078329E39 /* CharacterSetECI.cpp in Sources */,
+				AAEF174950EBB42F561668D9BD413F74 /* ChecksumException.cpp in Sources */,
+				9E4D1F357E53B3BBD76DC6DE9362D3FF /* CodaBarReader.cpp in Sources */,
+				9AED1F7BD17DDAABAD03C487385FDE2D /* Code128Reader.cpp in Sources */,
+				B99434CCA5803CD16E0F2AD9B4C32E87 /* Code39Reader.cpp in Sources */,
+				E8D339E0CED17025405F701AE60A67EE /* Code93Reader.cpp in Sources */,
+				2F5DA9BED65710951B5A55989AB8B4DC /* CornerPoint.cpp in Sources */,
+				F8D7012B7EF0BCF75D4210431C909064 /* DataBlock.cpp in Sources */,
+				4BE7B361CE81225C8C175DDD63956EC5 /* DataBlock.cpp in Sources */,
+				323B09BDA5A6D851149FD3BDD9B3AA15 /* DataMask.cpp in Sources */,
+				E7CB4FD03C74466BAFD5B65351AD24E0 /* DataMatrixReader.cpp in Sources */,
+				C85FE199809967F07575A9852717EFD8 /* DataMatrixReader.mm in Sources */,
+				0417BD782B375C300BA167F5BE3C43CA /* DecodedBitStreamParser.cpp in Sources */,
+				30D2E267D55514D4C7271791AEA215AC /* DecodedBitStreamParser.cpp in Sources */,
+				B0E9438BAB954994FC4B9723D225C53C /* DecodedBitStreamParser.cpp in Sources */,
+				B1A30270D1EA2FB93A9DE0A960C651CF /* DecodeHints.cpp in Sources */,
+				CC15DFB6B841A75A0064E54C712EB52F /* Decoder.cpp in Sources */,
+				68601F600BE29A381A8FEBD53BD60810 /* Decoder.cpp in Sources */,
+				9E5BEC6BDCF98A0C7D4C775BF16EAB08 /* Decoder.cpp in Sources */,
+				38FCD8C7950281F958B6920B4D31D610 /* Decoder.cpp in Sources */,
+				B39B7212290AB31AADA20CBF44DF5056 /* Decoder.mm in Sources */,
+				220DAA2DEAD62E3EBE65D4BD063A2FCE /* DecoderResult.cpp in Sources */,
+				16AF860586AF6392AF295B85BB5CE3C8 /* Detector.cpp in Sources */,
+				A6FE6EACAA2C885C1D384A1F42D1F91D /* Detector.cpp in Sources */,
+				C2DC6557DAA4F8E8051A0CEB1E75A2DC /* Detector.cpp in Sources */,
+				F9E9F73AB2D192F5CF2A87725C1E1C09 /* Detector.cpp in Sources */,
+				CD6246601028E0BF056670C2EA13B8CB /* DetectorException.cpp in Sources */,
+				42D03E8708F89FAB902DFFDF65C46090 /* DetectorResult.cpp in Sources */,
+				4E9430B30EBCDBA747C5EE9A1C00FB64 /* EAN13Reader.cpp in Sources */,
+				D355D8F8C57ED3ECB1AD8B4BA78DEBD5 /* EAN8Reader.cpp in Sources */,
+				29875CA5311A647DA7AC537650E67532 /* EmailAction.m in Sources */,
+				C4F489983850912EB1C150E194AB0D42 /* EmailAddressResultParser.m in Sources */,
+				B5A73D419BFEFC7FFC2AF25266285950 /* EmailDoCoMoResultParser.m in Sources */,
+				7DE79EA377C3BA7E27F94580234C3F84 /* EmailParsedResult.m in Sources */,
+				3034434BB477727EC5BC4346AC2EADD9 /* ErrorCorrection.cpp in Sources */,
+				DD40B73D45F316C748FE5AD41E5FF94E /* ErrorCorrectionLevel.cpp in Sources */,
+				4763F8C969D42999F7A3467C96EB0401 /* Exception.cpp in Sources */,
+				B612B698C584732530D0CD56CF7DBFE6 /* FinderPattern.cpp in Sources */,
+				4A6452CF3745C3C75F322DCC896289BE /* FinderPatternFinder.cpp in Sources */,
+				CAF9199DCA4E30FEF965CEE37DDA9AC4 /* FinderPatternInfo.cpp in Sources */,
+				8E214D1154F2C7298D0961FE3F449FDE /* FormatException.cpp in Sources */,
+				E91E65DAFF6870AD8228CFCCC7F4F903 /* FormatInformation.cpp in Sources */,
+				6D86ECB1AEE8882AEB22DB8C597E45B6 /* FormatReader.mm in Sources */,
+				70693E3A9A517025BB52878B97920C11 /* GenericGF.cpp in Sources */,
+				93D4B1F22657292611A6100616B73663 /* GenericGFPoly.cpp in Sources */,
+				52260E500122D4204D75A10673D05334 /* GenericMultipleBarcodeReader.cpp in Sources */,
+				6E9DF88DEF204D82E3BAFF7D74C23E37 /* GeoParsedResult.m in Sources */,
+				90E720A0C996C123E9DCA6A1897F1C9F /* GeoResultParser.m in Sources */,
+				D026F760FA0B7D3EA47B26E12F074430 /* GlobalHistogramBinarizer.cpp in Sources */,
+				D286D6A8E06CCF935115A5450194F4F4 /* GreyscaleLuminanceSource.cpp in Sources */,
+				28A320FAB89FF2EE9BBA60CEC98956A0 /* GreyscaleRotatedLuminanceSource.cpp in Sources */,
+				596FE7A5631C8388C51FA3E0D541724B /* GridSampler.cpp in Sources */,
+				7454C91FE1FC06AC5959668435233C0F /* HybridBinarizer.cpp in Sources */,
+				348A0689DE23CD45E457FC689A08C5B0 /* IllegalArgumentException.cpp in Sources */,
+				E6E3ECEE840ED955FD41D0CF202414EF /* InvertedLuminanceSource.cpp in Sources */,
+				F7E2A32B4A952D09F794A45171DD95BC /* ISBNParsedResult.m in Sources */,
+				6B7CC0C6C80A52361B30B27292BE93DE /* ISBNResultParser.m in Sources */,
+				F6ABF791ADFD01F33285A0B02CB7CA66 /* ITFReader.cpp in Sources */,
+				15AE34B2665353BEF332E6D084D0C20A /* LinesSampler.cpp in Sources */,
+				46D956622BBB6A43D8D7B798C8A0BB0F /* LuminanceSource.cpp in Sources */,
+				F667EC3B660F6BD8B3C4B9097E3E1BD4 /* MeCardParser.m in Sources */,
+				6451CD510886FD30F870CB20D880347E /* Mode.cpp in Sources */,
+				A0BE8977C870342D820A59A62180799A /* ModulusGF.cpp in Sources */,
+				75B2A61733B4276D6463CE97AC4C2B49 /* ModulusPoly.cpp in Sources */,
+				F5E1D04C62A6F58019CA86EEE179828E /* MonochromeRectangleDetector.cpp in Sources */,
+				A4FA254BD4ED88D61C50AFBDFD6BF1A6 /* MultiDetector.cpp in Sources */,
+				E404EFC34CFA61399EDA7F55EA6F40CD /* MultiFinderPatternFinder.cpp in Sources */,
+				7892F630EE5F81CEDBD16973B151A961 /* MultiFormatOneDReader.cpp in Sources */,
+				0C5300A8F27AA36EDF498519700B4406 /* MultiFormatOneDReader.mm in Sources */,
+				86F45CDD45F2F10912340A9B0C1BC1CF /* MultiFormatReader.cpp in Sources */,
+				A5FD326B4CA9B95118441EE273FD18FE /* MultiFormatReader.mm in Sources */,
+				2FE914053659218B24000080980C3968 /* MultiFormatUPCEANReader.cpp in Sources */,
+				85DEF89D83B02C235416821CA05B7747 /* MultiFormatUPCEANReader.mm in Sources */,
+				2AD20908EA7D451C386C35E556AD8B7B /* MultipleBarcodeReader.cpp in Sources */,
+				D923B499B1E88133BB11F7D2B5C63CB9 /* NSString+HTML.m in Sources */,
+				D558915FAAEFF3C8414488791CF98409 /* OneDReader.cpp in Sources */,
+				1C8FC85030DE8D8D116F863E1E3AA6AF /* OneDResultPoint.cpp in Sources */,
+				CBC480B8D2A4AD49416E5D5709CCE2C8 /* OpenUrlAction.m in Sources */,
+				9415660549C3003F4916EA8453DB0B6E /* OverlayView.m in Sources */,
+				D07AB7105DA9ABEC484E4BA49D8C11F1 /* ParsedResult.m in Sources */,
+				6694C97336D7F8A28E131AC93CE2D1F4 /* PDF417Reader.cpp in Sources */,
+				588212411653B1286B66A102A577E052 /* PerspectiveTransform.cpp in Sources */,
+				D5AFC7C977BF00FAFB52DDFECB80195F /* PlainEmailResultParser.m in Sources */,
+				7FAB152A70B4F6EBC65769ADC88952DF /* ProductParsedResult.m in Sources */,
+				2BDFE1EE8443A035FB3657BD525B2B52 /* ProductResultParser.mm in Sources */,
+				0EF2E869A93B4E5BBBD6D43E3A7C368D /* QRCodeMultiReader.cpp in Sources */,
+				8EA48915719CC1C7D6B448A7823405A2 /* QRCodeReader.cpp in Sources */,
+				F3D13956944C23E97F9A7D62E0E8C8B2 /* QRCodeReader.mm in Sources */,
+				5DEB847C4C80A784CF3B721C7F6ECA9A /* Reader.cpp in Sources */,
+				9E5400DF971DC01539E4BCBE8AB8DEBF /* ReedSolomonDecoder.cpp in Sources */,
+				948CB20D39B406BE9C30838AB89C0392 /* ReedSolomonException.cpp in Sources */,
+				4826D392022E9D48A01CC27BF8688022 /* Result.cpp in Sources */,
+				07E4830F82E963DBDDDB2C7F5E46F3AB /* ResultAction.m in Sources */,
+				E865DFB063CB965173A83F9B50B196EE /* ResultIO.cpp in Sources */,
+				A4535447008F633A04BDB323CBECF03C /* ResultParser.m in Sources */,
+				C268E20AF3B6B79AA95B03EFD5303FE7 /* ResultPoint.cpp in Sources */,
+				A12923DBBEACF338BCA459A8B67F7477 /* ResultPointCallback.cpp in Sources */,
+				2D9850A6548D8B117365C4245B823D69 /* ShowMapAction.m in Sources */,
+				76F44E826F78DFC677136C2B3C25E77B /* SMSAction.m in Sources */,
+				EEB9E505AE745EF2FCDA5788BF506194 /* SMSParsedResult.m in Sources */,
+				A9C5E23DABD500B25FE5FA7AAF336062 /* SMSResultParser.m in Sources */,
+				3F8B6183D538C6910186A2CADB9C19B4 /* SMSTOResultParser.m in Sources */,
+				8CFAD5528676AEAD9EC2B077257201D6 /* SMTPResultParser.m in Sources */,
+				A4F7A988EA15A48482C1538D4E98E956 /* Str.cpp in Sources */,
+				BFB0700AC1EA5D2ADC062E70320CCEBE /* StringUtils.cpp in Sources */,
+				59506D9D39E33910869A99636924414E /* TelParsedResult.m in Sources */,
+				1E55965771F6CD015D0523BEDA60189A /* TelResultParser.m in Sources */,
+				607E52C2B40F5EE8F0E9BFE6EB80ED62 /* TextParsedResult.m in Sources */,
+				2EDB80B0FDF8FE8AA5D719055825D1D7 /* TextResultParser.m in Sources */,
+				306BBC7B569EBA930416A1CE508A4A92 /* TwoDDecoderResult.m in Sources */,
+				8E7A5615B7B9832E447502AD155FB1F9 /* UniversalResultParser.m in Sources */,
+				E143307CE17F361767F90A8520C10B28 /* UPCAReader.cpp in Sources */,
+				C325E94FCB1FE2EA1073E5322E0CF79D /* UPCEANReader.cpp in Sources */,
+				09C5E25D87D44A22F05E9691728B056C /* UPCEReader.cpp in Sources */,
+				5B422A25DCCD9D9D12DBBBFF76E0BEA6 /* URIParsedResult.m in Sources */,
+				BBF01641CDB895A059CB946AFCB65DD2 /* URLResultParser.m in Sources */,
+				ABA3AD4B24C57261DD2407E69158E0B7 /* URLTOResultParser.m in Sources */,
+				C4003C1468EC72CA20F392B296270730 /* VCardResultParser.m in Sources */,
+				268226F3C6E1A143077D499C6D5241E8 /* Version.cpp in Sources */,
+				935483B956A47419E78A002CCF6E265D /* Version.cpp in Sources */,
+				C1DEB18A230235509A1392C82298336E /* WhiteRectangleDetector.cpp in Sources */,
+				9D84C649BE17263316CF9AE2EA2D1F5F /* ZXBinarizer.mm in Sources */,
+				0EBC652A42B9313431057A6EB3BFCD36 /* ZXBinaryBitmap.mm in Sources */,
+				1F598ED7C83E1FB7622614495F997536 /* ZXCapture.mm in Sources */,
+				6317120BC81A965A2861AB4FC45A845D /* ZXCaptureView.mm in Sources */,
+				30EE986F59D0E8692898CC78DB8B7EC9 /* ZXCGImageLuminanceSource.mm in Sources */,
+				838E7CE6EE23FCF6AAD035F6CE46DCA0 /* ZXDecodeHints.mm in Sources */,
+				14129626632E7FB207B1B4E364FE168C /* ZXHybridBinarizer.mm in Sources */,
+				68EB9F4746E8EBB5CE97E2FB15263F07 /* ZXIllegalArgumentException.mm in Sources */,
+				216675B78166806E4F69A39B43851EAD /* ZXImage.mm in Sources */,
+				BCC7DD9118F40ADCBA490B0CAB2DD3F4 /* ZXing-dummy.m in Sources */,
+				4A8BBEF50BE3576DE74984ACC6F42D10 /* ZXingWidgetController.m in Sources */,
+				9E4BD516613DB32414432546347F1E03 /* ZXLuminanceSource.mm in Sources */,
+				A4F16C3ECEF962FECFD523BD2441104C /* ZXMultiFormatReader.mm in Sources */,
+				8F2AE02B5B431440F3084A71B28CC6E7 /* ZXQRCodeReader.mm in Sources */,
+				FF6DC064A5B41E74A864709F11FE9EF4 /* ZXReader.mm in Sources */,
+				B51673D20773ED4E08B81FF0A3177C07 /* ZXReaderException.mm in Sources */,
+				4F9B4C4DA2CA6ECBFBFBD8864B4793C7 /* ZXResult.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34245CD517C19378E178B5689F9FE9D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45E0CEA6838ED5A9B0BDE4DC1DD234F /* Pods-QRCodeTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C904C9E1AC3CA0BB354B642BD337E7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZXing;
+			target = D77D4512A9467CB21BE1522C6C637153 /* ZXing */;
+			targetProxy = 508164909CBFA00AFEC5EF16C8CADD98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		135B8F4796FFADCD8D9E732D530D9EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1D8E9B5C4DA6AAFD3E0724939399641 /* Pods-QRCodeTest.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2E882B66FDB38F185C2E1738DBF09622 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D83E93DE369138904FB5C7796471681 /* Pods-QRCodeTest.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		728F47B6B141CE3FCA36FC57C19A6C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90F2C0F111487D28B8A05B99E5BC8D55 /* ZXing.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ZXing/ZXing-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78B93A92F696AAF1A4ACA0D1AC85467E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90F2C0F111487D28B8A05B99E5BC8D55 /* ZXing.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ZXing/ZXing-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6D4341B9A8135E4C2E6F2246C2B80EA /* Build configuration list for PBXNativeTarget "Pods-QRCodeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				135B8F4796FFADCD8D9E732D530D9EAC /* Debug */,
+				2E882B66FDB38F185C2E1738DBF09622 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2F0D2D9EA03C88DE11E76D150DD61CB /* Build configuration list for PBXNativeTarget "ZXing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B93A92F696AAF1A4ACA0D1AC85467E /* Debug */,
+				728F47B6B141CE3FCA36FC57C19A6C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
