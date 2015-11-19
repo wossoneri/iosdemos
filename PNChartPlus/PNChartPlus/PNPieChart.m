@@ -47,7 +47,6 @@
         _selectedItems = [NSMutableDictionary dictionary];
         _circleRadius = CGRectGetWidth(self.bounds) / 2;
 //        _outerCircleRadius  = CGRectGetWidth(self.bounds) / 2;
-//        _innerCircleRadius  = CGRectGetWidth(self.bounds) / 6;
 //        _descriptionTextColor = [UIColor whiteColor];
 //        _descriptionTextFont  = [UIFont fontWithName:@"Avenir-Medium" size:18.0];
 //        _descriptionTextShadowColor  = [[UIColor blackColor] colorWithAlphaComponent:0.4];
@@ -132,6 +131,11 @@
                                                       endAngle:M_PI_2 * 3
                                                      clockwise:YES];
     
+    ///终于明白空心圆的原理了！！
+    ///先以radius为半径画一个圆圈，这圈线的宽度为1
+    ///然后以 borderwidth 为线圈的宽度向里和外分别拓展 borderWidth / 2 的宽度
+    ///如果 radius == borderWidth / 2，结果当然是实心的，否则肯定是空心的 bravo!
+    
     circle.fillColor   = fillColor.CGColor;
     circle.strokeColor = borderColor.CGColor;
     circle.strokeStart = startPercentage;
@@ -139,12 +143,13 @@
     circle.lineWidth   = borderWidth;
     circle.path        = path.CGPath;
     
+    
     return circle;
 }
 
 - (void)maskChart{
-    CGFloat radius = _circleRadius;//_innerCircleRadius + (_outerCircleRadius - _innerCircleRadius) / 2;
-    CGFloat borderWidth = _circleRadius;//_outerCircleRadius - _innerCircleRadius;
+    CGFloat radius = _circleRadius / 2;
+    CGFloat borderWidth = _circleRadius;
     CAShapeLayer *maskLayer = [self newCircleLayerWithRadius:radius
                                                  borderWidth:borderWidth
                                                    fillColor:[UIColor clearColor]
@@ -191,7 +196,7 @@
     
     CGFloat distanceFromCenter = sqrtf(powf((touchLocation.y - circleCenter.y),2) + powf((touchLocation.x - circleCenter.x),2));
     
-    if (distanceFromCenter > _circleRadius) {
+    if (distanceFromCenter < 0) {
         if ([self.delegate respondsToSelector:@selector(didUnselectPieItem)]) {
             [self.delegate didUnselectPieItem];
         }
@@ -268,7 +273,7 @@
 - (CGFloat) findPercentageOfAngleInCircle:(CGPoint)center fromPoint:(CGPoint)reference{
     //Find angle of line Passing In Reference And Center
     CGFloat angleOfLine = atanf((reference.y - center.y) / (reference.x - center.x));
-    CGFloat percentage = (angleOfLine + M_PI/2)/(2 * M_PI);
+    CGFloat percentage = (angleOfLine + M_PI_2)/(2 * M_PI);
     return (reference.x - center.x) > 0 ? percentage : percentage + .5;
 }
 
@@ -284,7 +289,6 @@
 - (void)recompute {
     self.circleRadius = CGRectGetWidth(self.bounds) / 2;
 //    self.outerCircleRadius = CGRectGetWidth(self.bounds) / 2;
-//    self.innerCircleRadius = CGRectGetWidth(self.bounds) / 6;
 }
 
 - (void)strokeChart{
@@ -299,8 +303,8 @@
         CGFloat startPercnetage = [self startPercentageForItemAtIndex:i];
         CGFloat endPercentage   = [self endPercentageForItemAtIndex:i];
         
-        CGFloat radius = _circleRadius;//_innerCircleRadius + (_outerCircleRadius - _innerCircleRadius) / 2;
-        CGFloat borderWidth = _circleRadius;//_outerCircleRadius - _innerCircleRadius;
+        CGFloat radius = _circleRadius / 2;
+        CGFloat borderWidth = _circleRadius;
         
         CAShapeLayer *currentPieLayer =	[self newCircleLayerWithRadius:radius
                                                            borderWidth:borderWidth

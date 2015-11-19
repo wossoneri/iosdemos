@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		887951E09296F4B2478AC65D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADFED6238C22D95E29EBCD1 /* libPods.a */; };
+		C503A4321BFDC42E003D506F /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503A4311BFDC42E003D506F /* SearchView.m */; };
 		ED7DE2611BFCC1C900E7AF62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7DE2601BFCC1C900E7AF62 /* main.m */; };
 		ED7DE2641BFCC1C900E7AF62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7DE2631BFCC1C900E7AF62 /* AppDelegate.m */; };
 		ED7DE2671BFCC1C900E7AF62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7DE2661BFCC1C900E7AF62 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		0F06C77DE931E0C50C923457 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8ADFED6238C22D95E29EBCD1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C503A4301BFDC42E003D506F /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		C503A4311BFDC42E003D506F /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		E038B437BF82F0E1CF2864EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ED7DE25C1BFCC1C900E7AF62 /* PNChartPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNChartPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7DE2601BFCC1C900E7AF62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +104,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C503A42F1BFDC412003D506F /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				C503A4301BFDC42E003D506F /* SearchView.h */,
+				C503A4311BFDC42E003D506F /* SearchView.m */,
+			);
+			name = SearchBar;
+			sourceTree = "<group>";
+		};
 		DF235820CB1FFA2CA62BA2EF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +147,7 @@
 		ED7DE25E1BFCC1C900E7AF62 /* PNChartPlus */ = {
 			isa = PBXGroup;
 			children = (
+				C503A42F1BFDC412003D506F /* SearchBar */,
 				ED7DE2921BFCC1D200E7AF62 /* PNPieChart */,
 				ED7DE2621BFCC1C900E7AF62 /* AppDelegate.h */,
 				ED7DE2631BFCC1C900E7AF62 /* AppDelegate.m */,
@@ -369,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C503A4321BFDC42E003D506F /* SearchView.m in Sources */,
 				ED7DE2671BFCC1C900E7AF62 /* ViewController.m in Sources */,
 				ED7DE2951BFCC22000E7AF62 /* PNPieChart.m in Sources */,
 				ED7DE2641BFCC1C900E7AF62 /* AppDelegate.m in Sources */,
@@ -517,6 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PNChartPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,6 +549,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PNChartPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

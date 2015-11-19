@@ -26,6 +26,10 @@
 @property (nonatomic, strong) UIButton *Histogram1;
 @property (nonatomic, strong) UIButton *Histogram2;
 @property (nonatomic, strong) UIButton *PieChart;
+@property (nonatomic, strong) UIButton *Choice;
+@property (nonatomic, strong) UIButton *TrueFale;
+@property (nonatomic, strong) UIButton *Completion;
+
 
 @end
 
@@ -66,11 +70,11 @@
                                                                       options:0
                                                                       metrics:nil
                                                                         views:view1]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[_showButton(==40)]"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-30-[_showButton(==40)]"
                                                                       options:0
                                                                       metrics:nil
                                                                         views:view1]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[_hideButton(==40)]"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-30-[_hideButton(==40)]"
                                                                       options:0
                                                                       metrics:nil
                                                                         views:view1]];
@@ -128,7 +132,56 @@
                                                                         views:NSDictionaryOfVariableBindings(_showButton, _PieChart)]];
     
     
+    self.Choice = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.Choice.titleLabel setFont:font];
+    [self.Choice setTitle:@"Choice" forState:UIControlStateNormal];
+    [self.Choice setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.Choice setBackgroundColor:[UIColor darkGrayColor]];
+    [self.Choice setTag:6];
+    [self.Choice addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
+    self.TrueFale = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.TrueFale.titleLabel setFont:font];
+    [self.TrueFale setTitle:@"TrueFale" forState:UIControlStateNormal];
+    [self.TrueFale setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.TrueFale setBackgroundColor:[UIColor darkGrayColor]];
+    [self.TrueFale setTag:7];
+    [self.TrueFale addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.Completion = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.Completion.titleLabel setFont:font];
+    [self.Completion setTitle:@"Completion" forState:UIControlStateNormal];
+    [self.Completion setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.Completion setBackgroundColor:[UIColor darkGrayColor]];
+    [self.Completion setTag:8];
+    [self.Completion addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:self.Choice];
+    [self.view addSubview:self.TrueFale];
+    [self.view addSubview:self.Completion];
+    
+    [self.Choice setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.TrueFale setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.Completion setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    NSDictionary *view3 = NSDictionaryOfVariableBindings(_Choice, _TrueFale, _Completion);
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[_Choice(==_TrueFale)]-20-[_TrueFale(==_Completion)]-20-[_Completion]-50-|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:view3]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Histogram1]-20-[_Choice(==40)]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:NSDictionaryOfVariableBindings(_Histogram1, _Choice)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Histogram1]-20-[_TrueFale(==40)]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:NSDictionaryOfVariableBindings(_Histogram1, _TrueFale)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Histogram1]-20-[_Completion(==40)]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:NSDictionaryOfVariableBindings(_Histogram1, _Completion)]];
     
     
     
@@ -274,10 +327,10 @@
                                                                               options:0
                                                                               metrics:nil
                                                                                 views:NSDictionaryOfVariableBindings(histogramS)]];
-            [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Histogram1]-50-[histogramS]-50-|"
+            [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Choice]-50-[histogramS]-50-|"
                                                                               options:0
                                                                               metrics:nil
-                                                                                views:NSDictionaryOfVariableBindings(_Histogram1, histogramS)]];
+                                                                                views:NSDictionaryOfVariableBindings(_Choice, histogramS)]];
             
             
         }
@@ -313,10 +366,10 @@
                                                                               options:0
                                                                               metrics:nil
                                                                                 views:NSDictionaryOfVariableBindings(histogramD)]];
-            [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Histogram1]-50-[histogramD]-50-|"
+            [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Choice]-50-[histogramD]-50-|"
                                                                               options:0
                                                                               metrics:nil
-                                                                                views:NSDictionaryOfVariableBindings(_Histogram1, histogramD)]];
+                                                                                views:NSDictionaryOfVariableBindings(_Choice, histogramD)]];
             
         }
             break;
@@ -350,10 +403,25 @@
                                                                               options:0
                                                                               metrics:nil
                                                                                 views:NSDictionaryOfVariableBindings(pieChart)]];
-            [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Histogram1]-50-[pieChart]-50-|"
+            [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_Choice]-50-[pieChart]-50-|"
                                                                               options:0
                                                                               metrics:nil
-                                                                                views:NSDictionaryOfVariableBindings(_Histogram1, pieChart)]];
+                                                                                views:NSDictionaryOfVariableBindings(_Choice, pieChart)]];
+        }
+            break;
+        case 6:
+        {
+            
+        }
+            break;
+        case 7:
+        {
+            
+        }
+            break;
+        case 8:
+        {
+            
         }
             break;
         default:

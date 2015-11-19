@@ -14,6 +14,7 @@
 #import "ViewController.h"
 #import "Masonry.h"
 #import "PNPieChart.h"
+#import "SearchView.h"
 
 @interface ViewController ()
 
@@ -26,21 +27,28 @@
     // Do any additional setup after loading the view, typically from a nib.
     NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNLightGreen],
                        [PNPieChartDataItem dataItemWithValue:20 color:PNFreshGreen description:@"WWDC"],
-                       [PNPieChartDataItem dataItemWithValue:40 color:PNDeepGreen description:@"GOOG I/O"],
+                       [PNPieChartDataItem dataItemWithValue:70 color:PNDeepGreen description:@"GOOG I/O"],
                        ];
 
     
-    PNPieChart *pieChart = [[PNPieChart alloc] initWithItems:items];
-    [pieChart strokeChart];
+//    PNPieChart *pieChart = [[PNPieChart alloc] initWithItems:items];
+//    [pieChart strokeChart];
+//    
+//    [self.view addSubview:pieChart];
+//    
+//    [pieChart mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.center.equalTo(self.view);
+//        make.width.mas_equalTo(200);
+//        make.height.mas_equalTo(200);
+//    }];
     
-    [self.view addSubview:pieChart];
+    SearchView *search = [[SearchView alloc] init];
+    [self.view addSubview:search];
     
-    [pieChart mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
-        make.width.mas_equalTo(200);
-        make.height.mas_equalTo(200);
+    [search mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.view).offset(30);
     }];
-    
     
     
 }

@@ -60,7 +60,6 @@
 
 @property (nonatomic) CGFloat circleRadius;
 
-//@property (nonatomic, weak) id<PNChartDelegate> delegate;
 @property (nonatomic, weak) id<PNPieChartDelegate> delegate;
 
 /** Update chart items. Does not update chart itself. */

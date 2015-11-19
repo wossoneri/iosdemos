@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< Updated upstream
 		ED60B4E61BDB8C6C00ABA6DA /* CircleTimerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ED60B4E51BDB8C6C00ABA6DA /* CircleTimerControl.m */; };
 		EDABBA7E1BDB85A20049858B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDABBA7D1BDB85A20049858B /* main.m */; };
 		EDABBA811BDB85A20049858B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDABBA801BDB85A20049858B /* AppDelegate.m */; };
@@ -31,11 +32,40 @@
 			containerPortal = EDABBA711BDB85A20049858B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EDABBA781BDB85A20049858B;
+=======
+		C52A919B1BDDB56400ED3608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A919A1BDDB56400ED3608 /* main.m */; };
+		C52A919E1BDDB56400ED3608 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A919D1BDDB56400ED3608 /* AppDelegate.m */; };
+		C52A91A11BDDB56400ED3608 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A91A01BDDB56400ED3608 /* ViewController.m */; };
+		C52A91A41BDDB56400ED3608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52A91A21BDDB56400ED3608 /* Main.storyboard */; };
+		C52A91A61BDDB56400ED3608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52A91A51BDDB56400ED3608 /* Assets.xcassets */; };
+		C52A91A91BDDB56400ED3608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52A91A71BDDB56400ED3608 /* LaunchScreen.storyboard */; };
+		C52A91B41BDDB56400ED3608 /* CircleTimerControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A91B31BDDB56400ED3608 /* CircleTimerControlTests.m */; };
+		C52A91BF1BDDB56400ED3608 /* CircleTimerControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A91BE1BDDB56400ED3608 /* CircleTimerControlUITests.m */; };
+		C52A91CD1BDDB75600ED3608 /* Masonry in Resources */ = {isa = PBXBuildFile; fileRef = C52A91CC1BDDB75600ED3608 /* Masonry */; };
+		C52A91D01BDDB9ED00ED3608 /* CircleTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A91CF1BDDB9ED00ED3608 /* CircleTimerView.m */; };
+		C52A91D61BDDC16600ED3608 /* TimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A91D51BDDC16600ED3608 /* TimeHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C52A91B01BDDB56400ED3608 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C52A918E1BDDB56400ED3608 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C52A91951BDDB56400ED3608;
+			remoteInfo = CircleTimerControl;
+		};
+		C52A91BB1BDDB56400ED3608 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C52A918E1BDDB56400ED3608 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C52A91951BDDB56400ED3608;
+>>>>>>> Stashed changes
 			remoteInfo = CircleTimerControl;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< Updated upstream
 		ED60B4E41BDB8C6C00ABA6DA /* CircleTimerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTimerControl.h; sourceTree = "<group>"; };
 		ED60B4E51BDB8C6C00ABA6DA /* CircleTimerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTimerControl.m; sourceTree = "<group>"; };
 		EDABBA791BDB85A20049858B /* CircleTimerControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleTimerControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,20 +88,55 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		EDABBA761BDB85A20049858B /* Frameworks */ = {
+=======
+		C52A91961BDDB56400ED3608 /* CircleTimerControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleTimerControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52A919A1BDDB56400ED3608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C52A919C1BDDB56400ED3608 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C52A919D1BDDB56400ED3608 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C52A919F1BDDB56400ED3608 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C52A91A01BDDB56400ED3608 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C52A91A31BDDB56400ED3608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C52A91A51BDDB56400ED3608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C52A91A81BDDB56400ED3608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C52A91AA1BDDB56400ED3608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52A91AF1BDDB56400ED3608 /* CircleTimerControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleTimerControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52A91B31BDDB56400ED3608 /* CircleTimerControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleTimerControlTests.m; sourceTree = "<group>"; };
+		C52A91B51BDDB56400ED3608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52A91BA1BDDB56400ED3608 /* CircleTimerControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleTimerControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52A91BE1BDDB56400ED3608 /* CircleTimerControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleTimerControlUITests.m; sourceTree = "<group>"; };
+		C52A91C01BDDB56400ED3608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52A91CC1BDDB75600ED3608 /* Masonry */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Masonry; sourceTree = "<group>"; };
+		C52A91CE1BDDB9ED00ED3608 /* CircleTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTimerView.h; sourceTree = "<group>"; };
+		C52A91CF1BDDB9ED00ED3608 /* CircleTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTimerView.m; sourceTree = "<group>"; };
+		C52A91D41BDDC16600ED3608 /* TimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeHelper.h; sourceTree = "<group>"; };
+		C52A91D51BDDC16600ED3608 /* TimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeHelper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C52A91931BDDB56400ED3608 /* Frameworks */ = {
+>>>>>>> Stashed changes
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+<<<<<<< Updated upstream
 		EDABBA8F1BDB85A20049858B /* Frameworks */ = {
+=======
+		C52A91AC1BDDB56400ED3608 /* Frameworks */ = {
+>>>>>>> Stashed changes
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+<<<<<<< Updated upstream
 		EDABBA9A1BDB85A20049858B /* Frameworks */ = {
+=======
+		C52A91B71BDDB56400ED3608 /* Frameworks */ = {
+>>>>>>> Stashed changes
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,6 +146,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< Updated upstream
 		EDABBA701BDB85A20049858B = {
 			isa = PBXGroup;
 			children = (
@@ -97,10 +163,29 @@
 				EDABBA791BDB85A20049858B /* CircleTimerControl.app */,
 				EDABBA921BDB85A20049858B /* CircleTimerControlTests.xctest */,
 				EDABBA9D1BDB85A20049858B /* CircleTimerControlUITests.xctest */,
+=======
+		C52A918D1BDDB56400ED3608 = {
+			isa = PBXGroup;
+			children = (
+				C52A91981BDDB56400ED3608 /* CircleTimerControl */,
+				C52A91B21BDDB56400ED3608 /* CircleTimerControlTests */,
+				C52A91BD1BDDB56400ED3608 /* CircleTimerControlUITests */,
+				C52A91971BDDB56400ED3608 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C52A91971BDDB56400ED3608 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C52A91961BDDB56400ED3608 /* CircleTimerControl.app */,
+				C52A91AF1BDDB56400ED3608 /* CircleTimerControlTests.xctest */,
+				C52A91BA1BDDB56400ED3608 /* CircleTimerControlUITests.xctest */,
+>>>>>>> Stashed changes
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
 		EDABBA7B1BDB85A20049858B /* CircleTimerControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,32 +200,74 @@
 				EDABBA8A1BDB85A20049858B /* LaunchScreen.storyboard */,
 				EDABBA851BDB85A20049858B /* Main.storyboard */,
 				EDABBA7C1BDB85A20049858B /* Supporting Files */,
+=======
+		C52A91981BDDB56400ED3608 /* CircleTimerControl */ = {
+			isa = PBXGroup;
+			children = (
+				C52A91CC1BDDB75600ED3608 /* Masonry */,
+				C52A919C1BDDB56400ED3608 /* AppDelegate.h */,
+				C52A919D1BDDB56400ED3608 /* AppDelegate.m */,
+				C52A919F1BDDB56400ED3608 /* ViewController.h */,
+				C52A91A01BDDB56400ED3608 /* ViewController.m */,
+				C52A91A21BDDB56400ED3608 /* Main.storyboard */,
+				C52A91A51BDDB56400ED3608 /* Assets.xcassets */,
+				C52A91A71BDDB56400ED3608 /* LaunchScreen.storyboard */,
+				C52A91AA1BDDB56400ED3608 /* Info.plist */,
+				C52A91991BDDB56400ED3608 /* Supporting Files */,
+				C52A91CE1BDDB9ED00ED3608 /* CircleTimerView.h */,
+				C52A91CF1BDDB9ED00ED3608 /* CircleTimerView.m */,
+				C52A91D41BDDC16600ED3608 /* TimeHelper.h */,
+				C52A91D51BDDC16600ED3608 /* TimeHelper.m */,
+>>>>>>> Stashed changes
 			);
 			path = CircleTimerControl;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
 		EDABBA7C1BDB85A20049858B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				EDABBA7D1BDB85A20049858B /* main.m */,
+=======
+		C52A91991BDDB56400ED3608 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C52A919A1BDDB56400ED3608 /* main.m */,
+>>>>>>> Stashed changes
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
 		EDABBA951BDB85A20049858B /* CircleTimerControlTests */ = {
 			isa = PBXGroup;
 			children = (
 				EDABBA961BDB85A20049858B /* CircleTimerControlTests.m */,
 				EDABBA981BDB85A20049858B /* Info.plist */,
+=======
+		C52A91B21BDDB56400ED3608 /* CircleTimerControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				C52A91B31BDDB56400ED3608 /* CircleTimerControlTests.m */,
+				C52A91B51BDDB56400ED3608 /* Info.plist */,
+>>>>>>> Stashed changes
 			);
 			path = CircleTimerControlTests;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
 		EDABBAA01BDB85A20049858B /* CircleTimerControlUITests */ = {
 			isa = PBXGroup;
 			children = (
 				EDABBAA11BDB85A20049858B /* CircleTimerControlUITests.m */,
 				EDABBAA31BDB85A20049858B /* Info.plist */,
+=======
+		C52A91BD1BDDB56400ED3608 /* CircleTimerControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C52A91BE1BDDB56400ED3608 /* CircleTimerControlUITests.m */,
+				C52A91C01BDDB56400ED3608 /* Info.plist */,
+>>>>>>> Stashed changes
 			);
 			path = CircleTimerControlUITests;
 			sourceTree = "<group>";
@@ -148,6 +275,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+<<<<<<< Updated upstream
 		EDABBA781BDB85A20049858B /* CircleTimerControl */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDABBAA61BDB85A20049858B /* Build configuration list for PBXNativeTarget "CircleTimerControl" */;
@@ -155,6 +283,15 @@
 				EDABBA751BDB85A20049858B /* Sources */,
 				EDABBA761BDB85A20049858B /* Frameworks */,
 				EDABBA771BDB85A20049858B /* Resources */,
+=======
+		C52A91951BDDB56400ED3608 /* CircleTimerControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52A91C31BDDB56400ED3608 /* Build configuration list for PBXNativeTarget "CircleTimerControl" */;
+			buildPhases = (
+				C52A91921BDDB56400ED3608 /* Sources */,
+				C52A91931BDDB56400ED3608 /* Frameworks */,
+				C52A91941BDDB56400ED3608 /* Resources */,
+>>>>>>> Stashed changes
 			);
 			buildRules = (
 			);
@@ -162,6 +299,7 @@
 			);
 			name = CircleTimerControl;
 			productName = CircleTimerControl;
+<<<<<<< Updated upstream
 			productReference = EDABBA791BDB85A20049858B /* CircleTimerControl.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -172,10 +310,23 @@
 				EDABBA8E1BDB85A20049858B /* Sources */,
 				EDABBA8F1BDB85A20049858B /* Frameworks */,
 				EDABBA901BDB85A20049858B /* Resources */,
+=======
+			productReference = C52A91961BDDB56400ED3608 /* CircleTimerControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C52A91AE1BDDB56400ED3608 /* CircleTimerControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52A91C61BDDB56400ED3608 /* Build configuration list for PBXNativeTarget "CircleTimerControlTests" */;
+			buildPhases = (
+				C52A91AB1BDDB56400ED3608 /* Sources */,
+				C52A91AC1BDDB56400ED3608 /* Frameworks */,
+				C52A91AD1BDDB56400ED3608 /* Resources */,
+>>>>>>> Stashed changes
 			);
 			buildRules = (
 			);
 			dependencies = (
+<<<<<<< Updated upstream
 				EDABBA941BDB85A20049858B /* PBXTargetDependency */,
 			);
 			name = CircleTimerControlTests;
@@ -190,20 +341,45 @@
 				EDABBA991BDB85A20049858B /* Sources */,
 				EDABBA9A1BDB85A20049858B /* Frameworks */,
 				EDABBA9B1BDB85A20049858B /* Resources */,
+=======
+				C52A91B11BDDB56400ED3608 /* PBXTargetDependency */,
+			);
+			name = CircleTimerControlTests;
+			productName = CircleTimerControlTests;
+			productReference = C52A91AF1BDDB56400ED3608 /* CircleTimerControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C52A91B91BDDB56400ED3608 /* CircleTimerControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52A91C91BDDB56400ED3608 /* Build configuration list for PBXNativeTarget "CircleTimerControlUITests" */;
+			buildPhases = (
+				C52A91B61BDDB56400ED3608 /* Sources */,
+				C52A91B71BDDB56400ED3608 /* Frameworks */,
+				C52A91B81BDDB56400ED3608 /* Resources */,
+>>>>>>> Stashed changes
 			);
 			buildRules = (
 			);
 			dependencies = (
+<<<<<<< Updated upstream
 				EDABBA9F1BDB85A20049858B /* PBXTargetDependency */,
 			);
 			name = CircleTimerControlUITests;
 			productName = CircleTimerControlUITests;
 			productReference = EDABBA9D1BDB85A20049858B /* CircleTimerControlUITests.xctest */;
+=======
+				C52A91BC1BDDB56400ED3608 /* PBXTargetDependency */,
+			);
+			name = CircleTimerControlUITests;
+			productName = CircleTimerControlUITests;
+			productReference = C52A91BA1BDDB56400ED3608 /* CircleTimerControlUITests.xctest */;
+>>>>>>> Stashed changes
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
+<<<<<<< Updated upstream
 		EDABBA711BDB85A20049858B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
@@ -226,6 +402,28 @@
 				};
 			};
 			buildConfigurationList = EDABBA741BDB85A20049858B /* Build configuration list for PBXProject "CircleTimerControl" */;
+=======
+		C52A918E1BDDB56400ED3608 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = magewell;
+				TargetAttributes = {
+					C52A91951BDDB56400ED3608 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					C52A91AE1BDDB56400ED3608 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = C52A91951BDDB56400ED3608;
+					};
+					C52A91B91BDDB56400ED3608 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = C52A91951BDDB56400ED3608;
+					};
+				};
+			};
+			buildConfigurationList = C52A91911BDDB56400ED3608 /* Build configuration list for PBXProject "CircleTimerControl" */;
+>>>>>>> Stashed changes
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -233,6 +431,7 @@
 				en,
 				Base,
 			);
+<<<<<<< Updated upstream
 			mainGroup = EDABBA701BDB85A20049858B;
 			productRefGroup = EDABBA7A1BDB85A20049858B /* Products */;
 			projectDirPath = "";
@@ -241,11 +440,22 @@
 				EDABBA781BDB85A20049858B /* CircleTimerControl */,
 				EDABBA911BDB85A20049858B /* CircleTimerControlTests */,
 				EDABBA9C1BDB85A20049858B /* CircleTimerControlUITests */,
+=======
+			mainGroup = C52A918D1BDDB56400ED3608;
+			productRefGroup = C52A91971BDDB56400ED3608 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C52A91951BDDB56400ED3608 /* CircleTimerControl */,
+				C52A91AE1BDDB56400ED3608 /* CircleTimerControlTests */,
+				C52A91B91BDDB56400ED3608 /* CircleTimerControlUITests */,
+>>>>>>> Stashed changes
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+<<<<<<< Updated upstream
 		EDABBA771BDB85A20049858B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,13 +467,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EDABBA901BDB85A20049858B /* Resources */ = {
+=======
+		C52A91941BDDB56400ED3608 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52A91CD1BDDB75600ED3608 /* Masonry in Resources */,
+				C52A91A91BDDB56400ED3608 /* LaunchScreen.storyboard in Resources */,
+				C52A91A61BDDB56400ED3608 /* Assets.xcassets in Resources */,
+				C52A91A41BDDB56400ED3608 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52A91AD1BDDB56400ED3608 /* Resources */ = {
+>>>>>>> Stashed changes
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+<<<<<<< Updated upstream
 		EDABBA9B1BDB85A20049858B /* Resources */ = {
+=======
+		C52A91B81BDDB56400ED3608 /* Resources */ = {
+>>>>>>> Stashed changes
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,6 +501,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+<<<<<<< Updated upstream
 		EDABBA751BDB85A20049858B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,12 +526,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDABBAA21BDB85A20049858B /* CircleTimerControlUITests.m in Sources */,
+=======
+		C52A91921BDDB56400ED3608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52A91A11BDDB56400ED3608 /* ViewController.m in Sources */,
+				C52A91D61BDDC16600ED3608 /* TimeHelper.m in Sources */,
+				C52A919E1BDDB56400ED3608 /* AppDelegate.m in Sources */,
+				C52A91D01BDDB9ED00ED3608 /* CircleTimerView.m in Sources */,
+				C52A919B1BDDB56400ED3608 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52A91AB1BDDB56400ED3608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52A91B41BDDB56400ED3608 /* CircleTimerControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52A91B61BDDB56400ED3608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52A91BF1BDDB56400ED3608 /* CircleTimerControlUITests.m in Sources */,
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+<<<<<<< Updated upstream
 		EDABBA941BDB85A20049858B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EDABBA781BDB85A20049858B /* CircleTimerControl */;
@@ -312,22 +569,47 @@
 			isa = PBXTargetDependency;
 			target = EDABBA781BDB85A20049858B /* CircleTimerControl */;
 			targetProxy = EDABBA9E1BDB85A20049858B /* PBXContainerItemProxy */;
+=======
+		C52A91B11BDDB56400ED3608 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C52A91951BDDB56400ED3608 /* CircleTimerControl */;
+			targetProxy = C52A91B01BDDB56400ED3608 /* PBXContainerItemProxy */;
+		};
+		C52A91BC1BDDB56400ED3608 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C52A91951BDDB56400ED3608 /* CircleTimerControl */;
+			targetProxy = C52A91BB1BDDB56400ED3608 /* PBXContainerItemProxy */;
+>>>>>>> Stashed changes
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+<<<<<<< Updated upstream
 		EDABBA851BDB85A20049858B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EDABBA861BDB85A20049858B /* Base */,
+=======
+		C52A91A21BDDB56400ED3608 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52A91A31BDDB56400ED3608 /* Base */,
+>>>>>>> Stashed changes
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
 		EDABBA8A1BDB85A20049858B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EDABBA8B1BDB85A20049858B /* Base */,
+=======
+		C52A91A71BDDB56400ED3608 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52A91A81BDDB56400ED3608 /* Base */,
+>>>>>>> Stashed changes
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -335,7 +617,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+<<<<<<< Updated upstream
 		EDABBAA41BDB85A20049858B /* Debug */ = {
+=======
+		C52A91C11BDDB56400ED3608 /* Debug */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -375,11 +661,19 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+<<<<<<< Updated upstream
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		EDABBAA51BDB85A20049858B /* Release */ = {
+=======
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C52A91C21BDDB56400ED3608 /* Release */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -412,16 +706,27 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+<<<<<<< Updated upstream
 				TARGETED_DEVICE_FAMILY = "1,2";
+=======
+				TARGETED_DEVICE_FAMILY = 2;
+>>>>>>> Stashed changes
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
+<<<<<<< Updated upstream
 		EDABBAA71BDB85A20049858B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+=======
+		C52A91C41BDDB56400ED3608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+>>>>>>> Stashed changes
 				INFOPLIST_FILE = CircleTimerControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -430,11 +735,18 @@
 			};
 			name = Debug;
 		};
+<<<<<<< Updated upstream
 		EDABBAA81BDB85A20049858B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+=======
+		C52A91C51BDDB56400ED3608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+>>>>>>> Stashed changes
 				INFOPLIST_FILE = CircleTimerControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -443,7 +755,11 @@
 			};
 			name = Release;
 		};
+<<<<<<< Updated upstream
 		EDABBAAA1BDB85A20049858B /* Debug */ = {
+=======
+		C52A91C71BDDB56400ED3608 /* Debug */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -455,7 +771,11 @@
 			};
 			name = Debug;
 		};
+<<<<<<< Updated upstream
 		EDABBAAB1BDB85A20049858B /* Release */ = {
+=======
+		C52A91C81BDDB56400ED3608 /* Release */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -467,7 +787,11 @@
 			};
 			name = Release;
 		};
+<<<<<<< Updated upstream
 		EDABBAAD1BDB85A20049858B /* Debug */ = {
+=======
+		C52A91CA1BDDB56400ED3608 /* Debug */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = CircleTimerControlUITests/Info.plist;
@@ -479,7 +803,11 @@
 			};
 			name = Debug;
 		};
+<<<<<<< Updated upstream
 		EDABBAAE1BDB85A20049858B /* Release */ = {
+=======
+		C52A91CB1BDDB56400ED3608 /* Release */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = CircleTimerControlUITests/Info.plist;
@@ -494,15 +822,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+<<<<<<< Updated upstream
 		EDABBA741BDB85A20049858B /* Build configuration list for PBXProject "CircleTimerControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDABBAA41BDB85A20049858B /* Debug */,
 				EDABBAA51BDB85A20049858B /* Release */,
+=======
+		C52A91911BDDB56400ED3608 /* Build configuration list for PBXProject "CircleTimerControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52A91C11BDDB56400ED3608 /* Debug */,
+				C52A91C21BDDB56400ED3608 /* Release */,
+>>>>>>> Stashed changes
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+<<<<<<< Updated upstream
 		EDABBAA61BDB85A20049858B /* Build configuration list for PBXNativeTarget "CircleTimerControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -533,4 +870,33 @@
 /* End XCConfigurationList section */
 	};
 	rootObject = EDABBA711BDB85A20049858B /* Project object */;
+=======
+		C52A91C31BDDB56400ED3608 /* Build configuration list for PBXNativeTarget "CircleTimerControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52A91C41BDDB56400ED3608 /* Debug */,
+				C52A91C51BDDB56400ED3608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C52A91C61BDDB56400ED3608 /* Build configuration list for PBXNativeTarget "CircleTimerControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52A91C71BDDB56400ED3608 /* Debug */,
+				C52A91C81BDDB56400ED3608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C52A91C91BDDB56400ED3608 /* Build configuration list for PBXNativeTarget "CircleTimerControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52A91CA1BDDB56400ED3608 /* Debug */,
+				C52A91CB1BDDB56400ED3608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C52A918E1BDDB56400ED3608 /* Project object */;
+>>>>>>> Stashed changes
 }

@@ -82,11 +82,11 @@
 }
 
 //
-- (void)setSelected:(BOOL)selected {
-    [super setSelected:selected];
-    
-    self.name.hidden = !selected;
-}
+//- (void)setSelected:(BOOL)selected {
+//    [super setSelected:selected];
+//    
+//    self.name.hidden = !selected;
+//}
 
 
 @end
