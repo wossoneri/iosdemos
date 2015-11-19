@@ -14,10 +14,15 @@
 {
 //    UISearchBar *searchBar;
     
-    UISearchController *searchController;
-    UITableViewController *tableViewController;
+    
+    
     
 }
+
+
+@property (nonatomic, strong) UISearchController *searchController;
+@property (nonatomic, strong) UITableViewController *tableViewController;
+
 @end
 
 
@@ -31,21 +36,31 @@
             [self.dataList addObject:[NSString stringWithFormat:@"%ld-item",(long)i]];
         }
         
+        self.tableViewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+
+        self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
         
-        searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-        searchController.searchResultsUpdater = self;
-        searchController.searchBar.delegate = self;
-        searchController.dimsBackgroundDuringPresentation = NO;
-        searchController.hidesNavigationBarDuringPresentation = NO;
+        self.searchController.searchResultsUpdater = self;
+        self.searchController.searchBar.delegate = self;
+        self.searchController.dimsBackgroundDuringPresentation = NO;
+        self.searchController.hidesNavigationBarDuringPresentation = NO;
         
-        tableViewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-        tableViewController.tableView.delegate = self;
-        tableViewController.tableView.dataSource = self;
-        tableViewController.tableView.tableHeaderView = searchController.searchBar;
+        self.tableViewController.tableView.delegate = self;
+        self.tableViewController.tableView.dataSource = self;
+        self.tableViewController.tableView.tableHeaderView = self.searchController.searchBar;
         
         
-        [self addSubview:tableViewController.tableView];
-        [tableViewController.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        [self addSubview:self.searchController.searchBar];
+        [self addSubview:self.tableViewController.tableView];
+        
+//        [_searchController.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.top.right.equalTo(self);
+//            make.bottom.equalTo(_tableViewController.tableView.mas_top);
+//        }];
+        
+        [_tableViewController.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(_searchController.searchBar.mas_bottom);
+//            make.left.right.bottom.equalTo(self);
             make.edges.equalTo(self);
         }];
         
@@ -57,8 +72,9 @@
 
 
 #pragma mark - 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (searchController.active) {
+    if (_searchController.active) {
         return [self.searchList count];
     } else {
         return [self.dataList count];
@@ -74,7 +90,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_ID];
     }
     
-    if (searchController.active) {
+    if (_searchController.active) {
         [cell.textLabel setText:self.searchList[indexPath.row]];
     } else {
         [cell.textLabel setText:self.dataList[indexPath.row]];
@@ -96,7 +112,7 @@
     
     self.searchList = [NSMutableArray arrayWithArray:[_dataList filteredArrayUsingPredicate:predicate]];
     
-    [tableViewController.tableView reloadData];
+    [_tableViewController.tableView reloadData];
     
 }
 
