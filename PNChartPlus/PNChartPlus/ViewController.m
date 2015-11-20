@@ -16,6 +16,9 @@
 #import "PNPieChart.h"
 #import "SearchView.h"
 
+#import "ListViewController.h"
+#import "ListViewTest.h"
+
 @interface ViewController ()
 
 @end
@@ -25,10 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNLightGreen],
-                       [PNPieChartDataItem dataItemWithValue:20 color:PNFreshGreen description:@"WWDC"],
-                       [PNPieChartDataItem dataItemWithValue:70 color:PNDeepGreen description:@"GOOG I/O"],
-                       ];
+//    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNLightGreen],
+//                       [PNPieChartDataItem dataItemWithValue:20 color:PNFreshGreen description:@"WWDC"],
+//                       [PNPieChartDataItem dataItemWithValue:70 color:PNDeepGreen description:@"GOOG I/O"],
+//                       ];
 
     
 //    PNPieChart *pieChart = [[PNPieChart alloc] initWithItems:items];
@@ -42,14 +45,32 @@
 //        make.height.mas_equalTo(200);
 //    }];
     
-    SearchView *search = [[SearchView alloc] init];
-    [self.view addSubview:search];
     
-    [search mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.view);
-        make.top.equalTo(self.view).offset(30);
+//    
+//    SearchView *search = [[SearchView alloc] init];
+//    [self.view addSubview:search];
+//    
+//    [search mas_makeConstraints:^(MASConstraintMaker *make) {
+////        make.left.right.bottom.equalTo(self.view);
+////        make.top.equalTo(self.view).offset(30);
+//        make.edges.equalTo(self.view);
+//    }];
+//    
+    
+//    ListViewController *controller = [[ListViewController alloc] init];
+//    [self.view addSubview:controller.tableView];
+//    [self addChildViewController:controller];
+//    [controller didMoveToParentViewController:self];
+//    
+//    [controller.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view);
+//    }];
+    
+    ListViewTest *listView = [[ListViewTest alloc] init];
+    [self.view addSubview:listView];
+    [listView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
     }];
-    
     
 }
 

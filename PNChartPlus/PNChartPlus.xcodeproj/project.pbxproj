@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		887951E09296F4B2478AC65D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADFED6238C22D95E29EBCD1 /* libPods.a */; };
+		C5002A041BFEB69F0084DF21 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5002A031BFEB69F0084DF21 /* ListViewController.m */; };
+		C5002A071BFEB78A0084DF21 /* ResultListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5002A061BFEB78A0084DF21 /* ResultListViewController.m */; };
+		C5002A0A1BFED82E0084DF21 /* ListViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5002A091BFED82E0084DF21 /* ListViewTest.m */; };
 		C503A4321BFDC42E003D506F /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C503A4311BFDC42E003D506F /* SearchView.m */; };
 		ED7DE2611BFCC1C900E7AF62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7DE2601BFCC1C900E7AF62 /* main.m */; };
 		ED7DE2641BFCC1C900E7AF62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7DE2631BFCC1C900E7AF62 /* AppDelegate.m */; };
@@ -42,6 +45,12 @@
 /* Begin PBXFileReference section */
 		0F06C77DE931E0C50C923457 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8ADFED6238C22D95E29EBCD1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5002A021BFEB69F0084DF21 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		C5002A031BFEB69F0084DF21 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		C5002A051BFEB78A0084DF21 /* ResultListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultListViewController.h; sourceTree = "<group>"; };
+		C5002A061BFEB78A0084DF21 /* ResultListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultListViewController.m; sourceTree = "<group>"; };
+		C5002A081BFED82E0084DF21 /* ListViewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewTest.h; sourceTree = "<group>"; };
+		C5002A091BFED82E0084DF21 /* ListViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewTest.m; sourceTree = "<group>"; };
 		C503A4301BFDC42E003D506F /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		C503A4311BFDC42E003D506F /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		E038B437BF82F0E1CF2864EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +113,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C5002A011BFEB2B70084DF21 /* SearchBarFromApple */ = {
+			isa = PBXGroup;
+			children = (
+				C5002A021BFEB69F0084DF21 /* ListViewController.h */,
+				C5002A031BFEB69F0084DF21 /* ListViewController.m */,
+				C5002A051BFEB78A0084DF21 /* ResultListViewController.h */,
+				C5002A061BFEB78A0084DF21 /* ResultListViewController.m */,
+				C5002A081BFED82E0084DF21 /* ListViewTest.h */,
+				C5002A091BFED82E0084DF21 /* ListViewTest.m */,
+			);
+			name = SearchBarFromApple;
+			sourceTree = "<group>";
+		};
 		C503A42F1BFDC412003D506F /* SearchBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +169,7 @@
 		ED7DE25E1BFCC1C900E7AF62 /* PNChartPlus */ = {
 			isa = PBXGroup;
 			children = (
+				C5002A011BFEB2B70084DF21 /* SearchBarFromApple */,
 				C503A42F1BFDC412003D506F /* SearchBar */,
 				ED7DE2921BFCC1D200E7AF62 /* PNPieChart */,
 				ED7DE2621BFCC1C900E7AF62 /* AppDelegate.h */,
@@ -384,10 +407,13 @@
 			files = (
 				C503A4321BFDC42E003D506F /* SearchView.m in Sources */,
 				ED7DE2671BFCC1C900E7AF62 /* ViewController.m in Sources */,
+				C5002A041BFEB69F0084DF21 /* ListViewController.m in Sources */,
 				ED7DE2951BFCC22000E7AF62 /* PNPieChart.m in Sources */,
 				ED7DE2641BFCC1C900E7AF62 /* AppDelegate.m in Sources */,
+				C5002A0A1BFED82E0084DF21 /* ListViewTest.m in Sources */,
 				ED7DE2981BFCC33800E7AF62 /* PNPieChartDataItem.m in Sources */,
 				ED7DE2611BFCC1C900E7AF62 /* main.m in Sources */,
+				C5002A071BFEB78A0084DF21 /* ResultListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
