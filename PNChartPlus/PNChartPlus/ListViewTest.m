@@ -68,31 +68,31 @@
         }
         
         
-        [self addSubview:_searchController.searchBar];
-        [_searchController.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.top.right.equalTo(self);
-            //            make.bottom.equalTo(_tableView.mas_top);
-            
-            make.centerX.equalTo(self);
-            make.top.equalTo(self);
-            make.width.mas_equalTo(320);
-        }];
+//        [self addSubview:_searchController.searchBar];
+//        [_searchController.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+////            make.left.top.right.equalTo(self);
+//            //            make.bottom.equalTo(_tableView.mas_top);
+//            
+//            make.centerX.equalTo(self);
+//            make.top.equalTo(self);
+//            make.width.mas_equalTo(320);
+//        }];
         
         [self addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.edges.equalTo(self);
+            make.edges.equalTo(self);
 //            make.left.right.bottom.equalTo(self);
-            make.bottom.equalTo(self);
-            make.centerX.equalTo(self);
-            make.width.mas_equalTo(320);
-            make.top.equalTo(_searchController.searchBar.mas_bottom);
+//            make.bottom.equalTo(self);
+//            make.centerX.equalTo(self);
+//            make.width.mas_equalTo(320);
+//            make.top.equalTo(_searchController.searchBar.mas_bottom);
             
         }];
         
 //        _tableView.contentOffset = CGPointMake(0, _searchController.searchBar.bounds.size.height);
-        _tableView.contentInset = UIEdgeInsetsMake(-_searchController.searchBar.bounds.size.height, 0, 0, 0);
+//        _tableView.contentInset = UIEdgeInsetsMake(-_searchController.searchBar.bounds.size.height, 0, 0, 0);
         
-        [self bringSubviewToFront:_searchController.searchBar];
+//        [self bringSubviewToFront:_searchController.searchBar];
     }
     return self;
 }

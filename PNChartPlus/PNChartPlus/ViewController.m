@@ -46,16 +46,16 @@
 //    }];
     
     
-//    
-//    SearchView *search = [[SearchView alloc] init];
-//    [self.view addSubview:search];
-//    
-//    [search mas_makeConstraints:^(MASConstraintMaker *make) {
-////        make.left.right.bottom.equalTo(self.view);
-////        make.top.equalTo(self.view).offset(30);
-//        make.edges.equalTo(self.view);
-//    }];
-//    
+    
+    SearchView *search = [[SearchView alloc] init];
+    [self.view addSubview:search];
+    
+    [search mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.bottom.equalTo(self.view);
+//        make.top.equalTo(self.view).offset(30);
+        make.edges.equalTo(self.view);
+    }];
+    
     
 //    ListViewController *controller = [[ListViewController alloc] init];
 //    [self.view addSubview:controller.tableView];
@@ -66,11 +66,11 @@
 //        make.edges.equalTo(self.view);
 //    }];
     
-    ListViewTest *listView = [[ListViewTest alloc] init];
-    [self.view addSubview:listView];
-    [listView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
+//    ListViewTest *listView = [[ListViewTest alloc] init];
+//    [self.view addSubview:listView];
+//    [listView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view);
+//    }];
     
 }
 
