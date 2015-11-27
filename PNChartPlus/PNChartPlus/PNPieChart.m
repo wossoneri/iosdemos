@@ -41,7 +41,7 @@
 
 - (id)initWithItems:(NSArray *)items {
     if (self = [super init]) {
-        self.backgroundColor = [UIColor grayColor];
+//        self.backgroundColor = [UIColor grayColor];
         
         _items = [NSArray arrayWithArray:items];
         _selectedItems = [NSMutableDictionary dictionary];
@@ -127,8 +127,8 @@
     
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center
                                                         radius:radius
-                                                    startAngle:-M_PI_2
-                                                      endAngle:M_PI_2 * 3
+                                                    startAngle:0
+                                                      endAngle:M_PI * 2
                                                      clockwise:YES];
     
     ///终于明白空心圆的原理了！！
@@ -273,8 +273,20 @@
 - (CGFloat) findPercentageOfAngleInCircle:(CGPoint)center fromPoint:(CGPoint)reference{
     //Find angle of line Passing In Reference And Center
     CGFloat angleOfLine = atanf((reference.y - center.y) / (reference.x - center.x));
-    CGFloat percentage = (angleOfLine + M_PI_2)/(2 * M_PI);
-    return (reference.x - center.x) > 0 ? percentage : percentage + .5;
+//    CGFloat percentage = (angleOfLine)/(2 * M_PI);
+    CGFloat percentage;
+    if (reference.x - center.x > 0) {
+        if (reference.y - center.y > 0)
+            percentage = (angleOfLine) / (2 * M_PI);
+        else
+            percentage = (angleOfLine + 2 * M_PI) / (2 * M_PI);
+    }else {
+        percentage = (angleOfLine + M_PI) / (2 * M_PI);
+    }
+    
+    return percentage;
+    
+//    return (reference.y - center.y) > 0 ? percentage : percentage + .5;
 }
 
 /* Redraw the chart on autolayout */
