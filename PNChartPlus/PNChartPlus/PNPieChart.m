@@ -20,6 +20,9 @@
 
 @property (nonatomic, strong) NSMutableDictionary *selectedItems;
 
+
+
+
 - (void)loadDefault;
 
 //- (UILabel *)descriptionLabelForItemAtIndex:(NSUInteger)index;
@@ -273,7 +276,7 @@
 - (CGFloat) findPercentageOfAngleInCircle:(CGPoint)center fromPoint:(CGPoint)reference{
     //Find angle of line Passing In Reference And Center
     CGFloat angleOfLine = atanf((reference.y - center.y) / (reference.x - center.x));
-//    CGFloat percentage = (angleOfLine)/(2 * M_PI);
+
     CGFloat percentage;
     if (reference.x - center.x > 0) {
         if (reference.y - center.y > 0)
@@ -286,7 +289,6 @@
     
     return percentage;
     
-//    return (reference.y - center.y) > 0 ? percentage : percentage + .5;
 }
 
 /* Redraw the chart on autolayout */
@@ -327,16 +329,48 @@
         [_pieLayer addSublayer:currentPieLayer];
     }
     
-    [self maskChart];
+//    [self maskChart];
     
-//    for (int i = 0; i < _items.count; i++) {
-//        UILabel *descriptionLabel =  [self descriptionLabelForItemAtIndex:i];
-//        [_contentView addSubview:descriptionLabel];
-//        [_descriptionLabels addObject:descriptionLabel];
-//    }
+    [_pieLayer addSublayer:[self drawLineAndLabel]];
 }
 
+- (CAShapeLayer *)drawLineAndLabel {
+    CAShapeLayer *lines = [CAShapeLayer layer];
+    
+    CGPoint center = CGPointMake(CGRectGetMidX(self.bounds),CGRectGetMidY(self.bounds));
+    
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    
+    for (int i = 0; i < _items.count; i++) {
+        //        UILabel *descriptionLabel =  [self descriptionLabelForItemAtIndex:i];
+        //        [_contentView addSubview:descriptionLabel];
+        //        [_descriptionLabels addObject:descriptionLabel];
+        
+        //draw line
+        CGFloat startPercentage = [self startPercentageForItemAtIndex:i];
+        CGFloat endPercentage   = [self endPercentageForItemAtIndex:i];
+        CGFloat centerPercentage = startPercentage + (endPercentage - startPercentage) / 2;
+        
+        CGPoint point1 = CGPointMake(center.x + _circleRadius * cos(centerPercentage) / 2,
+                                     center.y + _circleRadius * sin(centerPercentage) / 2);
+        CGPoint point2 = CGPointMake(center.x + (_circleRadius + 10) * cos(centerPercentage) / 2,
+                                     center.y + (_circleRadius + 10) * sin(centerPercentage) / 2);
+        
+        
+        [bezierPath moveToPoint:point1];
+        [bezierPath addLineToPoint:point2];
 
+        
+    }
+    
+    lines.fillColor = [UIColor redColor].CGColor;
+    lines.borderColor = [UIColor yellowColor].CGColor;
+    lines.lineWidth = 10;
+    lines.path = bezierPath.CGPath;
+    
+    [bezierPath closePath];
+    return lines;
+}
 
 
 
