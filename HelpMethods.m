@@ -157,3 +157,54 @@
     self.titleEdgeInsets = UIEdgeInsetsMake(0, insetAmount, 0, -insetAmount);
     self.contentEdgeInsets = UIEdgeInsetsMake(0, insetAmount, 0, insetAmount);
 }
+
+//segment control 圆角
+NSArray *itemArr = [NSArray arrayWithObjects:NSLocalizedString(@"a", nil), NSLocalizedString(@"s", nil), nil];
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArr];
+    [segmentedControl setSelectedSegmentIndex:0];
+    [segmentedControl addTarget:self action:@selector(switchContent:) forControlEvents:UIControlEventValueChanged];
+    [segmentedControl setTintColor:[UIColor whiteColor]];
+    //    [segmentedControl setBorderColor:[UIColor whiteColor] width:2];
+    [segmentedControl setBackgroundColor:[UIColor colorWithHexString:@"3f51b5"]];
+    
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline], NSFontAttributeName,
+                                nil];
+    [segmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
+    segmentedControl.layer.cornerRadius = 8;
+    segmentedControl.layer.borderColor = [UIColor whiteColor].CGColor;
+    segmentedControl.layer.borderWidth = 1.0f;
+    segmentedControl.layer.masksToBounds = YES;
+
+
+NSArray *itemArr = [NSArray arrayWithObjects:NSLocalizedString(@"a", nil), NSLocalizedString(@"s ", nil), NSLocalizedString(@"d", nil), nil];
+    UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:itemArr];
+    [segmentControl setSelectedSegmentIndex:0];
+    [segmentControl addTarget:self action:@selector(switchAnalysis:) forControlEvents:UIControlEventValueChanged];
+    [segmentControl setTintColor:[UIColor clearColor]];
+    [segmentControl setBackgroundColor:[UIColor clearColor]];
+    
+    NSDictionary *titleAttrNormal = [NSDictionary dictionaryWithObjectsAndKeys:FONT_Headline, NSFontAttributeName, [UIColor lightGrayColor], NSForegroundColorAttributeName, nil];
+    [segmentControl setTitleTextAttributes:titleAttrNormal forState:UIControlStateNormal];
+    
+    NSDictionary *titleAttrSelected = [NSDictionary dictionaryWithObjectsAndKeys:FONT_Headline, NSFontAttributeName, [UIColor colorWithHexString:@"3f51b5"], NSForegroundColorAttributeName, nil];
+    [segmentControl setTitleTextAttributes:titleAttrSelected forState:UIControlStateSelected];
+
+    - (void)switchAnalysis:(UISegmentedControl *)segment {
+    if (segment.selectedSegmentIndex == 0) {
+
+    }
+    
+    if (segment.selectedSegmentIndex == 1) {
+
+    }
+    
+    if (segment.selectedSegmentIndex == 2) {
+        
+    }
+    
+    if (segment.selectedSegmentIndex == 3) {
+        
+    }
+}
