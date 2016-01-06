@@ -34,6 +34,9 @@
     return self;
 }
 
+//- (void)dealloc {
+//    [self.headerScrollView removeObserver:self forKeyPath:@"contentOffset"];
+//}
 
 - (void)setTopView:(UIView *)top height:(float)topHeight andBottom:(UIView *)bottom height:(float)bottomHeight {
     destinaOffset = - topHeight;
@@ -77,6 +80,57 @@
     
     
 }
+
+- (NSArray *)createStringArrayWithPercentages:(NSArray *)percent {
+    
+    NSString *strCorrect = [NSLocalizedString(@"studentAnsRight", nil) stringByAppendingString:
+                          [NSString stringWithFormat:@":%.2lf%%", [[percent objectAtIndex:ANSWER_CORRECT] floatValue]]];
+    NSString *strWrong = [NSLocalizedString(@"studentAnsWrong", nil) stringByAppendingString:
+                [NSString stringWithFormat:@":%.2lf%%", [[percent objectAtIndex:ANSWER_WRONG] floatValue]]];
+    
+    NSString *strUnfinished = [NSLocalizedString(@"studentAnsUnfinished", nil) stringByAppendingString:
+                     [NSString stringWithFormat:@":%.2lf%%", [[percent objectAtIndex:ANSWER_UNFINISHED] floatValue]]];
+
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObject:strCorrect];
+    [array addObject:strWrong];
+    [array addObject:strUnfinished];
+    
+    return array;
+}
+
+- (NSString *)createStringTimes:(NSArray *)timeArr andCount:(NSArray *)countArr {
+    
+    NSString *strTimeDistribution = [NSLocalizedString(@"timeDistribution", nil) stringByAppendingString:@" : "];
+    int i = 0;
+    for (; i < [timeArr count] - 1; i++) {
+        NSString *str = [NSString stringWithFormat:NSLocalizedString(@"timeDistributionSecond", nil), [[timeArr objectAtIndex:i] integerValue], [[countArr objectAtIndex:i] integerValue]];
+        
+        str = [str stringByAppendingString:@", "];
+        strTimeDistribution = [strTimeDistribution stringByAppendingString:str];
+    }
+    NSString *str = [NSString stringWithFormat:NSLocalizedString(@"timeDistributionSecond", nil), [[timeArr objectAtIndex:i] integerValue], [[countArr objectAtIndex:i] integerValue]];
+    strTimeDistribution = [strTimeDistribution stringByAppendingString:str];
+    
+    return strTimeDistribution;
+}
+
+- (NSString *)createStringOptions:(NSArray *)optionArr andCount:(NSArray *)countArr {
+    
+    NSString *strOptionDistribution = [NSLocalizedString(@"ansDistribution", nil) stringByAppendingString:@" : "];
+    int i = 0;
+    for (; i < [optionArr count] - 1; i++) {
+        NSString *str = [NSString stringWithFormat:NSLocalizedString(@"ansDistributionItem", nil), [optionArr objectAtIndex:i], [[countArr objectAtIndex:i] intValue]];
+        str = [str stringByAppendingString:@", "];
+        strOptionDistribution = [strOptionDistribution stringByAppendingString:str];
+    }
+    NSString *str = [NSString stringWithFormat:NSLocalizedString(@"ansDistributionItem", nil), [optionArr objectAtIndex:i], [[countArr objectAtIndex:i] intValue]];
+    strOptionDistribution = [strOptionDistribution stringByAppendingString:str];
+    
+    return strOptionDistribution;
+}
+
+
 
 #pragma mark - tap gesture
 - (void)tapTop {
