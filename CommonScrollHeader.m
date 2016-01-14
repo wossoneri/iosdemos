@@ -11,7 +11,7 @@
 
 @interface CommonScrollHeader ()
 {
-    UIView *contentView;
+//    UIView *contentView;
     
     float _topHeight;
     float _bottomHeight;
@@ -44,30 +44,45 @@
     _topHeight = topHeight;
     _bottomHeight = bottomHeight;
     topView = top;
+    topView.alpha = 0;
     bottomView = bottom;
     bottomView.userInteractionEnabled = YES;
     
-    contentView = [[UIView alloc] init];
-    [contentView addSubview:topView];
-    [contentView addSubview:bottomView];
+//    contentView = [[UIView alloc] init];
+//    [contentView addSubview:topView];
+//    [contentView addSubview:bottomView];
+    
+//    [topView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.top.right.equalTo(contentView);
+////        make.bottom.equalTo(bottomView.mas_top);
+//        make.height.mas_equalTo(topHeight);
+//    }];
+//    
+//    [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.bottom.right.equalTo(contentView);
+//        make.top.equalTo(topView.mas_bottom);
+//        make.height.mas_equalTo(bottomHeight);
+//    }];
+    
+//    [self addSubview:contentView];
+//    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.bottom.equalTo(self);
+//        make.top.equalTo(self).offset(- topHeight);
+//    }];
+    
+    [self addSubview:topView];
+    [self addSubview:bottomView];
     
     [topView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.equalTo(contentView);
-        make.bottom.equalTo(bottomView.mas_top);
+        make.left.top.right.equalTo(self);
         make.height.mas_equalTo(topHeight);
     }];
     
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.right.equalTo(contentView);
-        make.top.equalTo(topView.mas_bottom);
+        make.edges.equalTo(self);
         make.height.mas_equalTo(bottomHeight);
     }];
     
-    [self addSubview:contentView];
-    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self);
-        make.top.equalTo(self).offset(- topHeight);
-    }];
     
     self.clipsToBounds = YES;
     [self.layer setMasksToBounds:YES];
@@ -83,13 +98,14 @@
 
 - (NSArray *)createStringArrayWithPercentages:(NSArray *)percent {
     
-    NSString *strCorrect = [NSLocalizedString(@"studentAnsRight", nil) stringByAppendingString:
-                          [NSString stringWithFormat:@":%.2lf%%", [[percent objectAtIndex:ANSWER_CORRECT] floatValue]]];
-    NSString *strWrong = [NSLocalizedString(@"studentAnsWrong", nil) stringByAppendingString:
-                [NSString stringWithFormat:@":%.2lf%%", [[percent objectAtIndex:ANSWER_WRONG] floatValue]]];
+    NSString *str = [self getPercentageArrayString:[percent[ANSWER_CORRECT] floatValue]];
+    NSString *strCorrect = [NSLocalizedString(@"studentAnsRight", nil) stringByAppendingString:str];
     
-    NSString *strUnfinished = [NSLocalizedString(@"studentAnsUnfinished", nil) stringByAppendingString:
-                     [NSString stringWithFormat:@":%.2lf%%", [[percent objectAtIndex:ANSWER_UNFINISHED] floatValue]]];
+    str = [self getPercentageArrayString:[percent[ANSWER_WRONG] floatValue]];
+    NSString *strWrong = [NSLocalizedString(@"studentAnsWrong", nil) stringByAppendingString:str];
+    
+    str = [self getPercentageArrayString:[percent[ANSWER_UNFINISHED] floatValue]];
+    NSString *strUnfinished = [NSLocalizedString(@"studentAnsUnfinished", nil) stringByAppendingString:str];
 
     NSMutableArray *array = [NSMutableArray array];
     [array addObject:strCorrect];
@@ -98,6 +114,22 @@
     
     return array;
 }
+
+- (NSString *)getPercentageArrayString:(float)value {
+    float fValue = value;
+    int iValue = floorf(value);
+    NSString *str;
+    
+    if (fValue - iValue > 0) {
+        str = [NSString stringWithFormat:@":%.2lf%%", fValue];
+    } else {
+        str = [NSString stringWithFormat:@":%d%%", iValue];
+    }
+    
+    return str;
+}
+
+
 
 - (NSString *)createStringTimes:(NSArray *)timeArr andCount:(NSArray *)countArr {
     
@@ -160,16 +192,17 @@
     
     float startChangeOffset = - self.headerScrollView.contentInset.top;
     
-    newOffset = CGPointMake(newOffset.x, newOffset.y < startChangeOffset ? startChangeOffset : (newOffset.y > destinaOffset ?destinaOffset : newOffset.y));
+    newOffset = CGPointMake(newOffset.x, newOffset.y < startChangeOffset ? startChangeOffset : (newOffset.y > destinaOffset ? destinaOffset : newOffset.y));
+    
     
     float newY = - newOffset.y - self.headerScrollView.contentInset.top;
     float d = destinaOffset - startChangeOffset;
     float alpha = 1 - (newOffset.y - startChangeOffset) / d;
     
     self.frame = CGRectMake(0, newY, self.frame.size.width, self.frame.size.height);
-    
-    contentView.frame = CGRectMake(0, destinaOffset + self.frame.size.height * (1 - alpha), contentView.frame.size.width, contentView.frame.size.height);
-    
+    topView.frame = CGRectMake(0, -newY, self.frame.size.width, self.frame.size.height);
+//    contentView.frame = CGRectMake(0, destinaOffset + self.frame.size.height * (1 - alpha), contentView.frame.size.width, contentView.frame.size.height);
+//    bottomView.frame = CGRectMake(0, self.frame.size.height * (1 - alpha), bottomView.frame.size.width, bottomView.frame.size.height);
     
     topView.alpha = 1 - alpha;
     bottomView.alpha = alpha;

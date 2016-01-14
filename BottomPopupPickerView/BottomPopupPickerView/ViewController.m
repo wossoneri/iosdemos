@@ -393,9 +393,17 @@
             [color addObject:[UIColor colorWithRed:0x22 / 255.0 green:0xa1 / 255.0 blue:0x2c / 255.0 alpha:1.0]];
             [color addObject:[UIColor colorWithRed:0xee / 255.0 green:0x88 / 255.0 blue:0x63 / 255.0 alpha:1.0]];
             
-            pieChart = [[PieChartView alloc] init];
-            [pieChart setResults:nums];
-            [pieChart setColors:color];
+            
+            PieChartItem *item0 = [PieChartItem initItemWithValue:1 color:color[0] textColor:color[0] title:@"未完成的学生：10%"];
+            PieChartItem *item1 = [PieChartItem initItemWithValue:7 color:color[1] textColor:color[1] title:@"未完成的学生：70%"];
+            PieChartItem *item2 = [PieChartItem initItemWithValue:2 color:color[2] textColor:color[2] title:@"未完成的学生：20%"];
+
+            
+            
+            pieChart = [[PieChartView alloc] initWithItems:@[item0, item1, item2]];
+//            [pieChart refreshChart];
+//            [pieChart setResults:nums];
+//            [pieChart setColors:color];
             
             [self.view addSubview:pieChart];
             [pieChart setTranslatesAutoresizingMaskIntoConstraints:NO];

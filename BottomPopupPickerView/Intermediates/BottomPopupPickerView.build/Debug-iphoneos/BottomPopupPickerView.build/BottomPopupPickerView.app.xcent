@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application-identifier</key>
+	<string>R4LZYP5B4L.com.magewell.BottomPopupPickerView</string>
+	<key>com.apple.developer.team-identifier</key>
+	<string>R4LZYP5B4L</string>
+	<key>get-task-allow</key>
+	<true/>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>R4LZYP5B4L.com.magewell.BottomPopupPickerView</string>
+	</array>
+</dict>
+</plist>
