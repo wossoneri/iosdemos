@@ -123,10 +123,9 @@
                                                       endAngle:M_PI * 2
                                                      clockwise:YES];
     
-    ///终于明白空心圆的原理了！！
     ///先以radius为半径画一个圆圈，这圈线的宽度为1
     ///然后以 borderwidth 为线圈的宽度向里和外分别拓展 borderWidth / 2 的宽度
-    ///如果 radius == borderWidth / 2，结果当然是实心的，否则肯定是空心的 bravo!
+    ///如果 radius == borderWidth / 2，结果当然是实心的，否则肯定是空心的
     
     circle.fillColor   = fillColor.CGColor;
     circle.strokeColor = borderColor.CGColor;
@@ -219,7 +218,7 @@
 
 - (void)didTouchAt:(CGPoint)touchLocation
 {
-    CGPoint circleCenter = CGPointMake(_contentView.bounds.size.width/2, _contentView.bounds.size.height/2);
+    CGPoint circleCenter = CGPointMake(_contentView.bounds.size.width / 2, _contentView.bounds.size.height / 2);
     
 //    CGFloat distanceFromCenter = sqrtf(powf((touchLocation.y - circleCenter.y),2) + powf((touchLocation.x - circleCenter.x),2));
 //    if (distanceFromCenter > _circleRadius) {
@@ -339,6 +338,8 @@
 /** Override this to change how inner attributes are computed. **/
 - (void)recompute {
     self.circleRadius = CGRectGetHeight(self.bounds) / 2;
+    
+        NSLog(@"refresh the radius is:%f", _circleRadius);
 }
 
 - (void)strokeChart{

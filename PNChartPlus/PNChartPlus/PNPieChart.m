@@ -6,6 +6,8 @@
 //  Copyright © 2015年 wossoneri. All rights reserved.
 //
 
+#define START_ANGLE -M_PI_2 //12点方向开始
+
 #import "PNPieChart.h"
 
 @interface PNPieChart()
@@ -130,8 +132,8 @@
     
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center
                                                         radius:radius
-                                                    startAngle:0
-                                                      endAngle:M_PI * 2
+                                                    startAngle:START_ANGLE
+                                                      endAngle:M_PI_2 * 4 + START_ANGLE
                                                      clockwise:YES];
     
     ///终于明白空心圆的原理了！！
@@ -275,20 +277,29 @@
 
 - (CGFloat) findPercentageOfAngleInCircle:(CGPoint)center fromPoint:(CGPoint)reference{
     //Find angle of line Passing In Reference And Center
-    CGFloat angleOfLine = atanf((reference.y - center.y) / (reference.x - center.x));
-
-    CGFloat percentage;
-    if (reference.x - center.x > 0) {
-        if (reference.y - center.y > 0)
-            percentage = (angleOfLine) / (2 * M_PI);
-        else
-            percentage = (angleOfLine + 2 * M_PI) / (2 * M_PI);
-    }else {
-        percentage = (angleOfLine + M_PI) / (2 * M_PI);
+    
+    if (/* DISABLES CODE */ (START_ANGLE) == 0) {
+        CGFloat angleOfLine = atanf((reference.y - center.y) / (reference.x - center.x));
+        
+        CGFloat percentage;
+        if (reference.x - center.x > 0) {
+            if (reference.y - center.y > 0)
+                percentage = (angleOfLine) / (2 * M_PI);
+            else
+                percentage = (angleOfLine + 2 * M_PI) / (2 * M_PI);
+        }else {
+            percentage = (angleOfLine + M_PI) / (2 * M_PI);
+        }
+        
+        return percentage;
     }
-    
-    return percentage;
-    
+
+    if (START_ANGLE == -M_PI_2) {
+        CGFloat angleOfLine = atanf((reference.y - center.y) / (reference.x - center.x));
+        CGFloat percentage = (angleOfLine + M_PI / 2) / (2 * M_PI);
+        return (reference.x - center.x) > 0 ? percentage : percentage + .5;
+    }
+
 }
 
 /* Redraw the chart on autolayout */

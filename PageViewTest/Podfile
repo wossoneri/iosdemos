@@ -1,0 +1,6 @@
+platform :ios, '9.0'
+
+xcodeproj 'PageViewTest'
+target 'PageViewTest', :exclusive => true do
+  pod 'Masonry'
+end

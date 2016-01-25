@@ -50,7 +50,6 @@
     CGPoint startPoint;
     CGPoint endPoint;
     CGPoint lastPoint;
-
 }
 
 @end
@@ -104,7 +103,6 @@
         
         relativeCenter = CGPointMake(self.bounds.origin.x + self.bounds.size.width / 2, self.bounds.origin.y + self.bounds.size.height / 2);
         startPoint = CGPointMake(relativeCenter.x, relativeCenter.y - radius);
-        
     }
     
     if (markBall) {
@@ -115,10 +113,25 @@
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [markBall addGestureRecognizer:panGesture];
+
+
 }
 
 - (void)handlePan : (UIPanGestureRecognizer *)recognizer {
+    
+    CGPoint touchPoint = [recognizer locationInView:self];
+//    NSLog(@"touch x: %f ", touchPoint.x);
+//    NSLog(@"touch y: %f ", touchPoint.y);
+    double distanceFromTouchToCenter = [self distanceFromPoint:touchPoint toPoint:markBall.center];
+//    NSLog(@"distance: %f", distanceFromTouchToCenter);
+    
+
+    if (distanceFromTouchToCenter > POINT_RADIUS * 2) {
+        return;
+    }
+    
     if (self.edit) {
+        
         CGPoint translation = [recognizer translationInView:self];
         
         //当前view对于markBallView的中点  self.center是当前view对于整个屏幕的中点
@@ -167,6 +180,10 @@
     }
 }
 
+- (double)distanceFromPoint:(CGPoint)pointA toPoint:(CGPoint)pointB {
+    return sqrt(pow(pointA.x - pointB.x, 2) + pow(pointA.y - pointB.y, 2));
+}
+
 - (void)drawRect:(CGRect)rect {
     [self calculateData];
     
@@ -201,7 +218,7 @@
         [progress stroke];
         [progress closePath];
         
-        CGPoint pos = [self getCurrentPointAtAngle:endAngle inRect:rect];
+        CGPoint pos = [self getCurrentPointAtAngle:endAngle];
         //    [self drawPointAt:pos];
         markBall.center = pos;
     }
@@ -218,7 +235,7 @@
     
 }
 
-- (CGPoint)getCurrentPointAtAngle:(CGFloat)angle inRect:(CGRect)rect {
+- (CGPoint)getCurrentPointAtAngle:(CGFloat)angle {
     //画个图就知道怎么用角度算了
     CGFloat y = sin(angle) * radius;
     CGFloat x = cos(angle) * radius;
