@@ -37,7 +37,7 @@
 
 
 + (NSString *)imageToNSString:(UIImage *)image {
-    NSData *data = UIImagePNGRepresentation(image);
+    NSData *data = UIImageJPEGRepresentation(image, 0.5);
     //    NSLog(@"image data %@", data);
     return [data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 }
@@ -71,7 +71,7 @@
 }
 
 
-+ (void)setUIView:(UIView *)view byWidth:(CGFloat)width andHeight:(CGFloat)height {
++ (void)setUIViewSize:(UIView *)view byWidth:(CGFloat)width andHeight:(CGFloat)height {
     CGRect rct = view.frame;
     rct.size.width = width;
     rct.size.height = height;
@@ -87,5 +87,23 @@
     }
     return size;
 }
+
+
++ (double)distanceFromPoint:(CGPoint)pointA toPoint:(CGPoint)pointB {
+    return sqrt(pow(pointA.x - pointB.x, 2) + pow(pointA.y - pointB.y, 2));
+}
+
++ (UIImage *)createImageByView:(UIView *)view {
+    [view layoutIfNeeded];
+    UIGraphicsBeginImageContext(view.bounds.size);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    
+    return image;
+}
+
 
 @end

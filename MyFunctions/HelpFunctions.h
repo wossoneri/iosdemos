@@ -21,8 +21,12 @@
 + (NSArray *)getChoiceStyleArrays;
 + (NSArray *)getTrueFalseStyleArrays;
 
-+ (void)setUIView:(UIView *)view byWidth:(CGFloat)width andHeight:(CGFloat)height;
++ (void)setUIViewSize:(UIView *)view byWidth:(CGFloat)width andHeight:(CGFloat)height;
 
 + (CGSize)findHeightForText:(NSString *)text havingWidth:(CGFloat)widthValue andFont:(UIFont *)font;
+
++ (double)distanceFromPoint:(CGPoint)pointA toPoint:(CGPoint)pointB;
+
++ (UIImage *)createImageByView:(UIView *)view;
 
 @end
