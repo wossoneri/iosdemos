@@ -42,12 +42,30 @@
     return [data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 }
 
-+ (UIImage *)stringToUIImage:(NSString *)string {
-    NSData *data = [[NSData alloc]initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
+///quality between 0(min) to 1(max) , image compress as jpeg
++ (NSString *)imageToNSString:(UIImage *)image imageQuality:(float)quality {
+    if (quality > 1) {
+        quality = 1;
+    }
     
-    return [UIImage imageWithData:data];
+    if (quality < 0) {
+        quality = 0;
+    }
+    
+    NSData *data = UIImageJPEGRepresentation(image, quality);
+    return [data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 }
 
+
++ (UIImage *)stringToUIImage:(NSString *)string {
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return [UIImage imageWithData:data ];
+}
+
++ (UIImage *)stringToUIImage:(NSString *)string withImageScale:(float)scale {
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return [UIImage imageWithData:data scale:scale];
+}
 
 
 + (NSDictionary *)getQuizBundleRootDictionary {
@@ -94,13 +112,12 @@
 }
 
 + (UIImage *)createImageByView:(UIView *)view {
-    [view layoutIfNeeded];
     UIGraphicsBeginImageContext(view.bounds.size);
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+//    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
     
     return image;
 }

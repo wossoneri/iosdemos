@@ -20,7 +20,7 @@
 @property (nonatomic) BOOL shouldHighlightSectorOnTouch;
 @property (nonatomic, weak) id<HistogramOptionDelegate> delegate;
 
-- (void)setHorizentalMin:(int)min Max:(int)max interval:(int)interval andUnit:(NSString *)unit;
+- (void)setHorizentalMin:(int)min Max:(int)max andUnit:(NSString *)unit;
 - (void)setVerticalUnit:(NSString *)unit;
 - (void)setTotalValues:(NSArray *)values options:(NSArray *)options andCorrectIndex:(int)index;
 

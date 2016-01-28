@@ -196,7 +196,7 @@
         } else {
             [[UIColor whiteColor] set];
         }
-        CGRect drawRect = CGRectMake(hDots[i], vEndPoint.y, hInterval, draw_Height);
+        CGRect drawRect = CGRectMake(hDots[i], vEndPoint.y, hInterval, draw_Height - 1);
         UIBezierPath *rct = [UIBezierPath bezierPathWithRect:drawRect];
         [rct fill];
         [rct closePath];
@@ -231,7 +231,7 @@
         NSInteger val = [[array objectAtIndex:i] integerValue];
         CGFloat h = val * 1.0 / vValue[1] * draw_Height;
         
-        CGRect drawRct = CGRectMake(hDots[i], startPoint.y - h, hInterval, h);
+        CGRect drawRct = CGRectMake(hDots[i], startPoint.y - h, hInterval, h - 1);
         UIBezierPath *rct = [UIBezierPath bezierPathWithRect:drawRct];
         [rct fill];
         [rct closePath];

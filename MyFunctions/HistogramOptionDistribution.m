@@ -6,6 +6,11 @@
 //  Copyright © 2015 magewell. All rights reserved.
 //
 
+//每格基本人数
+#define STU_BASE_COUNT  5
+//人数分几格
+#define DEFAULT_H_COUNT 5
+
 #import "HistogramOptionDistribution.h"
 #import "Chart.h"
 
@@ -139,19 +144,32 @@
     
     ////画纵向bar的起始坐标
     //先算间隔  还是从startPoint开始
-    CGFloat vInterval = (draw_Height - OFFSET_V * (barOptions.count - 1)) / barOptions.count;
-    
+    CGFloat vInterval;
     CGFloat vDots[barOptions.count];
-    vDots[0] = startPoint.y;
-    for (int i = 1; i < barOptions.count; i++) {
-        vDots[i] = vDots[i - 1] - vInterval - OFFSET_V;
-    }
     
+    if (1 == barOptions.count) { //如果一个bar的话 居中显示  bar宽度为 30
+        vInterval = 50;
+        vDots[0] = startPoint.y - (draw_Height - vInterval) / 2;
+        
+    } else if (2 == barOptions.count) {
+        vInterval = 50;
+        float twoBarOffset = 20;
+        vDots[0] = startPoint.y - (draw_Height - vInterval * 2 - twoBarOffset) / 2;
+        vDots[1] = vDots[0] - vInterval - twoBarOffset;
+        
+    } else {
+        vInterval = (draw_Height - OFFSET_V * (barOptions.count - 1)) / barOptions.count;
+
+        vDots[0] = startPoint.y;
+        for (int i = 1; i < barOptions.count; i++) {
+            vDots[i] = vDots[i - 1] - vInterval - OFFSET_V;
+        }
+    }
     
     //画阴影和矩形
     for(int i = 0; i < barOptions.count; i++) {
-        //背景阴影
-        CGRect drawRct = CGRectMake(startPoint.x, vDots[i] - vInterval, draw_Width, vInterval);
+        //背景阴影  x + 1 是防止绘制bar的时候覆盖坐标轴的线的一半  导致一段粗一段细
+        CGRect drawRct = CGRectMake(startPoint.x + 1, vDots[i] - vInterval, draw_Width, vInterval);
         UIBezierPath *rct = [UIBezierPath bezierPathWithRect:drawRct];
         [barGray set];
         [rct fill];
@@ -164,7 +182,7 @@
             w = 0;
         }
         
-        drawRct = CGRectMake(startPoint.x, vDots[i] - vInterval, w, vInterval);
+        drawRct = CGRectMake(startPoint.x + 1, vDots[i] - vInterval, w, vInterval);
         rct = [UIBezierPath bezierPathWithRect:drawRct];
         if (-1 == correctIndex)
             [barBlue set];
@@ -341,14 +359,22 @@
 
 #pragma mark - public
 
-- (void)setHorizentalMin:(int)min Max:(int)max interval:(int)interval andUnit:(NSString *)unit {
+- (void)setHorizentalMin:(int)min Max:(int)max andUnit:(NSString *)unit {
     //    hDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:min], @"min",
     //                                                      [NSNumber numberWithInteger:max], @"max",
     //                                                      [NSNumber numberWithInteger:interval], @"interval",
     //                                                      unit, @"unit", nil];
+
+    //人数换算成5的倍数
+    int num = max / STU_BASE_COUNT;
+    if (max % STU_BASE_COUNT > 0) {
+        num += 1;
+    }
+    num *= STU_BASE_COUNT;
+    
     hValue[0] = min;
-    hValue[1] = max;
-    hValue[2] = interval;
+    hValue[1] = num;
+    hValue[2] = DEFAULT_H_COUNT;
     
     hUnit = unit;
     

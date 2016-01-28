@@ -15,7 +15,10 @@
 + (NSString *)formatTimeWithSecond:(CGFloat)secondTime;
 
 + (NSString *)imageToNSString:(UIImage *)image;
++ (NSString *)imageToNSString:(UIImage *)image imageQuality:(float)quality;
+
 + (UIImage *)stringToUIImage:(NSString *)string;
++ (UIImage *)stringToUIImage:(NSString *)string withImageScale:(float)scale;
 
 + (NSDictionary *)getQuizBundleRootDictionary;
 + (NSArray *)getChoiceStyleArrays;
