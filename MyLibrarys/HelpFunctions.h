@@ -32,4 +32,6 @@
 
 + (UIImage *)createImageByView:(UIView *)view;
 
++ (CGSize)resizeImageViewFromImageSize:(CGSize)imageSize toFitShowSize:(CGSize)showSize;
+
 @end

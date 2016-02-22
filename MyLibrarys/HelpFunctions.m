@@ -122,5 +122,37 @@
     return image;
 }
 
+/// resize image to fit in show area without changing image scale
++ (CGSize)resizeImageViewFromImageSize:(CGSize)imageSize toFitShowSize:(CGSize)showSize {
+    CGFloat ratioW = imageSize.width / showSize.width;
+    CGFloat ratioH = imageSize.height / showSize.height;
+    
+    CGFloat ratio = imageSize.width / imageSize.height;
+    
+    if (ratioW > 1 && ratioH > 1) { // 宽高都超过屏幕，需要根据两个值来判断缩放程度
+        
+        if (ratioW > ratioH) { //以宽进行缩放
+            imageSize.width = showSize.width;
+            imageSize.height = imageSize.width / ratio;
+        } else {
+            imageSize.height = showSize.height;
+            imageSize.width = imageSize.height * ratio;
+        }
+        
+    } else if (ratioW > 1) {
+        
+        imageSize.width = showSize.width;
+        imageSize.height = imageSize.width / ratio;
+        
+    } else if (ratioH > 1) {
+        
+        imageSize.height = showSize.height;
+        imageSize.width = imageSize.height * ratio;
+        
+    }
+
+    return imageSize;
+}
+
 
 @end
