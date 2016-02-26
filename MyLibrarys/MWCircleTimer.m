@@ -30,7 +30,8 @@
 {
     CGFloat startAngle;
     CGFloat endAngle;
-    int     totalTime;
+    CGFloat angleCount;
+    NSInteger totalTime;
     
     UIFont *textFont;
     UIColor *textColor;
@@ -81,6 +82,7 @@
     // 圆周为 2 * pi * R, 默认起始点于正右方向为 0 度， 改为正上为起始点
     startAngle = -0.5 * M_PI;
     endAngle = startAngle;
+    angleCount = 0;
     
     totalTime = 0;
     radius = 0;
@@ -122,23 +124,30 @@
     CGPoint touchPoint = [recognizer locationInView:self];
 //    NSLog(@"touch x: %f ", touchPoint.x);
 //    NSLog(@"touch y: %f ", touchPoint.y);
-    double distanceFromTouchToCenter = [self distanceFromPoint:touchPoint toPoint:markBall.center];
+//    double distanceFromTouchToCenter = [self distanceFromPoint:touchPoint toPoint:markBall.center];
 //    NSLog(@"distance: %f", distanceFromTouchToCenter);
     
 
-    if (distanceFromTouchToCenter > POINT_RADIUS * 2) {
-        return;
-    }
+//    if (distanceFromTouchToCenter > POINT_RADIUS * 2) {
+//        return;
+//    }
     
     if (self.edit) {
         
         CGPoint translation = [recognizer translationInView:self];
-        
+//        NSLog(@"translation x: %f ", translation.x);
+//        NSLog(@"translation y: %f ", translation.y);
         //当前view对于markBallView的中点  self.center是当前view对于整个屏幕的中点
         //    CGPoint relativeCenter = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
         
-        CGFloat xOffset = recognizer.view.center.x + translation.x - relativeCenter.x;
-        CGFloat yOffset = recognizer.view.center.y + translation.y - relativeCenter.y;
+        
+//        NSLog(@"recognizer.view.center x: %f ", recognizer.view.center.x);
+//        NSLog(@"recognizer.view.center y: %f ", recognizer.view.center.y);
+        
+//        CGFloat xOffset = recognizer.view.center.x + translation.x - relativeCenter.x;
+//        CGFloat yOffset = recognizer.view.center.y + translation.y - relativeCenter.y;
+        CGFloat xOffset = touchPoint.x - relativeCenter.x;
+        CGFloat yOffset = touchPoint.y - relativeCenter.y;
         double length = sqrt(pow(xOffset , 2) + pow(yOffset , 2));
         double ratio = radius / length;
         CGFloat x = xOffset * ratio + relativeCenter.x;
@@ -158,9 +167,16 @@
         
         CGFloat distance = sqrt(pow(startPoint.x - endPoint.x , 2) + pow(startPoint.y - endPoint.y , 2));
         CGFloat angle = acos(1 - pow(distance, 2) / 2 / pow(radius, 2));
-        CGFloat xx = 2 * M_PI / self.intervalCount;
-        if (angle >= xx) {
-            startPoint = endPoint;
+        CGFloat baseAngle = 2 * M_PI / self.intervalCount;
+        
+        if (dir > 0)
+            angleCount += angle;
+        else
+            angleCount -= angle;
+        NSLog(@"angleCount:%f, angle:%f, baseAngle:%f", angleCount, angle, baseAngle);
+        
+        if (fabs(angleCount) >= baseAngle) {
+            angleCount = 0;
             
             if (dir > 0)
                 leftTime += self.interval;
@@ -173,6 +189,8 @@
             
             [self setNeedsDisplay];
         }
+        
+        startPoint = lastPoint;
         
         recognizer.view.center = endPoint;
         

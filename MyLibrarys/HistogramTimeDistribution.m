@@ -127,7 +127,8 @@
         [BP addLineToPoint:CGPointMake(hDots[index], startPoint.y + DOTWIDTH)];
         [BP stroke];
         
-        NSString *text = [NSString stringWithFormat:@"%d", hValue[2] * index];
+//        NSString *text = [NSString stringWithFormat:@"%d", hValue[2] * index];
+        NSString *text = [NSString stringWithFormat:@"%@", [HelpFunctions formatTimeWithSecond:hValue[2] * index]];
         CGSize textSize = [text sizeWithAttributes:@{NSFontAttributeName:textFont}];
         
         CGPoint textOrigin = CGPointMake(hDots[index] - textSize.width / 2, startPoint.y + DOTWIDTH + 2);
@@ -196,7 +197,7 @@
         } else {
             [[UIColor whiteColor] set];
         }
-        CGRect drawRect = CGRectMake(hDots[i], vEndPoint.y, hInterval, draw_Height - 1);
+        CGRect drawRect = CGRectMake(hDots[i], vEndPoint.y, hInterval, draw_Height - 0);
         UIBezierPath *rct = [UIBezierPath bezierPathWithRect:drawRect];
         [rct fill];
         [rct closePath];
@@ -231,7 +232,7 @@
         NSInteger val = [[array objectAtIndex:i] integerValue];
         CGFloat h = val * 1.0 / vValue[1] * draw_Height;
         
-        CGRect drawRct = CGRectMake(hDots[i], startPoint.y - h, hInterval, h - 1);
+        CGRect drawRct = CGRectMake(hDots[i], startPoint.y - h, hInterval, h - 0);
         UIBezierPath *rct = [UIBezierPath bezierPathWithRect:drawRct];
         [rct fill];
         [rct closePath];

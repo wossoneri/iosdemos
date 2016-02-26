@@ -225,6 +225,7 @@
         [circle closePath];
         
 
+        //画线 及 显示文字
         NSString *text = item.title;
         CGSize textSize = [text sizeWithAttributes:@{NSFontAttributeName:textFont}];
         CGRect textRct = CGRectZero;

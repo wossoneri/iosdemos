@@ -169,7 +169,7 @@
     //画阴影和矩形
     for(int i = 0; i < barOptions.count; i++) {
         //背景阴影  x + 1 是防止绘制bar的时候覆盖坐标轴的线的一半  导致一段粗一段细
-        CGRect drawRct = CGRectMake(startPoint.x + 1, vDots[i] - vInterval, draw_Width, vInterval);
+        CGRect drawRct = CGRectMake(startPoint.x + 0, vDots[i] - vInterval, draw_Width, vInterval);
         UIBezierPath *rct = [UIBezierPath bezierPathWithRect:drawRct];
         [barGray set];
         [rct fill];
@@ -182,7 +182,7 @@
             w = 0;
         }
         
-        drawRct = CGRectMake(startPoint.x + 1, vDots[i] - vInterval, w, vInterval);
+        drawRct = CGRectMake(startPoint.x + 0, vDots[i] - vInterval, w, vInterval);
         rct = [UIBezierPath bezierPathWithRect:drawRct];
         if (-1 == correctIndex)
             [barBlue set];

@@ -8,6 +8,13 @@
 
 #import "HelpFunctions.h"
 
+@interface HelpFunctions ()
+{
+    UIView *viewToCheckState;
+}
+
+@end
+
 @implementation HelpFunctions
 
 + (NSString *)formatTimeWithSecond:(CGFloat)secondTime {
@@ -35,7 +42,7 @@
 
 }
 
-
+#pragma mark - Functions with UIImage
 + (NSString *)imageToNSString:(UIImage *)image {
     NSData *data = UIImageJPEGRepresentation(image, 0.5);
     //    NSLog(@"image data %@", data);
@@ -65,6 +72,52 @@
 + (UIImage *)stringToUIImage:(NSString *)string withImageScale:(float)scale {
     NSData *data = [[NSData alloc]initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
     return [UIImage imageWithData:data scale:scale];
+}
+
++ (UIImage *)createImageByView:(UIView *)view {
+    UIGraphicsBeginImageContext(view.bounds.size);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    
+    return image;
+}
+
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    
+    // we want to save imageScale
+    CGFloat ratioW = image.size.width / newSize.width;
+    CGFloat ratioH = image.size.height / newSize.height;
+    
+    CGFloat ratio = image.size.width / image.size.height;
+    
+    CGSize showSize = CGSizeZero;
+    if (ratioW > 1 && ratioH > 1) { // 宽高都超过屏幕，需要根据两个值来判断缩放程度
+        if (ratioW > ratioH) { //以宽进行缩放
+            showSize.width = newSize.width;
+            showSize.height = showSize.width / ratio;
+        } else {
+            showSize.height = newSize.height;
+            showSize.width = showSize.height * ratio;
+        }
+    } else if (ratioW > 1) {
+        showSize.width = showSize.width;
+        showSize.height = showSize.width / ratio;
+    } else if (ratioH > 1) {
+        showSize.height = showSize.height;
+        showSize.width = showSize.height * ratio;
+    }
+
+    //UIGraphicsBeginImageContext(newSize);
+    // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
+    // Pass 1.0 to force exact pixel size.
+    UIGraphicsBeginImageContextWithOptions(showSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, showSize.width, showSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 
@@ -111,16 +164,7 @@
     return sqrt(pow(pointA.x - pointB.x, 2) + pow(pointA.y - pointB.y, 2));
 }
 
-+ (UIImage *)createImageByView:(UIView *)view {
-    UIGraphicsBeginImageContext(view.bounds.size);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-//    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-    
-    return image;
-}
+
 
 /// resize image to fit in show area without changing image scale
 + (CGSize)resizeImageViewFromImageSize:(CGSize)imageSize toFitShowSize:(CGSize)showSize {
@@ -149,10 +193,54 @@
         imageSize.height = showSize.height;
         imageSize.width = imageSize.height * ratio;
         
+    } else { //宽高都小于屏幕，可以处理为拉伸全屏
+        
+        if (ratioW > ratioH) { //宽铺满
+            
+            if (showSize.width / imageSize.width <= 2) {   //最大放2倍
+                imageSize.width = showSize.width;
+                imageSize.height = imageSize.width / ratio;
+            }
+
+        } else {
+            
+            if (showSize.height / imageSize.height <= 2) {
+                imageSize.height = showSize.height;
+                imageSize.width = imageSize.height * ratio;
+            }
+
+        }
+        
     }
 
     return imageSize;
 }
 
+#pragma mark - Check View Until Showing
+- (void)checkTheView:(UIView *)view showState:(checkViewShowStateBlock)checkViewState {
+
+    viewToCheckState = view;
+    _viewStateBlock = checkViewState;
+    
+    _helpThread = [[NSThread alloc] initWithTarget:self selector:@selector(checkIfViewIsShowing) object:nil];
+    [_helpThread start];
+    
+    
+}
+
+- (void)checkIfViewIsShowing {
+    while (1) {
+        if (viewToCheckState.window != nil) {
+            break;
+        }
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _viewStateBlock();
+    });
+    
+    [_helpThread cancel];
+    _helpThread = nil;
+}
 
 @end
