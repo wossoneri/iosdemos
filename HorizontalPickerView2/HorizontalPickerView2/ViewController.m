@@ -47,7 +47,7 @@
     self.collectionView.decelerationRate = UIScrollViewDecelerationRateNormal;
     
     [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([CollectionViewCell class])];
-    [self.collectionView setBackgroundColor:[UIColor blueColor]];
+    [self.collectionView setBackgroundColor:[UIColor clearColor]];
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
     
@@ -55,7 +55,7 @@
     
     self.itemName = [[UILabel alloc] initWithFrame:CGRectMake(rct.origin.x, rct.origin.y + rct.size.height, rct.size.width, 50)];
     self.itemName.textAlignment = NSTextAlignmentCenter;
-    self.itemName.backgroundColor = [UIColor yellowColor];
+//    self.itemName.backgroundColor = [UIColor clearColor];
     self.itemName.font = [UIFont fontWithName:@"Helvetica Neue" size:20];
 //    NSLog(@"width : %f", self.view.bounds.size.width);
     
