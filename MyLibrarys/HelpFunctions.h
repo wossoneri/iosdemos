@@ -42,10 +42,11 @@ typedef void(^checkViewShowStateBlock)(void);
 
 + (double)distanceFromPoint:(CGPoint)pointA toPoint:(CGPoint)pointB;
 
-
+/// just show logs
++ (void)logCurrentTimeMS;
 
 + (CGSize)resizeImageViewFromImageSize:(CGSize)imageSize toFitShowSize:(CGSize)showSize;
 
-- (void)checkTheView:(UIView *)view showState:(checkViewShowStateBlock)checkViewState;
+- (void)checkTheView:(UIView *)view runAtFirstShow:(checkViewShowStateBlock)checkViewState;
 
 @end

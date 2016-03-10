@@ -1,0 +1,27 @@
+-x
+objective-c
+-arch
+x86_64
+-std=c99
+-fobjc-arc
+-fmodules
+-gmodules
+-fmodules-cache-path=/Volumes/TrueCrypt/Github/iosdemos/TableSearchwithUISearchController/Objective-C/DerivedData/ModuleCache
+-fbuild-session-file=/Volumes/TrueCrypt/Github/iosdemos/TableSearchwithUISearchController/Objective-C/DerivedData/ModuleCache/Session.modulevalidation
+-fpascal-strings
+-O0
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.2.sdk
+-fasm-blocks
+-mios-simulator-version-min=8.0
+-g
+-fobjc-abi-version=2
+-fobjc-legacy-dispatch
+-iquote
+-iquote
+-I/Volumes/TrueCrypt/Github/iosdemos/TableSearchwithUISearchController/Objective-C/RunImage/Debug-iphonesimulator/include
+-F/Volumes/TrueCrypt/Github/iosdemos/TableSearchwithUISearchController/Objective-C/RunImage/Debug-iphonesimulator
+x86_64-apple-darwin15.0.0
+"4.2.1 Compatible Apple LLVM 7.0.2 (clang-700.1.81)"
+SDK_PRODUCT_BUILD_VERSION=13C75
+13C75

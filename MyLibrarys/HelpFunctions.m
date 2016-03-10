@@ -44,6 +44,10 @@
 
 #pragma mark - Functions with UIImage
 + (NSString *)imageToNSString:(UIImage *)image {
+    if (!image) {
+        NSLog(@"the image converted to string is null");
+        return @"";
+    }
     NSData *data = UIImageJPEGRepresentation(image, 0.5);
     //    NSLog(@"image data %@", data);
     return [data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
@@ -51,6 +55,11 @@
 
 ///quality between 0(min) to 1(max) , image compress as jpeg
 + (NSString *)imageToNSString:(UIImage *)image imageQuality:(float)quality {
+    if (!image) {
+        NSLog(@"the image converted to string is null");
+        return @"";
+    }
+    
     if (quality > 1) {
         quality = 1;
     }
@@ -65,11 +74,21 @@
 
 
 + (UIImage *)stringToUIImage:(NSString *)string {
+    if (string.length == 0) {
+        NSLog(@"the string converted to image is null");
+        return nil;
+    }
+    
     NSData *data = [[NSData alloc]initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
     return [UIImage imageWithData:data ];
 }
 
 + (UIImage *)stringToUIImage:(NSString *)string withImageScale:(float)scale {
+    if (string.length == 0) {
+        NSLog(@"the string converted to image is null");
+        return nil;
+    }
+    
     NSData *data = [[NSData alloc]initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
     return [UIImage imageWithData:data scale:scale];
 }
@@ -93,7 +112,7 @@
     
     CGFloat ratio = image.size.width / image.size.height;
     
-    CGSize showSize = CGSizeZero;
+    CGSize showSize = image.size;
     if (ratioW > 1 && ratioH > 1) { // 宽高都超过屏幕，需要根据两个值来判断缩放程度
         if (ratioW > ratioH) { //以宽进行缩放
             showSize.width = newSize.width;
@@ -164,7 +183,15 @@
     return sqrt(pow(pointA.x - pointB.x, 2) + pow(pointA.y - pointB.y, 2));
 }
 
-
++ (void)logCurrentTimeMS {
+    NSString* date;
+    
+    NSDateFormatter * formatter = [[NSDateFormatter alloc ] init];
+    //[formatter setDateFormat:@"YYYY.MM.dd.hh.mm.ss"];
+    [formatter setDateFormat:@"YYYY-MM-dd hh:mm:ss:SSS"];
+    date = [formatter stringFromDate:[NSDate date]];
+    NSLog(@"%@", [[NSString alloc] initWithFormat:@"%@", date]);
+}
 
 /// resize image to fit in show area without changing image scale
 + (CGSize)resizeImageViewFromImageSize:(CGSize)imageSize toFitShowSize:(CGSize)showSize {
@@ -217,7 +244,7 @@
 }
 
 #pragma mark - Check View Until Showing
-- (void)checkTheView:(UIView *)view showState:(checkViewShowStateBlock)checkViewState {
+- (void)checkTheView:(UIView *)view runAtFirstShow:(checkViewShowStateBlock)checkViewState {
 
     viewToCheckState = view;
     _viewStateBlock = checkViewState;
