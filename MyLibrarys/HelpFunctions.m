@@ -43,17 +43,18 @@
 }
 
 #pragma mark - Functions with UIImage
+
+/// use PNG format
 + (NSString *)imageToNSString:(UIImage *)image {
     if (!image) {
         NSLog(@"the image converted to string is null");
         return @"";
     }
-    NSData *data = UIImageJPEGRepresentation(image, 0.5);
-    //    NSLog(@"image data %@", data);
+    NSData *data = UIImagePNGRepresentation(image);
     return [data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 }
 
-///quality between 0(min) to 1(max) , image compress as jpeg
+/// use JPG format, quality between 0(min) to 1(max) , image compress as jpeg
 + (NSString *)imageToNSString:(UIImage *)image imageQuality:(float)quality {
     if (!image) {
         NSLog(@"the image converted to string is null");
@@ -88,14 +89,19 @@
         NSLog(@"the string converted to image is null");
         return nil;
     }
+    if (scale == 0) {
+        scale = [[UIScreen mainScreen] scale];
+    }
     
     NSData *data = [[NSData alloc]initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
     return [UIImage imageWithData:data scale:scale];
 }
 
 + (UIImage *)createImageByView:(UIView *)view {
-    UIGraphicsBeginImageContext(view.bounds.size);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0f);
+//    [view.layer renderInContext:UIGraphicsGetCurrentContext()];  //low efficient out of date
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -104,40 +110,123 @@
     return image;
 }
 
-+ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
++ (UIImage *)combineViewsToOneImage:(NSArray *)views {
+    UIGraphicsBeginImageContext(((UIView *)views[0]).bounds.size);
+    for (UIView *view in views) {
+        [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+    }
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return viewImage;
+}
+
+
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize originScale:(BOOL)origin {
     
-    // we want to save imageScale
-    CGFloat ratioW = image.size.width / newSize.width;
-    CGFloat ratioH = image.size.height / newSize.height;
-    
-    CGFloat ratio = image.size.width / image.size.height;
-    
-    CGSize showSize = image.size;
-    if (ratioW > 1 && ratioH > 1) { // 宽高都超过屏幕，需要根据两个值来判断缩放程度
-        if (ratioW > ratioH) { //以宽进行缩放
-            showSize.width = newSize.width;
+    if (origin) {
+        // we want to save imageScale
+        CGFloat ratioW = image.size.width / newSize.width;
+        CGFloat ratioH = image.size.height / newSize.height;
+        
+        CGFloat ratio = image.size.width / image.size.height;
+        
+        CGSize showSize = image.size;
+        if (ratioW > 1 && ratioH > 1) { // 宽高都超过屏幕，需要根据两个值来判断缩放程度
+            if (ratioW > ratioH) { //以宽进行缩放
+                showSize.width = newSize.width;
+                showSize.height = showSize.width / ratio;
+            } else {
+                showSize.height = newSize.height;
+                showSize.width = showSize.height * ratio;
+            }
+        } else if (ratioW > 1) {
+            showSize.width = showSize.width;
             showSize.height = showSize.width / ratio;
-        } else {
-            showSize.height = newSize.height;
+        } else if (ratioH > 1) {
+            showSize.height = showSize.height;
             showSize.width = showSize.height * ratio;
         }
-    } else if (ratioW > 1) {
-        showSize.width = showSize.width;
-        showSize.height = showSize.width / ratio;
-    } else if (ratioH > 1) {
-        showSize.height = showSize.height;
-        showSize.width = showSize.height * ratio;
+        
+        //UIGraphicsBeginImageContext(newSize);
+        // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
+        // Pass 1.0 to force exact pixel size.
+        UIGraphicsBeginImageContextWithOptions(showSize, NO, 0.0);
+        [image drawInRect:CGRectMake(0, 0, showSize.width, showSize.height)];
+        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return newImage;
+    } else {
+//        UIGraphicsBeginImageContext(newSize);
+        UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+        [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return newImage;
     }
 
-    //UIGraphicsBeginImageContext(newSize);
-    // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
-    // Pass 1.0 to force exact pixel size.
-    UIGraphicsBeginImageContextWithOptions(showSize, NO, 0.0);
-    [image drawInRect:CGRectMake(0, 0, showSize.width, showSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+}
+
+
++ (UIImage *)addBorderToImage:(UIImage *)image borderWidth:(float)borderWidth borderColor:(UIColor *)borderColor {
+    CGImageRef bgimage = [image CGImage];
+    float width = CGImageGetWidth(bgimage);
+    float height = CGImageGetHeight(bgimage);
+    
+    // Create a temporary texture data buffer
+    void *data = malloc(width * height * 4);
+    
+    // Draw image to buffer
+    CGContextRef ctx = CGBitmapContextCreate(data,
+                                             width,
+                                             height,
+                                             8,
+                                             width * 4,
+                                             CGImageGetColorSpace(image.CGImage),
+                                             kCGImageAlphaPremultipliedLast);
+    CGContextDrawImage(ctx, CGRectMake(0, 0, (CGFloat)width, (CGFloat)height), bgimage);
+    
+    //Set the stroke (pen) color
+    CGContextSetStrokeColorWithColor(ctx, borderColor.CGColor);
+    
+    //Set the width of the pen mark
+//    CGFloat borderWidth = (float)width * 0.05;
+    CGContextSetLineWidth(ctx, borderWidth);
+    
+    //Start at 0,0 and draw a square
+    CGContextMoveToPoint(ctx, 0.0, 0.0);
+    CGContextAddLineToPoint(ctx, 0.0, height);
+    CGContextAddLineToPoint(ctx, width, height);
+    CGContextAddLineToPoint(ctx, width, 0.0);
+    CGContextAddLineToPoint(ctx, 0.0, 0.0);
+    
+    //Draw it
+    CGContextStrokePath(ctx);
+    
+    // write it to a new image
+    CGImageRef cgimage = CGBitmapContextCreateImage(ctx);
+    UIImage *newImage = [UIImage imageWithCGImage:cgimage];
+    CFRelease(cgimage);
+    CGContextRelease(ctx);
+    
+    // auto-released
     return newImage;
 }
+
++ (UIImage *)imageBorderedWithImage:(UIImage *)image Color:(UIColor *)color BorderWidth:(CGFloat)width {
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
+    [image drawAtPoint:CGPointZero];
+    [color setStroke];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+    path.lineWidth = width;
+    [path stroke];
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return result;
+}
+
+
+
+
 
 
 + (NSDictionary *)getQuizBundleRootDictionary {
@@ -183,6 +272,7 @@
     return sqrt(pow(pointA.x - pointB.x, 2) + pow(pointA.y - pointB.y, 2));
 }
 
+#pragma mark - current time
 + (void)logCurrentTimeMS {
     NSString* date;
     
@@ -191,6 +281,10 @@
     [formatter setDateFormat:@"YYYY-MM-dd hh:mm:ss:SSS"];
     date = [formatter stringFromDate:[NSDate date]];
     NSLog(@"%@", [[NSString alloc] initWithFormat:@"%@", date]);
+}
+
++ (long long)getCurrentTimeLong {
+    return (long long)([[NSDate date] timeIntervalSince1970] * 1000.0);
 }
 
 /// resize image to fit in show area without changing image scale

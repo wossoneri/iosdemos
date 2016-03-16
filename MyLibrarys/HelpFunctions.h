@@ -23,13 +23,18 @@ typedef void(^checkViewShowStateBlock)(void);
 + (NSString *)imageToNSString:(UIImage *)image;
 + (NSString *)imageToNSString:(UIImage *)image imageQuality:(float)quality;
 
+#pragma mark - UIImage
 + (UIImage *)stringToUIImage:(NSString *)string;
 + (UIImage *)stringToUIImage:(NSString *)string withImageScale:(float)scale;
 ///把一个View生成图片
 + (UIImage *)createImageByView:(UIView *)view;
++ (UIImage *)combineViewsToOneImage:(NSArray *)views;
 
-+ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
-
+//+ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize originScale:(BOOL)origin;
+// 给图片加边框  后者效率要高一点
++ (UIImage *)addBorderToImage:(UIImage *)image borderWidth:(float)borderWidth borderColor:(UIColor *)borderColor;
++ (UIImage *)imageBorderedWithImage:(UIImage *)image Color:(UIColor *)color BorderWidth:(CGFloat)width;
 
 
 + (NSDictionary *)getQuizBundleRootDictionary;
@@ -44,6 +49,7 @@ typedef void(^checkViewShowStateBlock)(void);
 
 /// just show logs
 + (void)logCurrentTimeMS;
++ (long long)getCurrentTimeLong;
 
 + (CGSize)resizeImageViewFromImageSize:(CGSize)imageSize toFitShowSize:(CGSize)showSize;
 
