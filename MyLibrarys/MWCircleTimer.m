@@ -50,7 +50,7 @@
     CGPoint relativeCenter;
     CGPoint startPoint;
     CGPoint endPoint;
-    CGPoint lastPoint;
+//    CGPoint lastPoint;
 }
 
 @end
@@ -120,8 +120,11 @@
 }
 
 - (void)handlePan : (UIPanGestureRecognizer *)recognizer {
+
     
     CGPoint touchPoint = [recognizer locationInView:self];
+    
+    
 //    NSLog(@"touch x: %f ", touchPoint.x);
 //    NSLog(@"touch y: %f ", touchPoint.y);
 //    double distanceFromTouchToCenter = [self distanceFromPoint:touchPoint toPoint:markBall.center];
@@ -134,7 +137,7 @@
     
     if (self.edit) {
         
-        CGPoint translation = [recognizer translationInView:self];
+//        CGPoint translation = [recognizer translationInView:self];
 //        NSLog(@"translation x: %f ", translation.x);
 //        NSLog(@"translation y: %f ", translation.y);
         //当前view对于markBallView的中点  self.center是当前view对于整个屏幕的中点
@@ -156,47 +159,110 @@
         
         //    startPoint = CGPointMake(relativeCenter.x, relativeCenter.y - radius);
         
-        lastPoint = endPoint;
+
         endPoint = CGPointMake(x, y);
+//        lastPoint = [self getCenterPointOfPointA:startPoint PointB:endPoint];
+//        
+//        CGPoint a = startPoint;
+//        CGPoint b = lastPoint;
+//        CGPoint c = endPoint;
+//        CGFloat dir = a.x * b.y - a.y * b.x + a.y * c.x - a.x * c.y + b.x * c.y - c.x * b.y;
+        CGFloat k1,k2, dir; //计算斜率判断方向
+        if (startPoint.x - relativeCenter.x == 0)
+            k1 = MAXFLOAT;
+        else
+            k1 = (startPoint.y - relativeCenter.y) / (startPoint.x - relativeCenter.x);
         
-        CGPoint a = startPoint;
-        CGPoint b = lastPoint;
-        CGPoint c = endPoint;
-        CGFloat dir = a.x * b.y - a.y * b.x + a.y * c.x - a.x * c.y + b.x * c.y - c.x * b.y;
+        if (endPoint.x - relativeCenter.x == 0)
+            k2 = MAXFLOAT;
+        else
+            k2 = (endPoint.y - relativeCenter.y) / (endPoint.x - relativeCenter.x);
+        
+        if (k1 == MAXFLOAT) {
+            if (k2 > 0)
+                dir = -1;
+            else
+                dir = 1;
+        } else if (k2 == MAXFLOAT) {
+            if (k1 > 0)
+                dir = 1;
+            else
+                dir = -1;
+        } else {
+            if (k1 > k2)
+                dir = -1;
+            else
+                dir = 1;
+        }
+        
+        if (leftTime <= 0 && dir < 0) { //时间为0 且逆时针转动  不予理会
+            return;
+        }
+
 
         
         CGFloat distance = sqrt(pow(startPoint.x - endPoint.x , 2) + pow(startPoint.y - endPoint.y , 2));
         CGFloat angle = acos(1 - pow(distance, 2) / 2 / pow(radius, 2));
-        CGFloat baseAngle = 2 * M_PI / self.intervalCount;
+        CGFloat baseAngle = 2 * M_PI / _intervalCount;
         
         if (dir > 0)
             angleCount += angle;
         else
             angleCount -= angle;
-        NSLog(@"angleCount:%f, angle:%f, baseAngle:%f", angleCount, angle, baseAngle);
+//        NSLog(@"angleCount:%f, angle:%f, baseAngle:%f", angleCount, angle, baseAngle);
         
         if (fabs(angleCount) >= baseAngle) {
-            angleCount = 0;
+//            angleCount = 0；//会清除掉部分多出来的角度，产生误差
             
-            if (dir > 0)
-                leftTime += self.interval;
-            
+            if (dir > 0) {
+                int count = fabs(angleCount) / baseAngle;
+                leftTime += _interval * count;
+                angleCount -= baseAngle * count;    //对多出来的一部分角度进行校正
+            }
             if (dir < 0) {
-                leftTime -= self.interval;
-                if (leftTime < 0)
+                int count = fabs(angleCount) / baseAngle;
+                leftTime -= _interval * count;
+                angleCount += baseAngle * count;    //对多出来的一部分角度进行保留
+                
+                if (leftTime < 0) {
                     leftTime = 0;
+                }
             }
             
             [self setNeedsDisplay];
         }
         
-        startPoint = lastPoint;
-        
+//        startPoint = lastPoint;
+        startPoint = endPoint;
         recognizer.view.center = endPoint;
         
         [recognizer setTranslation:CGPointZero inView:self];
     }
 }
+
+//- (CGPoint)getCenterPointOfPointA:(CGPoint)pointA PointB:(CGPoint)pointB {
+//    CGPoint centerPoint = CGPointMake((pointA.x + pointB.x) / 2, (pointA.y + pointB.y) / 2);
+//    CGFloat x, y, k;
+//    k = (centerPoint.y - relativeCenter.y) / (centerPoint.x - relativeCenter.x); //斜率
+//    
+//    if (centerPoint.x - relativeCenter.x != 0) {
+//        
+//        x = sqrt(pow(radius, 2) / (1 + pow(k, 2)));
+//        y = k * x;
+//        if (centerPoint.x - relativeCenter.x < 0) {
+//            x *= -1;
+//        }
+//    } else {
+//        x = 0;
+//        y = radius;
+//        if (centerPoint.y - relativeCenter.y < 0) {
+//            y *= -1;
+//        }
+//    }
+//    
+//    return CGPointMake(x + relativeCenter.x, y + relativeCenter.y);
+//    
+//}
 
 - (double)distanceFromPoint:(CGPoint)pointA toPoint:(CGPoint)pointB {
     return sqrt(pow(pointA.x - pointB.x, 2) + pow(pointA.y - pointB.y, 2));

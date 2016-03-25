@@ -74,6 +74,22 @@
     }
 }
 
+- (CALayer *)setUnderLine:(UIColor *)color width:(CGFloat)width {
+    CALayer *border = [CALayer layer];
+    border.borderColor = color.CGColor;
+    border.frame = CGRectMake(0, self.frame.size.height - width - 4, self.frame.size.width, width);
+    border.borderWidth = width;
+    [self.layer addSublayer:border];
+    self.layer.masksToBounds = YES;
+    return border;
+}
+
+- (void)bringSubviewsToFront:(NSArray *)views {
+    for (UIView *view in views) {
+        [self bringSubviewToFront:view];
+    }
+}
+
 - (void)removeAllSubviews {
     for (UIView *view in self.subviews) {
         [view removeFromSuperview];
@@ -181,17 +197,22 @@
 //}
 
 - (void) distributeSpacingHorizontallyWith:(NSArray *)views withMargin:(int)margin eachWidth:(float)width eachHeight:(float)height {
-    UIView *lastView;
-    UIView *nextView;
-    UIView *thisView;
+    __block UIView *lastView;
+    __block UIView *nextView;
+    __block UIView *thisView;
+    
+    __block float viewWidth = width;
+    __block float viewHeight = height;
     
     if (views.count == 1) {
         thisView = (UIView *)[views objectAtIndex:0];
         [thisView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.equalTo(self);
             make.left.right.equalTo(self);
-            make.width.mas_equalTo(width);
-            make.height.mas_equalTo(height);
+            if (viewWidth > 0)
+                make.width.mas_equalTo(viewWidth);
+            if (viewHeight > 0)
+                make.height.mas_equalTo(viewHeight);
         }];
         return;
     }
@@ -205,8 +226,10 @@
                 make.left.equalTo(self);
                 make.top.bottom.equalTo(self);
                 make.right.equalTo(nextView.mas_left).offset(-margin);
-                make.width.mas_equalTo(width);
-                make.height.mas_equalTo(height);
+                if (viewWidth > 0)
+                    make.width.mas_equalTo(viewWidth);
+                if (viewHeight > 0)
+                    make.height.mas_equalTo(viewHeight);
             }];
         } else if (i == views.count - 1) {
             lastView = (UIView *)[views objectAtIndex:i - 1];
@@ -214,8 +237,10 @@
                 make.left.equalTo(lastView.mas_right).offset(margin);
                 make.top.bottom.equalTo(self);
                 make.right.equalTo(self);
-                make.width.mas_equalTo(width);
-                make.height.mas_equalTo(height);
+                if (viewWidth > 0)
+                    make.width.mas_equalTo(viewWidth);
+                if (viewHeight > 0)
+                    make.height.mas_equalTo(viewHeight);
             }];
         } else {
             nextView = (UIView *)[views objectAtIndex:i + 1];
@@ -224,8 +249,10 @@
                 make.top.bottom.equalTo(self);
                 make.left.equalTo(lastView.mas_right).offset(margin);
                 make.right.equalTo(nextView.mas_left).offset(-margin);
-                make.width.mas_equalTo(width);
-                make.height.mas_equalTo(height);
+                if (viewWidth > 0)
+                    make.width.mas_equalTo(viewWidth);
+                if (viewHeight > 0)
+                    make.height.mas_equalTo(viewHeight);
             }];
         }
     }
@@ -242,8 +269,10 @@
         [thisView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self);
             make.top.bottom.equalTo(self);
-            make.width.mas_equalTo(width);
-            make.height.mas_equalTo(height);
+            if (width > 0)
+                make.width.mas_equalTo(width);
+            if (height > 0)
+                make.height.mas_equalTo(height);
         }];
         return;
     }
@@ -256,8 +285,10 @@
                 make.top.equalTo(self);
                 make.left.right.equalTo(self);
                 make.bottom.equalTo(nextView.mas_top).offset(-margin);
-                make.width.mas_equalTo(width);
-                make.height.mas_equalTo(height);
+                if (width > 0)
+                    make.width.mas_equalTo(width);
+                if (height > 0)
+                    make.height.mas_equalTo(height);
             }];
         } else if (i == views.count - 1) {
             lastView = (UIView *)[views objectAtIndex:i - 1];
@@ -265,8 +296,10 @@
                 make.top.equalTo(lastView.mas_bottom).offset(margin);
                 make.left.right.equalTo(self);
                 make.bottom.equalTo(self);
-                make.width.mas_equalTo(width);
-                make.height.mas_equalTo(height);
+                if (width > 0)
+                    make.width.mas_equalTo(width);
+                if (height > 0)
+                    make.height.mas_equalTo(height);
             }];
         } else {
             nextView = (UIView *)[views objectAtIndex:i + 1];
@@ -275,8 +308,10 @@
                 make.left.right.equalTo(self);
                 make.top.equalTo(lastView.mas_bottom).offset(margin);
                 make.bottom.equalTo(nextView.mas_top).offset(-margin);
-                make.width.mas_equalTo(width);
-                make.height.mas_equalTo(height);
+                if (width > 0)
+                    make.width.mas_equalTo(width);
+                if (height > 0)
+                    make.height.mas_equalTo(height);
             }];
         }
     }

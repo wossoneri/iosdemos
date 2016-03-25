@@ -35,7 +35,11 @@ typedef void(^checkViewShowStateBlock)(void);
 // 给图片加边框  后者效率要高一点
 + (UIImage *)addBorderToImage:(UIImage *)image borderWidth:(float)borderWidth borderColor:(UIColor *)borderColor;
 + (UIImage *)imageBorderedWithImage:(UIImage *)image Color:(UIColor *)color BorderWidth:(CGFloat)width;
-
+/**
+ 把所有图像按列表顺序覆盖在一张图上
+ 列表最前的在图像最下方
+ */
++ (UIImage *)combineImages:(NSArray *)images;
 
 + (NSDictionary *)getQuizBundleRootDictionary;
 + (NSArray *)getChoiceStyleArrays;
@@ -53,6 +57,15 @@ typedef void(^checkViewShowStateBlock)(void);
 
 + (CGSize)resizeImageViewFromImageSize:(CGSize)imageSize toFitShowSize:(CGSize)showSize;
 
+/**
+ 由于使用自动布局，一些布局在界面show出来之前是没有宽高值的
+ 加上没有viewController，所以没法控制viewWillAppear的周期
+ 所以要解决比如：有些需要计算的地方比如画layer必须要view的frame大小 这类问题就比较棘手
+ 所以添加这个方法，把block当成viewWillAppear即可
+ 
+ @param view 即将要show出来的view
+ @param checkViewShowStateBlock 界面刚show出来需要做的操作
+ */
 - (void)checkTheView:(UIView *)view runAtFirstShow:(checkViewShowStateBlock)checkViewState;
 
 @end

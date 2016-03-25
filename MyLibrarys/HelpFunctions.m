@@ -224,7 +224,19 @@
     return result;
 }
 
-
++ (UIImage *)combineImages:(NSArray *)images {
+    CGSize drawSize = ((UIImage *)[images firstObject]).size;
+    
+    UIGraphicsBeginImageContext(drawSize);
+    for (UIImage *img in images) {
+        [img drawInRect:CGRectMake(0, 0, drawSize.width, drawSize.height)];
+    }
+    
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return result;
+}
 
 
 

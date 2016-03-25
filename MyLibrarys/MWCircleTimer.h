@@ -17,11 +17,11 @@
 
 @interface MWCircleTimer : UIView
 
-//time interval,second
+///time interval,second
 @property (nonatomic) int interval;
-//intervalCount per round
+///intervalCount per round
 @property (nonatomic) int intervalCount;
-//set YES u can drag the ball
+///set YES to scroll the ball
 @property (nonatomic) bool edit;
 @property (nonatomic, assign) id<CircleTimerDelegate> delegate;
 
