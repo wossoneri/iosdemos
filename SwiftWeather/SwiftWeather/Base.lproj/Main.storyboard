@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="wgE-5Q-6Pf">
             <objects>
-                <viewController id="zvD-57-wGZ" sceneMemberID="viewController">
+                <viewController id="zvD-57-wGZ" customClass="ViewController" customModule="SwiftWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5y5-uj-dme"/>
                         <viewControllerLayoutGuide type="bottom" id="lnQ-XF-Y8T"/>
@@ -17,18 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Melboune" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z37-Av-QNU">
-                                <rect key="frame" x="60" y="49" width="280" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z37-Av-QNU">
+                                <rect key="frame" x="47" y="85" width="280" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Spell_holy_sealofmight" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-fw-QmU">
-                                <rect key="frame" x="125" y="124" width="150" height="150"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3L-BG-edH">
-                                <rect key="frame" x="23" y="310" width="355" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3L-BG-edH">
+                                <rect key="frame" x="10" y="379" width="355" height="90"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-fw-QmU">
+                                <rect key="frame" x="123" y="192" width="128" height="128"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="c2A-mD-loR">
+                                <rect key="frame" x="177" y="246" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7A9-lH-moI">
+                                <rect key="frame" x="29" y="333" width="316" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -36,13 +45,17 @@
                         <color key="backgroundColor" red="0.25751813902147302" green="0.58547622659231291" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="icon" destination="dFS-fw-QmU" id="YhG-uX-0Zf"/>
+                        <outlet property="loading" destination="7A9-lH-moI" id="67P-nn-xaV"/>
+                        <outlet property="loadingIndicator" destination="c2A-mD-loR" id="GC4-6J-CSz"/>
+                        <outlet property="location" destination="z37-Av-QNU" id="Cnj-64-BwT"/>
+                        <outlet property="temperature" destination="F3L-BG-edH" id="Rfe-6x-zRz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JY-Lt-LT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="933.5" y="565.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Spell_holy_sealofmight" width="64" height="64"/>
-    </resources>
 </document>
