@@ -81,6 +81,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.loading.text = "地理位置信息不可用"
     }
     
+    
+    
     func updateWeatherIcon(condition: Int, nightTime: Bool) -> Void {
         if condition < 300 {
             if nightTime {
